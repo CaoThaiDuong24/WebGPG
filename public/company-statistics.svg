@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5BA3F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6BB6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="numberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E5C8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A90E2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Flow arrows and statistics -->
+  
+  <!-- 11 VĂN PHÒNG -->
+  <g transform="translate(650, 80)">
+    <path d="M -100 0 Q -50 -20 0 0 Q 50 20 100 0" stroke="url(#flowGradient)" stroke-width="8" fill="none"/>
+    <circle cx="0" cy="0" r="35" fill="white" stroke="#4A90E2" stroke-width="3"/>
+    <rect x="-15" y="-15" width="30" height="20" rx="2" fill="#4A90E2"/>
+    <rect x="-12" y="-8" width="6" height="12" fill="white"/>
+    <rect x="-4" y="-8" width="6" height="12" fill="white"/>
+    <rect x="4" y="-8" width="6" height="12" fill="white"/>
+    <text x="80" y="-10" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#numberGradient)">11</text>
+    <text x="80" y="10" font-family="Arial, sans-serif" font-size="12" fill="#4A90E2">VĂN PHÒNG</text>
+    <text x="80" y="25" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">OFFICES</text>
+  </g>
+  
+  <!-- 16 BÃI DEPOTS -->
+  <g transform="translate(150, 180)">
+    <path d="M -100 0 Q -50 20 0 0 Q 50 -20 100 0" stroke="url(#flowGradient)" stroke-width="8" fill="none"/>
+    <circle cx="0" cy="0" r="35" fill="white" stroke="#4A90E2" stroke-width="3"/>
+    <circle cx="-8" cy="-5" r="3" fill="#4A90E2"/>
+    <circle cx="8" cy="-5" r="3" fill="#4A90E2"/>
+    <path d="M -10 5 Q 0 15 10 5" stroke="#4A90E2" stroke-width="2" fill="none"/>
+    <text x="-120" y="-10" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#numberGradient)">16</text>
+    <text x="-120" y="10" font-family="Arial, sans-serif" font-size="12" fill="#4A90E2">BÃI</text>
+    <text x="-120" y="25" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">DEPOTS</text>
+    <text x="120" y="-5" font-family="Arial, sans-serif" font-size="10" fill="#4A90E2">BÃI CONTAINER SỞ HỮU</text>
+    <text x="120" y="10" font-family="Arial, sans-serif" font-size="8" fill="#6B7280">OWNED DEPOTS</text>
+  </g>
+  
+  <!-- 633,000 M² -->
+  <g transform="translate(650, 280)">
+    <path d="M -100 0 Q -50 -20 0 0 Q 50 20 100 0" stroke="url(#flowGradient)" stroke-width="8" fill="none"/>
+    <circle cx="0" cy="0" r="35" fill="white" stroke="#4A90E2" stroke-width="3"/>
+    <rect x="-12" y="-10" width="24" height="16" rx="2" fill="none" stroke="#4A90E2" stroke-width="2"/>
+    <rect x="-8" y="-6" width="4" height="8" fill="#4A90E2"/>
+    <rect x="-2" y="-6" width="4" height="8" fill="#4A90E2"/>
+    <rect x="4" y="-6" width="4" height="8" fill="#4A90E2"/>
+    <text x="120" y="-15" font-family="Arial, sans-serif" font-size="12" fill="#4A90E2">TỔNG DIỆN TÍCH BÃI CONTAINER</text>
+    <text x="120" y="0" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">TOTAL AREA FOR CONTAINER DEPOT</text>
+    <text x="120" y="20" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#numberGradient)">633,000</text>
+    <text x="220" y="20" font-family="Arial, sans-serif" font-size="14" fill="#4A90E2">M²</text>
+    <text x="250" y="25" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">SQM</text>
+  </g>
+  
+  <!-- 150,000 M² LOGISTICS -->
+  <g transform="translate(150, 380)">
+    <path d="M -100 0 Q -50 20 0 0 Q 50 -20 100 0" stroke="url(#flowGradient)" stroke-width="8" fill="none"/>
+    <circle cx="0" cy="0" r="35" fill="white" stroke="#4A90E2" stroke-width="3"/>
+    <rect x="-10" y="-8" width="20" height="12" rx="2" fill="none" stroke="#4A90E2" stroke-width="2"/>
+    <path d="M -6 -4 L 6 -4 M -6 0 L 6 0 M -6 4 L 6 4" stroke="#4A90E2" stroke-width="1"/>
+    <text x="-180" y="-15" font-family="Arial, sans-serif" font-size="12" fill="#4A90E2">TỔNG DIỆN TÍCH KHO VẬN LOGISTICS</text>
+    <text x="-180" y="0" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">TOTAL AREA FOR LOGISTICS</text>
+    <text x="-180" y="25" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#numberGradient)">150,000</text>
+    <text x="-80" y="25" font-family="Arial, sans-serif" font-size="14" fill="#4A90E2">M²</text>
+    <text x="-50" y="30" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">SQM</text>
+  </g>
+  
+  <!-- 35,000 M² WAREHOUSE -->
+  <g transform="translate(650, 480)">
+    <path d="M -100 0 Q -50 -20 0 0 Q 50 20 100 0" stroke="url(#flowGradient)" stroke-width="8" fill="none"/>
+    <circle cx="0" cy="0" r="35" fill="white" stroke="#4A90E2" stroke-width="3"/>
+    <path d="M -12 -8 L 0 -15 L 12 -8 L 12 8 L -12 8 Z" fill="none" stroke="#4A90E2" stroke-width="2"/>
+    <rect x="-8" y="-2" width="16" height="6" fill="#4A90E2"/>
+    <text x="120" y="-10" font-family="Arial, sans-serif" font-size="12" fill="#4A90E2">DIỆN TÍCH KHO</text>
+    <text x="120" y="5" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">WAREHOUSE SPACE</text>
+    <text x="120" y="30" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#numberGradient)">35,000</text>
+    <text x="220" y="30" font-family="Arial, sans-serif" font-size="14" fill="#4A90E2">M²</text>
+    <text x="250" y="35" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">SQM</text>
+  </g>
+  
+  <!-- 60 XE TRUCKS -->
+  <g transform="translate(150, 580)">
+    <path d="M -100 0 Q -50 20 0 0 Q 50 -20 100 0" stroke="url(#flowGradient)" stroke-width="8" fill="none"/>
+    <circle cx="0" cy="0" r="35" fill="white" stroke="#4A90E2" stroke-width="3"/>
+    <rect x="-12" y="-6" width="20" height="8" rx="2" fill="none" stroke="#4A90E2" stroke-width="2"/>
+    <circle cx="-8" cy="6" r="3" fill="none" stroke="#4A90E2" stroke-width="1"/>
+    <circle cx="8" cy="6" r="3" fill="none" stroke="#4A90E2" stroke-width="1"/>
+    <text x="-120" y="-10" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#numberGradient)">60</text>
+    <text x="-120" y="10" font-family="Arial, sans-serif" font-size="12" fill="#4A90E2">XE TẢI</text>
+    <text x="-120" y="25" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">LIGHT TRUCKS</text>
+    <text x="120" y="0" font-family="Arial, sans-serif" font-size="12" fill="#4A90E2">XE</text>
+    <text x="120" y="15" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">TRUCKS</text>
+  </g>
+  
+  <!-- 30 XE + 70 REMOOC -->
+  <g transform="translate(650, 680)">
+    <path d="M -100 0 Q -50 -20 0 0 Q 50 20 100 0" stroke="url(#flowGradient)" stroke-width="8" fill="none"/>
+    <circle cx="0" cy="0" r="35" fill="white" stroke="#4A90E2" stroke-width="3"/>
+    <rect x="-15" y="-6" width="12" height="8" rx="1" fill="none" stroke="#4A90E2" stroke-width="1"/>
+    <rect x="-1" y="-6" width="16" height="8" rx="1" fill="none" stroke="#4A90E2" stroke-width="1"/>
+    <circle cx="-10" cy="6" r="2" fill="none" stroke="#4A90E2" stroke-width="1"/>
+    <circle cx="-2" cy="6" r="2" fill="none" stroke="#4A90E2" stroke-width="1"/>
+    <circle cx="10" cy="6" r="2" fill="none" stroke="#4A90E2" stroke-width="1"/>
+    <text x="120" y="-15" font-family="Arial, sans-serif" font-size="12" fill="#4A90E2">XE ĐẦU KÉO</text>
+    <text x="120" y="-5" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">CONTAINER TRUCKS</text>
+    <text x="120" y="15" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#numberGradient)">30</text>
+    <text x="160" y="15" font-family="Arial, sans-serif" font-size="12" fill="#4A90E2">XE</text>
+    <text x="200" y="15" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#numberGradient)">70</text>
+    <text x="240" y="10" font-family="Arial, sans-serif" font-size="10" fill="#4A90E2">REMOOC</text>
+    <text x="240" y="22" font-family="Arial, sans-serif" font-size="8" fill="#6B7280">TRAILERS</text>
+  </g>
+  
+  <!-- 21 ĐƠN VỊ -->
+  <g transform="translate(150, 780)">
+    <path d="M -100 0 Q -50 20 0 0 Q 50 -20 100 0" stroke="url(#flowGradient)" stroke-width="8" fill="none"/>
+    <circle cx="0" cy="0" r="35" fill="white" stroke="#4A90E2" stroke-width="3"/>
+    <rect x="-10" y="-10" width="20" height="16" rx="2" fill="none" stroke="#4A90E2" stroke-width="2"/>
+    <path d="M -6 -6 L 6 -6 M -6 -2 L 6 -2 M -6 2 L 6 2" stroke="#4A90E2" stroke-width="1"/>
+    <text x="-150" y="-10" font-family="Arial, sans-serif" font-size="12" fill="#4A90E2">HÃNG TÀU ĐANG PHỤC VỤ</text>
+    <text x="-150" y="5" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">SUPPORTING CARRIERS</text>
+    <text x="-150" y="30" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#numberGradient)">21</text>
+    <text x="-110" y="30" font-family="Arial, sans-serif" font-size="12" fill="#4A90E2">ĐƠN VỊ</text>
+    <text x="-110" y="42" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">CARRIERS</text>
+  </g>
+  
+  <!-- 65,000 TEUS -->
+  <g transform="translate(650, 880)">
+    <path d="M -100 0 Q -50 -20 0 0 Q 50 20 100 0" stroke="url(#flowGradient)" stroke-width="8" fill="none"/>
+    <circle cx="0" cy="0" r="35" fill="white" stroke="#4A90E2" stroke-width="3"/>
+    <path d="M -12 -8 L 0 -15 L 12 -8 L 12 8 L -12 8 Z" fill="none" stroke="#4A90E2" stroke-width="2"/>
+    <rect x="-8" y="-2" width="16" height="6" fill="#4A90E2"/>
+    <text x="120" y="-15" font-family="Arial, sans-serif" font-size="12" fill="#4A90E2">SỨC CHỨA BÃI CONTAINER ĐẠT ĐƯỢC</text>
+    <text x="120" y="-5" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">DEPOT CAPACITY UPTO</text>
+    <text x="120" y="20" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="url(#numberGradient)">65,000</text>
+    <text x="230" y="20" font-family="Arial, sans-serif" font-size="14" fill="#4A90E2">TEUS</text>
+  </g>
+  
+  <!-- Connecting flow lines -->
+  <g stroke="url(#flowGradient)" stroke-width="6" fill="none" opacity="0.7">
+    <path d="M 550 80 Q 400 130 250 180"/>
+    <path d="M 250 180 Q 400 230 550 280"/>
+    <path d="M 550 280 Q 400 330 250 380"/>
+    <path d="M 250 380 Q 400 430 550 480"/>
+    <path d="M 550 480 Q 400 530 250 580"/>
+    <path d="M 250 580 Q 400 630 550 680"/>
+    <path d="M 550 680 Q 400 730 250 780"/>
+    <path d="M 250 780 Q 400 830 550 880"/>
+  </g>
+</svg>
