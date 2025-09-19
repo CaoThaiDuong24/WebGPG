@@ -4,6 +4,10 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { ClientWrapper } from "@/components/client-wrapper"
+import { ErrorBoundary } from "@/components/error-boundary"
+import { LoadingFallback } from "@/components/loading-fallback"
+import ChatBox from "@/components/chat-box"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -22,7 +26,14 @@ export default function RootLayout({
   return (
     <html lang="vi" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="font-sans antialiased">
-        <Suspense fallback={null}>{children}</Suspense>
+        <ErrorBoundary>
+          <ClientWrapper>
+            <Suspense fallback={<LoadingFallback />}>
+              {children}
+            </Suspense>
+          </ClientWrapper>
+          <ChatBox />
+        </ErrorBoundary>
         <Analytics />
       </body>
     </html>

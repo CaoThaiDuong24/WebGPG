@@ -1,10 +1,14 @@
 import React from "react"
 import { Button } from "@/components/ui/button"
 import { Mail, Phone, MapPin, Facebook, Linkedin, Youtube, ArrowRight, Sparkles } from "lucide-react"
-
+import { useLocale } from "@/components/locale-provider"
+import { useRouter } from "next/navigation"
 export function Footer() {
+  const { t } = useLocale()
+  const router = useRouter()
+  
   return (
-    <footer className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 text-white overflow-hidden z-10">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,rgba(59,130,246,0.15),transparent_50%)]" />
@@ -46,7 +50,7 @@ export function Footer() {
             </div>
             
             <p className="text-gray-300 leading-relaxed text-xs sm:text-sm">
-              Đối tác tin cậy trong hành trình phát triển bền vững, mang đến những giải pháp sáng tạo và chất lượng cao.
+              {t('footer.description')}
             </p>
             
             {/* Vertical divider */}
@@ -55,22 +59,23 @@ export function Footer() {
             {/* Social Media */}
             <div className="flex justify-center sm:justify-start space-x-3 sm:space-x-4">
               {[
-                { icon: Facebook, color: 'from-blue-600 to-blue-500' },
-                { icon: Linkedin, color: 'from-blue-700 to-blue-600' },
-                { icon: Youtube, color: 'from-red-600 to-red-500' }
+                { icon: Facebook, color: 'from-blue-600 to-blue-500', url: 'https://www.facebook.com/GenuinePartnerGroup' },
+                { icon: Linkedin, color: 'from-blue-700 to-blue-600', url: 'https://www.linkedin.com/company/genuine-partner-group/' },
+                { icon: Youtube, color: 'from-red-600 to-red-500', url: 'https://www.youtube.com/@Genuinepartnergroup' }
               ].map((social, index) => {
                 const IconComponent = social.icon;
                 return (
-                  <Button
+                  <a
                     key={index}
-                    size="sm"
-                    variant="ghost"
-                    className="relative w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-xl sm:rounded-2xl bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-110 group"
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-xl sm:rounded-2xl bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-110 group flex items-center justify-center"
                   >
                     <div className={`absolute inset-0 bg-gradient-to-r ${social.color} opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity duration-500`} />
                     <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-300" />
                     <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-300 group-hover:text-white relative z-10 transition-all duration-300 group-hover:animate-bounce" />
-                  </Button>
+                  </a>
                 );
               })}
             </div>
@@ -79,24 +84,28 @@ export function Footer() {
           {/* Quick Links */}
           <div className="space-y-6 sm:space-y-8">
             <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-6 sm:mb-8 relative flex items-center gap-2 sm:gap-3">
-              <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">Liên kết nhanh</span>
+              <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">{t('footer.sections.quick_links')}</span>
               <div className="flex-1 h-px bg-gradient-to-r from-blue-500/50 to-transparent hidden sm:block" />
             </h4>
             <div className="space-y-2 sm:space-y-3">
               {[
-                { name: 'Về chúng tôi', href: '/gioi-thieu-chung' },
-                { name: 'Hệ sinh thái', href: '#' }, 
-                { name: 'Trách nhiệm xã hội', href: '/trach-nhiem-xa-hoi' },
-                { name: 'Tin tức', href: '/tin-tuc' },
-                { name: 'Cơ hội nghề nghiệp', href: '/co-hoi-nghe-nghiep' }
+                { name: t('footer.links.about'), href: '/gioi-thieu-chung' },
+                { name: t('footer.links.ecosystem'), href: '#' }, 
+                { name: t('footer.links.responsibility'), href: '/trach-nhiem-xa-hoi' },
+                { name: t('footer.links.news'), href: '/tin-tuc' },
+                { name: t('footer.links.careers'), href: '/co-hoi-nghe-nghiep' }
               ].map((item, index) => (
-                <a key={index} href={item.href} className="group relative block p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-105">
+                <button 
+                  key={index} 
+                  onClick={() => item.href !== '#' && router.push(item.href)}
+                  className="group relative block p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-105 w-full text-left"
+                >
                   <div className="flex items-center justify-between">
                     <span className="text-sm sm:text-base text-gray-200 group-hover:text-white font-medium transition-colors duration-300">{item.name}</span>
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-blue-400 transform group-hover:translate-x-1 transition-all duration-300" />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </a>
+                </button>
               ))}
             </div>
           </div>
@@ -104,15 +113,15 @@ export function Footer() {
           {/* Services */}
           <div className="space-y-6 sm:space-y-8">
             <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-6 sm:mb-8 relative flex items-center gap-2 sm:gap-3">
-              <span className="bg-gradient-to-r from-indigo-400 to-violet-500 bg-clip-text text-transparent">Dịch vụ</span>
+              <span className="bg-gradient-to-r from-indigo-400 to-violet-500 bg-clip-text text-transparent">{t('footer.sections.services')}</span>
               <div className="flex-1 h-px bg-gradient-to-r from-indigo-500/50 to-transparent hidden sm:block" />
             </h4>
             <div className="space-y-2 sm:space-y-3">
               {[
-                'Logistics & Phụ trợ',
-                'Dịch vụ & Thương mại',
-                'Tư vấn & Công nghệ',
-                'Cộng đồng & An sinh'
+                t('footer.services.logistics'),
+                t('footer.services.commerce'),
+                t('footer.services.consulting'),
+                t('footer.services.community')
               ].map((item, index) => (
                 <a key={index} href="#" className="group relative block p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-105">
                   <div className="flex items-center justify-between">
@@ -128,14 +137,14 @@ export function Footer() {
           {/* Contact */}
           <div className="space-y-6 sm:space-y-8">
             <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-6 sm:mb-8 relative flex items-center gap-2 sm:gap-3">
-              <span className="bg-gradient-to-r from-blue-400 to-violet-500 bg-clip-text text-transparent">Liên hệ</span>
+              <span className="bg-gradient-to-r from-blue-400 to-violet-500 bg-clip-text text-transparent">{t('footer.sections.contact')}</span>
               <div className="flex-1 h-px bg-gradient-to-r from-blue-500/50 to-transparent hidden sm:block" />
             </h4>
             <div className="space-y-3 sm:space-y-4">
               {[
-                { icon: MapPin, label: 'Địa chỉ', text: 'Việt Nam', gradient: 'from-blue-500 to-indigo-500' },
-                { icon: Phone, label: 'Điện thoại', text: '+84 xxx xxx xxx', gradient: 'from-indigo-500 to-violet-500' },
-                { icon: Mail, label: 'Email', text: 'info@genuinepartner.com', gradient: 'from-blue-500 to-indigo-500' }
+                { icon: MapPin, label: t('footer.contact.address'), text: t('footer.contact.country'), gradient: 'from-blue-500 to-indigo-500' },
+                { icon: Phone, label: t('footer.contact.phone'), text: t('footer.contact.phone_number'), gradient: 'from-indigo-500 to-violet-500' },
+                { icon: Mail, label: t('footer.contact.email'), text: t('footer.contact.email_address'), gradient: 'from-blue-500 to-indigo-500' }
               ].map((item, index) => {
                 const IconComponent = item.icon;
                 return (
@@ -174,16 +183,16 @@ export function Footer() {
                   © 2024 <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent font-bold">Genuine Partner Group</span>
                 </p>
                 <div className="w-1 h-1 bg-gray-500 rounded-full" />
-                <p className="text-gray-400 text-xs sm:text-sm">Tất cả quyền được bảo lưu.</p>
+                <p className="text-gray-400 text-xs sm:text-sm">{t('footer.rights')}</p>
               </div>
               
               {/* Footer Links */}
               <div className="flex flex-wrap justify-center lg:justify-end items-center gap-4 sm:gap-6 lg:gap-8">
                 {[
-                  'Chính sách bảo mật',
-                  'Điều khoản sử dụng', 
-                  'Sitemap',
-                  'Hỗ trợ'
+                  t('footer.legal.privacy'),
+                  t('footer.legal.terms'), 
+                  t('footer.legal.sitemap'),
+                  t('footer.legal.support')
                 ].map((item, index) => (
                   <a key={index} href="#" className="group relative text-gray-400 hover:text-white text-xs sm:text-sm font-medium transition-all duration-300">
                     <span className="relative z-10">{item}</span>
@@ -197,14 +206,14 @@ export function Footer() {
             <div className="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-white/10">
               <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
                 <div className="flex items-center space-x-2 text-gray-400 text-xs order-2 sm:order-1">
-                  <span>Được phát triển với</span>
-                  <span className="text-red-400 animate-pulse">♥</span>
-                  <span>tại Việt Nam</span>
+                  <span>{t('footer.bottom.developed')}</span>
+                  <span className="text-red-400 animate-pulse">{t('footer.bottom.love')}</span>
+                  <span>{t('footer.bottom.location')}</span>
                 </div>
                 <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-gray-400 text-xs order-1 sm:order-2">
-                  <span>Phiên bản 2.0.1</span>
+                  <span>{t('footer.bottom.version')}</span>
                   <div className="hidden sm:block w-1 h-1 bg-gray-500 rounded-full" />
-                  <span>Cập nhật lần cuối: 2024</span>
+                  <span>{t('footer.bottom.last_update')}</span>
                 </div>
               </div>
             </div>

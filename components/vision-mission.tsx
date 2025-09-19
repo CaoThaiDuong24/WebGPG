@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { 
@@ -19,32 +19,86 @@ import {
   Play
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { fadeInUp, fadeInLeft, fadeInRight, fadeInScale, staggerContainer, hoverScale } from './animations';
+import { fadeInUp, fadeInLeft, fadeInRight, fadeInScale, staggerContainer, hoverScale, floating, pulse, textReveal, gradientText } from './animations';
+import { useLocale } from '@/components/locale-provider';
 
 const VisionMission = () => {
+  const { t } = useLocale();
+  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+  const [animatedItems, setAnimatedItems] = useState<Set<number>>(new Set())
+
   const coreValues = [
     {
       icon: Shield,
-      title: "Sự tin tưởng",
-      description: "Xây dựng niềm tin vững chắc với khách hàng, đối tác và cộng đồng thông qua sự minh bạch, trung thực trong mọi hoạt động kinh doanh.",
+      title: t('vision_mission.core_values.values.trust.title'),
+      description: t('vision_mission.core_values.values.trust.description'),
       color: "from-blue-500 to-blue-600",
       bgColor: "from-blue-50 to-blue-100"
     },
     {
       icon: Heart,
-      title: "Tinh thần trách nhiệm",
-      description: "Thể hiện tinh thần trách nhiệm cao trong mọi công việc, cam kết mang lại giá trị tốt nhất cho khách hàng và xã hội.",
+      title: t('vision_mission.core_values.values.responsibility.title'),
+      description: t('vision_mission.core_values.values.responsibility.description'),
       color: "from-green-500 to-emerald-500",
       bgColor: "from-green-50 to-emerald-100"
     },
     {
       icon: Leaf,
-      title: "Phát triển bền vững",
-      description: "Hướng đến sự phát triển bền vững, cân bằng giữa lợi ích kinh tế, xã hội và môi trường cho thế hệ hiện tại và tương lai.",
+      title: t('vision_mission.core_values.values.sustainability.title'),
+      description: t('vision_mission.core_values.values.sustainability.description'),
       color: "from-emerald-500 to-teal-500",
       bgColor: "from-emerald-50 to-teal-100"
     }
   ];
+
+  // Memoize particle positions and animations for performance
+  const particleData = useMemo(() => {
+    return {
+      floatingParticles: Array.from({ length: 12 }, (_, i) => ({
+        id: i,
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+        xOffset: Math.random() * 20 - 10,
+        duration: 4 + Math.random() * 3,
+        delay: Math.random() * 3
+      })),
+      sparkleParticles: Array.from({ length: 6 }, (_, i) => ({
+        id: i,
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+        duration: 2 + Math.random() * 2,
+        delay: Math.random() * 2
+      }))
+    }
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          // Animate items with staggered delay
+          coreValues.forEach((_, index) => {
+            setTimeout(() => {
+              setAnimatedItems(prev => new Set([...prev, index]))
+            }, index * 200)
+          })
+        }
+      },
+      { threshold: 0.2 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current)
+      }
+    }
+  }, [coreValues])
 
 
   return (
@@ -127,23 +181,47 @@ const VisionMission = () => {
           />
           
           {/* Additional floating particles */}
-          {[...Array(8)].map((_, i) => (
+          {particleData.floatingParticles.map((particle) => (
             <motion.div
-              key={i}
+              key={particle.id}
               className="absolute w-2 h-2 rounded-full bg-blue-400/60"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: `${particle.left}%`,
+                top: `${particle.top}%`,
               }}
               animate={{
-                y: [0, -20, 0],
+                y: [0, -30, 0],
                 opacity: [0, 1, 0],
-                scale: [0, 1, 0]
+                scale: [0, 1.2, 0],
+                x: [0, particle.xOffset, 0]
               }}
               transition={{
-                duration: 3 + Math.random() * 2,
+                duration: particle.duration,
                 repeat: Infinity,
-                delay: Math.random() * 2,
+                delay: particle.delay,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+          
+          {/* Additional sparkle effects */}
+          {particleData.sparkleParticles.map((particle) => (
+            <motion.div
+              key={`sparkle-${particle.id}`}
+              className="absolute w-1 h-1 rounded-full bg-yellow-400/80"
+              style={{
+                left: `${particle.left}%`,
+                top: `${particle.top}%`,
+              }}
+              animate={{
+                scale: [0, 1, 0],
+                opacity: [0, 1, 0],
+                rotate: [0, 180, 360]
+              }}
+              transition={{
+                duration: particle.duration,
+                repeat: Infinity,
+                delay: particle.delay,
                 ease: "easeInOut"
               }}
             />
@@ -172,7 +250,7 @@ const VisionMission = () => {
                 >
                   <Globe className="w-4 h-4" />
                 </motion.div>
-                <span className="text-white/90">TẦM NHÌN • SỨ MỆNH • GIÁ TRỊ CỐT LÕI</span>
+                <span className="text-white/90">{t('vision_mission.hero.badge')}</span>
                 <motion.div
                   animate={{ 
                     scale: [1, 1.2, 1],
@@ -191,20 +269,59 @@ const VisionMission = () => {
               variants={fadeInUp}
             >
               <motion.span 
-                className="block mb-2 text-white"
+                className="block mb-2"
+                style={{
+                  background: "linear-gradient(45deg, #ffffff, #60a5fa, #a78bfa, #ffffff)",
+                  backgroundSize: "300% 300%",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent"
+                }}
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                  opacity: 1,
+                  y: 0
+                }}
+                transition={{
+                  backgroundPosition: {
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "linear"
+                  },
+                  opacity: { duration: 0.8, delay: 0.2 },
+                  y: { duration: 0.8, delay: 0.2 }
+                }}
                 initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
               >
-                TẦM NHÌN & SỨ MỆNH
+{t('vision_mission.hero.title1')}
               </motion.span>
               <motion.span 
-                className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-blue-200"
+                className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                style={{
+                  background: "linear-gradient(45deg, #60a5fa, #a78bfa, #ec4899, #60a5fa)",
+                  backgroundSize: "300% 300%",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent"
+                }}
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                  opacity: 1,
+                  y: 0
+                }}
+                transition={{
+                  backgroundPosition: {
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "linear",
+                    delay: 0.5
+                  },
+                  opacity: { duration: 0.8, delay: 0.4 },
+                  y: { duration: 0.8, delay: 0.4 }
+                }}
                 initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
               >
-                TCT ĐỐI TÁC CHÂN THẬT
+{t('vision_mission.hero.title2')}
               </motion.span>
             </motion.h1>
 
@@ -219,9 +336,19 @@ const VisionMission = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                <span className="font-bold text-blue-200">Định hướng tương lai</span> với 
-                <span className="font-semibold text-white"> tầm nhìn rõ ràng</span> và 
-                <span className="font-semibold text-white"> sứ mệnh bền vững</span>
+                <motion.span 
+                  className="font-bold text-blue-200"
+                  animate={{ 
+                    textShadow: [
+                      "0 0 0px rgba(96, 165, 250, 0)",
+                      "0 0 20px rgba(96, 165, 250, 0.5)",
+                      "0 0 0px rgba(96, 165, 250, 0)"
+                    ]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  {t('vision_mission.hero.description1')}
+                </motion.span>
               </motion.p>
               <motion.p 
                 className="text-base sm:text-lg text-white/80 leading-relaxed"
@@ -229,9 +356,7 @@ const VisionMission = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
-                Chúng tôi cam kết mang lại 
-                <span className="font-medium text-blue-200"> giá trị • đổi mới • phát triển bền vững</span> 
-                cho doanh nghiệp và cộng đồng
+                {t('vision_mission.hero.description2')}
               </motion.p>
             </motion.div>
 
@@ -269,7 +394,7 @@ const VisionMission = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 1.2 }}
                   >
-                    "Con đường đạt đến thành công không gì hơn trí tuệ và lòng nhẫn nại"
+                    {t('vision_mission.hero.quote1')}
                   </motion.p>
                   
                   <motion.p 
@@ -278,7 +403,7 @@ const VisionMission = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 1.4 }}
                   >
-                    "Bền chắc trong sự thành công không gì hơn sự chân thật và tình yêu thương"
+                    {t('vision_mission.hero.quote2')}
                   </motion.p>
                   
                   <motion.div 
@@ -294,7 +419,7 @@ const VisionMission = () => {
                       transition={{ duration: 0.8, delay: 1.8 }}
                     />
                     <p className="text-sm text-blue-200 font-medium px-4">
-                      Thượng tọa Thích Nghiêm Đạo
+                      {t('vision_mission.hero.quote_author')}
                     </p>
                     <motion.div 
                       className="w-8 h-px bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent"
@@ -355,7 +480,7 @@ const VisionMission = () => {
               >
                 <Eye className="w-4 h-4 text-white" />
               </motion.div>
-              Tầm nhìn
+              {t('vision_mission.vision.badge')}
             </motion.div>
             <motion.h2 
               className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6"
@@ -367,7 +492,7 @@ const VisionMission = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                Tương lai
+                {t('vision_mission.vision.title1')}
               </motion.span>
               <motion.span 
                 className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent"
@@ -375,13 +500,22 @@ const VisionMission = () => {
                   backgroundSize: "300% 300%"
                 }}
                 animate={{
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                  opacity: 1,
+                  y: 0
+                }}
+                transition={{
+                  backgroundPosition: {
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "linear"
+                  },
+                  opacity: { duration: 0.8, delay: 0.2 },
+                  y: { duration: 0.8, delay: 0.2 }
                 }}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
               >
-                chúng tôi hướng đến
+                {t('vision_mission.vision.title2')}
               </motion.span>
             </motion.h2>
             <motion.div 
@@ -434,7 +568,7 @@ const VisionMission = () => {
                     <Eye className="w-10 h-10 text-white" />
                   </motion.div>
                   <div>
-                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Tầm nhìn</h3>
+                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{t('vision_mission.vision.section_title')}</h3>
                     <motion.div 
                       className="w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"
                       initial={{ scaleX: 0 }}
@@ -451,11 +585,7 @@ const VisionMission = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                   >
-                    Bằng việc ứng dụng các công nghệ tiên tiến và thông minh, chúng tôi kiến tạo và kết nối các giá trị giúp 
-                    <span className="font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                      {" "}hàng hoá lưu thông thông suốt trên thị trường một cách hiệu quả và tin cậy
-                    </span> 
-                    {" "}để phát triển cuộc sống con người, doanh nghiệp và nền kinh tế một cách bền vững.
+                    {t('vision_mission.vision.description1')}
                   </motion.p>
                   <motion.p 
                     className="text-lg md:text-xl text-gray-600 leading-relaxed mt-6"
@@ -463,7 +593,7 @@ const VisionMission = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                   >
-                    Từ đó chúng tôi đóng góp để xây dựng một xã hội tốt đẹp hơn bằng việc cung cấp các sản phẩm và dịch vụ chất lượng phù hợp với xu hướng phát triển của thế giới nhằm nâng cao chất lượng đời sống của nhân viên, đối tác, khách hàng và công chúng.
+                    {t('vision_mission.vision.description2')}
                   </motion.p>
                 </div>
               </CardContent>
@@ -520,7 +650,7 @@ const VisionMission = () => {
               >
                 <Target className="w-4 h-4 text-white" />
               </motion.div>
-              Sứ mệnh
+              {t('vision_mission.mission.badge')}
             </motion.div>
             <motion.h2 
               className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6"
@@ -532,7 +662,7 @@ const VisionMission = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                Sứ mệnh
+                {t('vision_mission.mission.title1')}
               </motion.span>
               <motion.span 
                 className="block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
@@ -540,13 +670,22 @@ const VisionMission = () => {
                   backgroundSize: "300% 300%"
                 }}
                 animate={{
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                  opacity: 1,
+                  y: 0
+                }}
+                transition={{
+                  backgroundPosition: {
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "linear"
+                  },
+                  opacity: { duration: 0.8, delay: 0.2 },
+                  y: { duration: 0.8, delay: 0.2 }
                 }}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
               >
-                của chúng tôi
+                {t('vision_mission.mission.title2')}
               </motion.span>
             </motion.h2>
             <motion.div 
@@ -599,7 +738,7 @@ const VisionMission = () => {
                     <Target className="w-10 h-10 text-white" />
                   </motion.div>
                   <div>
-                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Sứ mệnh</h3>
+                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{t('vision_mission.mission.section_title')}</h3>
                     <motion.div 
                       className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"
                       initial={{ scaleX: 0 }}
@@ -616,10 +755,7 @@ const VisionMission = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                   >
-                    Không ngừng đổi mới và cải tiến công nghệ để mang đến cho doanh nghiệp và khách hàng các 
-                    <span className="font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                      {" "}sản phẩm và dịch vụ chất lượng
-                    </span>.
+                    {t('vision_mission.mission.description1')}
                   </motion.p>
                   <motion.p 
                     className="text-lg md:text-xl text-gray-600 leading-relaxed mt-6"
@@ -627,7 +763,7 @@ const VisionMission = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                   >
-                    Không ngừng kiến tạo và cung cấp giá trị gia tăng cho tất cả các bên liên quan, góp phần tích cực vào sự phát triển bền vững của xã hội và đảm bảo giảm thiểu tác hại đến môi trường.
+                    {t('vision_mission.mission.description2')}
                   </motion.p>
                 </div>
               </CardContent>
@@ -638,6 +774,7 @@ const VisionMission = () => {
 
       {/* Core Values Section */}
       <motion.section 
+        ref={sectionRef}
         className="relative py-16 overflow-hidden bg-gradient-to-br from-emerald-50 via-green-50/40 to-teal-50/60"
         initial="initial"
         whileInView="animate"
@@ -684,19 +821,34 @@ const VisionMission = () => {
               >
                 <Star className="w-4 h-4 text-white" />
               </motion.div>
-              Giá trị cốt lõi
+              {t('vision_mission.core_values.badge')}
             </motion.div>
             <motion.h2 
               className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6"
               variants={fadeInUp}
             >
               <motion.span 
-                className="block text-gray-900 mb-2"
+                className="block bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 bg-clip-text text-transparent"
+                style={{
+                  backgroundSize: "300% 300%"
+                }}
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                  opacity: 1,
+                  y: 0
+                }}
+                transition={{
+                  backgroundPosition: {
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "linear"
+                  },
+                  opacity: { duration: 0.6 },
+                  y: { duration: 0.6 }
+                }}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
               >
-                Giá trị cốt lõi
+                {t('vision_mission.core_values.title')}
               </motion.span>
             </motion.h2>
             <motion.div 
@@ -711,7 +863,7 @@ const VisionMission = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              "Thành công của bạn là thành công của chúng tôi"
+              {t('vision_mission.core_values.subtitle')}
             </motion.p>
           </motion.div>
 
@@ -812,37 +964,21 @@ const VisionMission = () => {
               >
                 <Crown className="w-5 h-5 text-yellow-400" />
               </motion.div>
-              <span className="text-white/90 font-medium">Cùng chúng tôi xây dựng tương lai</span>
+              <span className="text-white/90 font-medium">{t('vision_mission.cta.badge')}</span>
             </motion.div>
 
             <motion.h2 
               className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 leading-tight"
               variants={fadeInUp}
             >
-              Sẵn sàng{" "}
-              <motion.span 
-                className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent"
-                style={{
-                  backgroundSize: "300% 300%"
-                }}
-                animate={{
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              >
-                hợp tác?
-              </motion.span>
+              {t('vision_mission.cta.title')}
             </motion.h2>
 
             <motion.p 
               className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed"
               variants={fadeInUp}
             >
-              Hãy liên hệ với chúng tôi để tìm hiểu thêm về tầm nhìn, sứ mệnh và cách chúng tôi có thể hỗ trợ doanh nghiệp của bạn
+              {t('vision_mission.cta.description')}
             </motion.p>
 
             <motion.div 
@@ -865,7 +1001,7 @@ const VisionMission = () => {
                     >
                       <Rocket className="w-5 h-5" />
                     </motion.div>
-                    Liên hệ ngay
+                    {t('vision_mission.cta.buttons.contact')}
                     <motion.div
                       animate={{ x: [0, 5, 0] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
@@ -893,7 +1029,7 @@ const VisionMission = () => {
                     >
                       <Play className="w-5 h-5" />
                     </motion.div>
-                    Tìm hiểu thêm
+                    {t('vision_mission.cta.buttons.learn_more')}
                     <motion.div
                       animate={{ rotate: [0, 10, -10, 0] }}
                       transition={{ duration: 2, repeat: Infinity }}

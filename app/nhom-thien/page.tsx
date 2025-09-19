@@ -7,11 +7,16 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Heart, Users, Award, ArrowRight, CheckCircle, Star, Sparkles, Globe, Building2, Store, Truck, Lightbulb, BookOpen, Target, Zap, HandHeart, Shield, Home } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+import { motion } from "framer-motion"
+import { fadeInUp, fadeInLeft, fadeInRight, fadeInScale, staggerContainer, hoverScale, floating, pulse, textReveal, gradientText } from "@/components/animations"
 import { ScrollIndicator } from "@/components/scroll-indicator"
 import { CustomCursor } from "@/components/custom-cursor"
 import { ParticleSystem } from "@/components/particle-system"
+import { LoadingAnimation } from "@/components/loading-animation"
+import { useTranslations } from '@/hooks/use-i18n'
 
 export default function NhomThienPage() {
+  const t = useTranslations()
   const sectionRef = useRef<HTMLElement>(null)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -38,54 +43,86 @@ export default function NhomThienPage() {
 
   const activities = [
     {
-      title: "Cộng đồng Công tác xã hội",
-      description: "Với sự ra đời Công ty TNHH Cộng đồng Công tác xã hội (SWC), SWC là một doanh nghiệp xã hội hoạt động kinh doanh hướng về các hoạt động về giáo dục, y tế và các hoạt động công tác xã hội.",
+      title: t('nhom_thien.activities.list.social_work.title'),
+      description: t('nhom_thien.activities.list.social_work.description'),
       icon: HandHeart,
       gradient: "from-rose-500 to-pink-500",
-      details: "TCT ĐTCT định hướng xây dựng những dự án và chương trình xã hội mang tính thường xuyên và bền vững, tạo dựng mô hình kinh doanh xã hội giúp cộng đồng phát triển tốt đẹp hơn."
+      details: t('nhom_thien.activities.list.social_work.details')
     },
     {
-      title: "Các tổ chức phi lợi nhuận",
-      description: "TCT ĐTCT phối hợp cùng Trung tâm Công tác xã hội Thanh thiếu niên Việt Nam (YSW), các đối tác đồng hành, Hội Liên hiệp Thanh niên Việt Nam các tỉnh, thành phố triển khai và thực hiện Dự án 'Xây dựng 100 cầu An Yên'.",
+      title: t('nhom_thien.activities.list.non_profit.title'),
+      description: t('nhom_thien.activities.list.non_profit.description'),
       icon: Shield,
       gradient: "from-emerald-500 to-green-500",
-      details: "Đây là một trong những dự án trọng điểm với mục tiêu từng bước xoá bỏ, thay thế cầu tạm, xây dựng nông thôn mới; giúp các em học sinh được đến trường an toàn; bà con đi lại dễ dàng hơn."
+      details: t('nhom_thien.activities.list.non_profit.details')
     },
     {
-      title: "Phúc lợi xã hội",
-      description: "Thúc đẩy hoạt động cộng đồng và phúc lợi xã hội của Hệ sinh thái TCT ĐTCT tạo điều kiện phát triển bền vững.",
+      title: t('nhom_thien.activities.list.social_welfare.title'),
+      description: t('nhom_thien.activities.list.social_welfare.description'),
       icon: Home,
       gradient: "from-blue-500 to-indigo-500",
-      details: "Chúng tôi tin rằng việc phục vụ cộng đồng không chỉ là trách nhiệm xã hội mà còn là một phần tạo dựng giá trị và tôn vinh tinh thần nhân ái."
+      details: t('nhom_thien.activities.list.social_welfare.details')
     }
   ]
 
   const achievements = [
     {
-      number: "25+",
-      label: "Bạn nhỏ",
-      description: "Phẫu thuật hở hàm ếch thành công",
+      number: t('nhom_thien.achievements.stats.children_helped.number'),
+      label: t('nhom_thien.achievements.stats.children_helped.label'),
+      description: t('nhom_thien.achievements.stats.children_helped.description'),
       icon: Heart,
       gradient: "from-rose-500 to-pink-500"
     },
     {
-      number: "12",
-      label: "Cây cầu",
-      description: "An Yên được xây dựng",
+      number: t('nhom_thien.achievements.stats.bridges_built.number'),
+      label: t('nhom_thien.achievements.stats.bridges_built.label'),
+      description: t('nhom_thien.achievements.stats.bridges_built.description'),
       icon: Shield,
       gradient: "from-emerald-500 to-green-500"
     },
     {
-      number: "12,5 tỷ",
-      label: "Quyên góp",
-      description: "Thiện nguyện",
+      number: t('nhom_thien.achievements.stats.donations.number'),
+      label: t('nhom_thien.achievements.stats.donations.label'),
+      description: t('nhom_thien.achievements.stats.donations.description'),
       icon: Award,
       gradient: "from-blue-500 to-indigo-500"
     }
   ]
 
+  const companies = [
+    {
+      name: "CXYT",
+      description: t('nhom_thien.companies.list.cxyt.description'),
+      services: t('nhom_thien.companies.list.cxyt.services'),
+      gradient: "from-rose-500 to-pink-500",
+      logo: "/Nhóm Thiện/CXYT logo.png"
+    },
+    {
+      name: "HyHy Community",
+      description: t('nhom_thien.companies.list.hyhy.description'),
+      services: t('nhom_thien.companies.list.hyhy.services'),
+      gradient: "from-emerald-500 to-green-500",
+      logo: "/Nhóm Thiện/LOGO HY HY FINAL-01.png"
+    },
+    {
+      name: "SWC",
+      description: t('nhom_thien.companies.list.swc.description'),
+      services: t('nhom_thien.companies.list.swc.services'),
+      gradient: "from-blue-500 to-indigo-500",
+      logo: "/Nhóm Thiện/Logo SWC-01.png"
+    },
+    {
+      name: "Bếp Nhà Từ Tâm",
+      description: t('nhom_thien.companies.list.bep_nha.description'),
+      services: t('nhom_thien.companies.list.bep_nha.services'),
+      gradient: "from-orange-500 to-red-500",
+      logo: "/Nhóm Thiện/Logo Bep nha Tu tam-01.png"
+    }
+  ]
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-rose-50/30 to-pink-50/50 relative overflow-hidden">
+      <LoadingAnimation />
       <ParticleSystem />
       <CustomCursor />
       <Header />
@@ -93,18 +130,72 @@ export default function NhomThienPage() {
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-rose-400/20 to-pink-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-emerald-400/20 to-green-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-blue-400/10 to-indigo-600/10 rounded-full blur-2xl animate-pulse" style={{ animationDuration: '12s', animationDelay: '4s' }} />
+        <motion.div 
+          className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-rose-400/20 to-pink-600/20 rounded-full blur-3xl"
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3],
+            rotate: [0, 180, 360]
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-emerald-400/20 to-green-600/20 rounded-full blur-3xl"
+          animate={{ 
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.5, 0.2],
+            x: [0, 30, 0],
+            y: [0, -20, 0]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        />
+        <motion.div 
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-blue-400/10 to-indigo-600/10 rounded-full blur-2xl"
+          animate={{ 
+            scale: [1, 1.4, 1],
+            opacity: [0.4, 0.7, 0.4],
+            rotate: [0, -180, -360]
+          }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 4 }}
+        />
+        
+        {/* Additional floating particles */}
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 rounded-full bg-rose-400/60"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0, 1, 0],
+              scale: [0, 1, 0]
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: "easeInOut"
+            }}
+          />
+        ))}
       </div>
       
       {/* Hero Section */}
-      <section ref={sectionRef} className="relative pt-24 md:pt-32 pb-12 md:pb-20 overflow-hidden">
+      <motion.section 
+        ref={sectionRef} 
+        className="relative pt-24 md:pt-32 pb-12 md:pb-20 overflow-hidden"
+        initial="initial"
+        animate="animate"
+        variants={staggerContainer}
+      >
         {/* Background Image with Enhanced Effects */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900/30 via-rose-900/20 to-pink-900/30" />
           <img 
-            src="/community-volunteers-helping-children-and-families.jpg" 
+            src="/thien.jpg" 
             alt="Community Volunteers" 
             className="w-full h-full object-cover opacity-15"
           />
@@ -120,57 +211,149 @@ export default function NhomThienPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 md:mb-20">
             {/* Enhanced Badge */}
-            <div className="mb-6 md:mb-8">
-              <div className="inline-flex items-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 backdrop-blur-xl border border-rose-200/60 rounded-full text-xs md:text-sm font-semibold shadow-2xl transition-all duration-500 hover:scale-110 group relative overflow-hidden bg-gradient-to-r from-white/20 via-rose-50/30 to-pink-50/20">
+            <motion.div className="mb-6 md:mb-8" variants={fadeInUp}>
+              <motion.div 
+                className="inline-flex items-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 backdrop-blur-xl border border-rose-200/60 rounded-full text-xs md:text-sm font-semibold shadow-2xl transition-all duration-500 hover:scale-110 group relative overflow-hidden bg-gradient-to-r from-white/20 via-rose-50/30 to-pink-50/20"
+                whileHover={{ scale: 1.05, y: -2 }}
+                transition={{ duration: 0.3 }}
+              >
                 <div className="absolute inset-0 bg-gradient-to-r from-rose-500/10 via-pink-500/10 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <Heart className="w-4 md:w-5 h-4 md:h-5 animate-pulse text-rose-600" style={{ animationDuration: '4s' }} />
-                <span className="font-bold tracking-wide text-xs md:text-sm bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-pink-600 relative z-10">NHÓM THIỆN • CỘNG ĐỒNG & AN SINH XÃ HỘI</span>
-                <Sparkles className="w-4 md:w-5 h-4 md:h-5 text-pink-600 animate-pulse" />
-              </div>
-            </div>
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                >
+                  <Heart className="w-4 md:w-5 h-4 md:h-5 text-rose-600" />
+                </motion.div>
+                <span className="font-bold tracking-wide text-xs md:text-sm bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-pink-600 relative z-10">{t('nhom_thien.hero.badge')}</span>
+                <motion.div
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <Sparkles className="w-4 md:w-5 h-4 md:h-5 text-pink-600" />
+                </motion.div>
+              </motion.div>
+            </motion.div>
 
             {/* Title */}
-            <h1 className={`text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-8 md:mb-12 transition-all duration-1000 leading-tight ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-600 via-pink-600 to-emerald-600 block sm:inline">
-                Nhóm Thiện
-              </span>
-            </h1>
+            <motion.h1 
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-8 md:mb-12 leading-tight"
+              variants={fadeInUp}
+            >
+              <motion.span 
+                className="block"
+                style={{
+                  background: "linear-gradient(45deg, #f43f5e, #ec4899, #10b981, #f43f5e)",
+                  backgroundSize: "300% 300%",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent"
+                }}
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              >
+{t('nhom_thien.hero.title')}
+              </motion.span>
+            </motion.h1>
 
             {/* Enhanced Quote */}
-            <div className={`max-w-4xl lg:max-w-6xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <Card className="bg-white/80 backdrop-blur-xl border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-rose-50/60 via-pink-50/40 to-emerald-50/60" />
-                {/* Animated Background Elements */}
-                <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
-                  <img 
-                    src="/community-volunteers-helping-children-and-families.jpg" 
-                    alt="Community" 
-                    className="w-full h-full object-cover rounded-full"
-                  />
-                </div>
-                <div className="absolute bottom-0 left-0 w-24 h-24 md:w-36 md:h-36 bg-gradient-to-br from-rose-400/20 to-pink-600/20 rounded-full blur-2xl animate-pulse" style={{ animationDuration: '6s' }} />
-                <CardContent className="p-6 sm:p-8 md:p-10 lg:p-12 relative z-10">
-                  <div className="text-center">
-                    <div className="w-16 h-1 bg-gradient-to-r from-rose-500 to-pink-500 mx-auto mb-6 rounded-full" />
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 md:mb-8">
-                      <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-pink-600">
-                        Cộng đồng & An sinh Xã hội
-                      </span>
-                    </h2>
-                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6 md:mb-8 font-medium">
-                      Thúc đẩy hoạt động cộng đồng và phúc lợi xã hội của Hệ sinh thái TCT ĐTCT tạo điều kiện phát triển bền vững
-                    </p>
-                    <div className="w-16 h-1 bg-gradient-to-r from-pink-500 to-emerald-500 mx-auto mt-6 rounded-full" />
+            <motion.div 
+              className="max-w-4xl lg:max-w-6xl mx-auto"
+              variants={fadeInUp}
+            >
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Card className="bg-white/80 backdrop-blur-xl border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-rose-50/60 via-pink-50/40 to-emerald-50/60" />
+                  {/* Animated Background Elements */}
+                  <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+                    <img 
+                      src="/thien.jpg" 
+                      alt="Community" 
+                      className="w-full h-full object-cover rounded-full"
+                    />
                   </div>
-                </CardContent>
-              </Card>
-            </div>
+                  <motion.div 
+                    className="absolute bottom-0 left-0 w-24 h-24 md:w-36 md:h-36 bg-gradient-to-br from-rose-400/20 to-pink-600/20 rounded-full blur-2xl"
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                      opacity: [0.3, 0.6, 0.3]
+                    }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                  <CardContent className="p-6 sm:p-8 md:p-10 lg:p-12 relative z-10">
+                    <div className="text-center">
+                      <motion.div 
+                        className="w-16 h-1 bg-gradient-to-r from-rose-500 to-pink-500 mx-auto mb-6 rounded-full"
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        viewport={{ once: true }}
+                      />
+                      <motion.h2 
+                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 md:mb-8"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                        viewport={{ once: true }}
+                      >
+                        <motion.span 
+                          className="bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-pink-600"
+                          animate={{
+                            backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                          }}
+                          transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "linear"
+                          }}
+                          style={{
+                            backgroundSize: "200% 200%"
+                          }}
+                        >
+{t('nhom_thien.hero.subtitle')}
+                        </motion.span>
+                      </motion.h2>
+                      <motion.p 
+                        className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-6 md:mb-8 font-medium"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        viewport={{ once: true }}
+                      >
+{t('nhom_thien.hero.description')}
+                      </motion.p>
+                      <motion.div 
+                        className="w-16 h-1 bg-gradient-to-r from-pink-500 to-emerald-500 mx-auto mt-6 rounded-full"
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        transition={{ duration: 0.8, delay: 0.5 }}
+                        viewport={{ once: true }}
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Overview Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-rose-50/30 to-pink-50/50 relative overflow-hidden">
+      <motion.section 
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-rose-50/30 to-pink-50/50 relative overflow-hidden"
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={staggerContainer}
+      >
         {/* Elegant Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
@@ -180,58 +363,167 @@ export default function NhomThienPage() {
           }} />
         </div>
         
+        {/* Animated Background Elements */}
+        <motion.div 
+          className="absolute top-20 left-10 w-24 h-24 bg-gradient-to-r from-rose-400/10 to-pink-400/10 rounded-full blur-xl"
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3],
+            rotate: [0, 180, 360]
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-emerald-400/10 to-green-400/10 rounded-full blur-xl"
+          animate={{ 
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.5, 0.2],
+            x: [0, 20, 0],
+            y: [0, -15, 0]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        />
+        
         <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-rose-600 to-pink-600 rounded-full text-white text-sm font-semibold mb-8 shadow-lg">
-              <Heart className="w-5 h-5" />
-              VAI TRÒ CỦA NHÓM THIỆN
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6">
-              Vai trò của Nhóm Thiện
-            </h2>
-            <p className="text-xl text-slate-600 leading-relaxed max-w-4xl mx-auto">
-              Nhóm Thiện tập trung vào việc thúc đẩy hoạt động cộng đồng và phúc lợi xã hội. Chúng tôi cam kết tạo dựng mô hình kinh doanh xã hội giúp cộng đồng phát triển tốt đẹp hơn và tôn vinh tinh thần nhân ái.
-            </p>
-          </div>
+          <motion.div className="text-center mb-16" variants={staggerContainer}>
+            <motion.div variants={fadeInUp}>
+              <motion.div 
+                className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-rose-600 to-pink-600 rounded-full text-white text-sm font-semibold mb-8 shadow-lg"
+                whileHover={{ scale: 1.05, y: -2 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                >
+                  <Heart className="w-5 h-5" />
+                </motion.div>
+{t('nhom_thien.overview.badge')}
+              </motion.div>
+            </motion.div>
+            <motion.h2 
+              className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6"
+              variants={fadeInUp}
+            >
+              <motion.span 
+                style={{
+                  background: "linear-gradient(45deg, #1e293b, #f43f5e, #1e293b)",
+                  backgroundSize: "300% 300%",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent"
+                }}
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              >
+{t('nhom_thien.overview.title')}
+              </motion.span>
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-slate-600 leading-relaxed max-w-4xl mx-auto"
+              variants={fadeInUp}
+            >
+{t('nhom_thien.overview.description')}
+            </motion.p>
+          </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/90 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-rose-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                    <HandHeart className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-rose-600 transition-colors">
-                    Tinh thần Nhân ái
-                  </h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    Phục vụ cộng đồng không chỉ là trách nhiệm xã hội mà còn là một phần tạo dựng giá trị
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch"
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeInScale} className="h-full">
+              <motion.div
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -10,
+                  boxShadow: "0 20px 40px rgba(244, 63, 94, 0.2)"
+                }}
+                transition={{ duration: 0.3 }}
+                className="h-full"
+              >
+                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/90 backdrop-blur-sm h-full flex flex-col">
+                  <CardContent className="p-8 flex-1 flex flex-col">
+                    <div className="text-center flex-1 flex flex-col justify-center">
+                      <motion.div 
+                        className="w-20 h-20 bg-gradient-to-r from-rose-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg"
+                        whileHover={{ rotate: 12, scale: 1.1 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <motion.div
+                          animate={{ 
+                            boxShadow: [
+                              "0 0 0px rgba(244, 63, 94, 0)",
+                              "0 0 20px rgba(244, 63, 94, 0.3)",
+                              "0 0 0px rgba(244, 63, 94, 0)"
+                            ]
+                          }}
+                          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                          className="w-full h-full rounded-2xl flex items-center justify-center"
+                        >
+                          <HandHeart className="w-10 h-10 text-white" />
+                        </motion.div>
+                      </motion.div>
+                      <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-rose-600 transition-colors">
+{t('nhom_thien.overview.roles.compassion.title')}
+                      </h3>
+                      <p className="text-slate-600 leading-relaxed">
+{t('nhom_thien.overview.roles.compassion.description')}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </motion.div>
 
-            <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/90 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
-                    <Shield className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-emerald-600 transition-colors">
-                    Phát triển Bền vững
-                  </h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    Tạo dựng mô hình kinh doanh xã hội giúp cộng đồng phát triển tốt đẹp hơn
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+            <motion.div variants={fadeInScale} className="h-full">
+              <motion.div
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -10,
+                  boxShadow: "0 20px 40px rgba(16, 185, 129, 0.2)"
+                }}
+                transition={{ duration: 0.3 }}
+                className="h-full"
+              >
+                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/90 backdrop-blur-sm h-full flex flex-col">
+                  <CardContent className="p-8 flex-1 flex flex-col">
+                    <div className="text-center flex-1 flex flex-col justify-center">
+                      <motion.div 
+                        className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg"
+                        whileHover={{ rotate: 12, scale: 1.1 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <Shield className="w-10 h-10 text-white" />
+                      </motion.div>
+                      <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-emerald-600 transition-colors">
+{t('nhom_thien.overview.roles.sustainability.title')}
+                      </h3>
+                      <p className="text-slate-600 leading-relaxed">
+{t('nhom_thien.overview.roles.sustainability.description')}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Activities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-emerald-50/20 to-green-50/30 relative overflow-hidden">
+      <motion.section 
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-emerald-50/20 to-green-50/30 relative overflow-hidden"
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={staggerContainer}
+      >
         {/* Elegant Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
@@ -241,50 +533,133 @@ export default function NhomThienPage() {
           }} />
         </div>
         
+        {/* Animated Background Elements */}
+        <motion.div 
+          className="absolute top-20 right-10 w-24 h-24 bg-gradient-to-r from-emerald-400/10 to-green-400/10 rounded-full blur-xl"
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3],
+            rotate: [0, -180, -360]
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute bottom-20 left-10 w-32 h-32 bg-gradient-to-r from-rose-400/10 to-pink-400/10 rounded-full blur-xl"
+          animate={{ 
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.5, 0.2],
+            x: [0, -20, 0],
+            y: [0, 15, 0]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        />
+        
         <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-emerald-600 to-green-600 rounded-full text-white text-sm font-semibold mb-8 shadow-lg">
-              <Award className="w-5 h-5" />
-              CÁC HOẠT ĐỘNG CHÍNH
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6">
-              Các Hoạt động Chính
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Nhóm Thiện thực hiện các dự án và chương trình xã hội mang tính thường xuyên và bền vững
-            </p>
-          </div>
+          <motion.div className="text-center mb-16" variants={staggerContainer}>
+            <motion.div variants={fadeInUp}>
+              <motion.div 
+                className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-emerald-600 to-green-600 rounded-full text-white text-sm font-semibold mb-8 shadow-lg"
+                whileHover={{ scale: 1.05, y: -2 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                >
+                  <Award className="w-5 h-5" />
+                </motion.div>
+{t('nhom_thien.activities.badge')}
+              </motion.div>
+            </motion.div>
+            <motion.h2 
+              className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6"
+              variants={fadeInUp}
+            >
+              <motion.span 
+                style={{
+                  background: "linear-gradient(45deg, #1e293b, #10b981, #1e293b)",
+                  backgroundSize: "300% 300%",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent"
+                }}
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              >
+{t('nhom_thien.activities.title')}
+              </motion.span>
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
+              variants={fadeInUp}
+            >
+{t('nhom_thien.activities.description')}
+            </motion.p>
+          </motion.div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <motion.div 
+            className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch"
+            variants={staggerContainer}
+          >
             {activities.map((activity, index) => {
               const IconComponent = activity.icon
               return (
-                <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/90 backdrop-blur-sm">
-                  <CardContent className="p-8">
-                    <div className="text-center">
-                      <div className={`w-20 h-20 bg-gradient-to-r ${activity.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
-                        <IconComponent className="w-10 h-10 text-white" />
-                      </div>
-                      <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-emerald-600 transition-colors">
-                        {activity.title}
-                      </h3>
-                      <p className="text-slate-600 leading-relaxed mb-4">
-                        {activity.description}
-                      </p>
-                      <p className="text-sm text-slate-500 leading-relaxed">
-                        {activity.details}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <motion.div key={index} variants={fadeInScale} className="h-full">
+                  <motion.div
+                    whileHover={{ 
+                      scale: 1.05, 
+                      y: -10,
+                      boxShadow: "0 20px 40px rgba(16, 185, 129, 0.2)"
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className="h-full"
+                  >
+                    <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/90 backdrop-blur-sm h-full flex flex-col">
+                      <CardContent className="p-8 flex-1 flex flex-col">
+                        <div className="text-center flex-1 flex flex-col justify-between">
+                          <div>
+                            <motion.div 
+                              className={`w-20 h-20 bg-gradient-to-r ${activity.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}
+                              whileHover={{ rotate: 12, scale: 1.1 }}
+                              transition={{ duration: 0.3 }}
+                            >
+                              <IconComponent className="w-10 h-10 text-white" />
+                            </motion.div>
+                            <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-emerald-600 transition-colors">
+                              {activity.title}
+                            </h3>
+                            <p className="text-slate-600 leading-relaxed mb-4">
+                              {activity.description}
+                            </p>
+                          </div>
+                          <p className="text-sm text-slate-500 leading-relaxed">
+                            {activity.details}
+                          </p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                </motion.div>
               )
             })}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Achievements Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50/20 to-indigo-50/30 relative overflow-hidden">
+      <motion.section 
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50/20 to-indigo-50/30 relative overflow-hidden"
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={staggerContainer}
+      >
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 opacity-3">
           <div className="absolute inset-0" style={{
@@ -294,48 +669,294 @@ export default function NhomThienPage() {
           }} />
         </div>
         
+        {/* Animated Background Elements */}
+        <motion.div 
+          className="absolute top-20 left-1/4 w-24 h-24 bg-gradient-to-r from-blue-400/10 to-indigo-400/10 rounded-full blur-xl"
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3],
+            rotate: [0, 180, 360]
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute bottom-20 right-1/4 w-32 h-32 bg-gradient-to-r from-indigo-400/10 to-violet-400/10 rounded-full blur-xl"
+          animate={{ 
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.5, 0.2],
+            x: [0, 20, 0],
+            y: [0, -15, 0]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        />
+        
         <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-white text-sm font-semibold mb-8 shadow-lg">
-              <Award className="w-5 h-5" />
-              THÀNH TỰU NỔI BẬT
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6">
-              Thành tựu Nổi bật
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Những con số ấn tượng thể hiện sự đóng góp của Nhóm Thiện cho cộng đồng
-            </p>
-          </div>
+          <motion.div className="text-center mb-16" variants={staggerContainer}>
+            <motion.div variants={fadeInUp}>
+              <motion.div 
+                className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-white text-sm font-semibold mb-8 shadow-lg"
+                whileHover={{ scale: 1.05, y: -2 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                >
+                  <Award className="w-5 h-5" />
+                </motion.div>
+{t('nhom_thien.achievements.badge')}
+              </motion.div>
+            </motion.div>
+            <motion.h2 
+              className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6"
+              variants={fadeInUp}
+            >
+              <motion.span 
+                style={{
+                  background: "linear-gradient(45deg, #1e293b, #3b82f6, #1e293b)",
+                  backgroundSize: "300% 300%",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent"
+                }}
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              >
+{t('nhom_thien.achievements.title')}
+              </motion.span>
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
+              variants={fadeInUp}
+            >
+{t('nhom_thien.achievements.description')}
+            </motion.p>
+          </motion.div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div 
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
+            variants={staggerContainer}
+          >
             {achievements.map((achievement, index) => {
               const IconComponent = achievement.icon
               return (
-                <Card key={index} className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-0 bg-white/80 backdrop-blur-sm ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${index * 100}ms` }}>
-                  <CardContent className="p-8 text-center">
-                    <div className={`w-20 h-20 bg-gradient-to-r ${achievement.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
-                      <IconComponent className="w-10 h-10 text-white" />
-                    </div>
-                    <div className={`text-4xl font-bold mb-3 bg-gradient-to-r ${achievement.gradient} bg-clip-text text-transparent`}>
-                      {achievement.number}
-                    </div>
-                    <div className="text-xl font-bold text-slate-800 mb-2">
-                      {achievement.label}
-                    </div>
-                    <div className="text-slate-600">
-                      {achievement.description}
-                    </div>
-                  </CardContent>
-                </Card>
+                <motion.div key={index} variants={fadeInScale} className="h-full">
+                  <motion.div
+                    whileHover={{ 
+                      scale: 1.05, 
+                      y: -10,
+                      boxShadow: "0 20px 40px rgba(59, 130, 246, 0.2)"
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className="h-full"
+                  >
+                    <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm h-full flex flex-col">
+                      <CardContent className="p-8 text-center flex-1 flex flex-col justify-center">
+                        <motion.div 
+                          className={`w-20 h-20 bg-gradient-to-r ${achievement.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}
+                          whileHover={{ rotate: 12, scale: 1.1 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <IconComponent className="w-10 h-10 text-white" />
+                        </motion.div>
+                        <motion.div 
+                          className={`text-4xl font-bold mb-3 bg-gradient-to-r ${achievement.gradient} bg-clip-text text-transparent`}
+                          animate={{ 
+                            scale: [1, 1.05, 1],
+                          }}
+                          transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
+                        >
+                          {achievement.number}
+                        </motion.div>
+                        <div className="text-xl font-bold text-slate-800 mb-2">
+                          {achievement.label}
+                        </div>
+                        <div className="text-slate-600">
+                          {achievement.description}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                </motion.div>
               )
             })}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
+
+      {/* Companies Section */}
+      <motion.section 
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-rose-50/20 to-pink-50/30 relative overflow-hidden"
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={staggerContainer}
+      >
+        {/* Subtle Background Pattern */}
+        <div className="absolute inset-0 opacity-3">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `linear-gradient(45deg, #f43f5e 1px, transparent 1px),
+                             linear-gradient(-45deg, #ec4899 1px, transparent 1px)`,
+            backgroundSize: '40px 40px'
+          }} />
+        </div>
+
+        {/* Animated Background Elements */}
+        <motion.div 
+          className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-rose-400/10 to-pink-400/10 rounded-full blur-xl"
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3],
+            rotate: [0, 180, 360]
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-pink-400/10 to-rose-400/10 rounded-full blur-xl"
+          animate={{ 
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.5, 0.2],
+            x: [0, 20, 0],
+            y: [0, -15, 0]
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        />
+        
+        <div className="max-w-7xl mx-auto relative">
+          <motion.div className="text-center mb-16" variants={staggerContainer}>
+            <motion.div variants={fadeInUp}>
+              <motion.div 
+                className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-rose-600 to-pink-600 rounded-full text-white text-sm font-semibold mb-8 shadow-lg"
+                whileHover={{ scale: 1.05, y: -2 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                >
+                  <Building2 className="w-5 h-5" />
+                </motion.div>
+                {t('nhom_thien.companies.badge')}
+              </motion.div>
+            </motion.div>
+            <motion.h2 
+              className="text-4xl sm:text-5xl font-bold text-slate-800 mb-6"
+              variants={fadeInUp}
+            >
+              <motion.span 
+                style={{
+                  background: "linear-gradient(45deg, #1e293b, #f43f5e, #1e293b)",
+                  backgroundSize: "300% 300%",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent"
+                }}
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              >
+                {t('nhom_thien.companies.title')}
+              </motion.span>
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
+              variants={fadeInUp}
+            >
+              {t('nhom_thien.companies.description')}
+            </motion.p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={staggerContainer}
+          >
+            {companies.map((company, index) => {
+              return (
+                <motion.div key={index} variants={fadeInScale} className="h-full">
+                  <motion.div
+                    whileHover={{ 
+                      scale: 1.05, 
+                      y: -10,
+                      boxShadow: "0 20px 40px rgba(244, 63, 94, 0.2)"
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className="h-full"
+                  >
+                    <Card className="group border-0 bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-500 h-full flex flex-col">
+                      <CardContent className="p-6 text-center flex flex-col h-full">
+                        <motion.div 
+                          className="mb-4 flex-shrink-0 relative"
+                          whileHover={{ scale: 1.1 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          {/* Animated glow effect behind logo */}
+                          <motion.div
+                            className="absolute inset-0 bg-gradient-to-r from-rose-500/20 to-pink-500/20 rounded-full blur-xl"
+                            animate={{
+                              scale: [1, 1.2, 1],
+                              opacity: [0, 0.3, 0]
+                            }}
+                            transition={{
+                              duration: 3,
+                              repeat: Infinity,
+                              delay: index * 0.2
+                            }}
+                          />
+                          <motion.img 
+                            src={company.logo} 
+                            alt={`${company.name} Logo`} 
+                            className="w-24 h-24 md:w-28 md:h-28 object-contain mx-auto relative z-10"
+                            animate={{ 
+                              scale: [1, 1.05, 1],
+                              rotate: [0, 2, 0]
+                            }}
+                            transition={{ 
+                              duration: 4, 
+                              repeat: Infinity, 
+                              delay: index * 0.2 
+                            }}
+                          />
+                        </motion.div>
+                        <motion.div 
+                          className="flex-grow flex items-center justify-center"
+                        >
+                          <motion.h3 
+                            className="font-bold text-slate-800 group-hover:text-rose-600 transition-colors text-base leading-tight"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            {company.name}
+                          </motion.h3>
+                        </motion.div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                </motion.div>
+              )
+            })}
+          </motion.div>
+        </div>
+      </motion.section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-rose-600 via-pink-600 to-emerald-600 relative overflow-hidden">
+      <motion.section 
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-rose-600 via-pink-600 to-emerald-600 relative overflow-hidden"
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={staggerContainer}
+      >
         {/* Elegant Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
@@ -345,39 +966,115 @@ export default function NhomThienPage() {
           }} />
         </div>
         
+        {/* Animated Background Elements */}
+        <motion.div 
+          className="absolute top-20 left-20 w-32 h-32 rounded-full blur-2xl bg-gradient-to-r from-white/10 to-rose-100/10"
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3],
+            rotate: [0, 180, 360]
+          }}
+          transition={{ 
+            duration: 8, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+        />
+        <motion.div 
+          className="absolute bottom-20 right-20 w-40 h-40 rounded-full blur-3xl bg-gradient-to-r from-white/10 to-emerald-100/10"
+          animate={{ 
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.5, 0.2],
+            x: [0, 30, 0],
+            y: [0, -20, 0]
+          }}
+          transition={{ 
+            duration: 10, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 2
+          }}
+        />
+        
         <div className="max-w-5xl mx-auto text-center relative">
-          <div className="mb-8">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-8 shadow-lg">
-              <Heart className="w-5 h-5" />
-              KẾT NỐI VỚI NHÓM THIỆN
-            </div>
-          </div>
-          
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-            Kết nối với Nhóm Thiện
-          </h2>
-          <p className="text-xl sm:text-2xl text-rose-100 mb-12 leading-relaxed max-w-3xl mx-auto">
-            Cùng chúng tôi tạo dựng giá trị và tôn vinh tinh thần nhân ái cho cộng đồng
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-white text-rose-600 hover:bg-rose-50 px-10 py-4 rounded-xl font-bold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 group"
+          <motion.div className="mb-8" variants={fadeInUp}>
+            <motion.div 
+              className="inline-flex items-center gap-3 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-8 shadow-lg"
+              whileHover={{ scale: 1.05, y: -2 }}
+              transition={{ duration: 0.3 }}
             >
-              Tham gia hoạt động
-              <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-white text-white hover:bg-white hover:text-rose-600 px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+              >
+                <Heart className="w-5 h-5" />
+              </motion.div>
+{t('nhom_thien.cta.badge')}
+            </motion.div>
+          </motion.div>
+          
+          <motion.h2 
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight"
+            variants={fadeInUp}
+          >
+            <motion.span 
+              style={{
+                background: "linear-gradient(45deg, #ffffff, #fecaca, #ffffff)",
+                backgroundSize: "300% 300%",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                WebkitTextFillColor: "transparent"
+              }}
+              animate={{
+                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "linear"
+              }}
             >
-              Quyên góp ủng hộ
-            </Button>
-          </div>
+{t('nhom_thien.cta.title')}
+            </motion.span>
+          </motion.h2>
+          <motion.p 
+            className="text-xl sm:text-2xl text-rose-100 mb-12 leading-relaxed max-w-3xl mx-auto"
+            variants={fadeInUp}
+          >
+{t('nhom_thien.cta.description')}
+          </motion.p>
+          
+          <motion.div 
+            className="flex justify-center"
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeInUp}>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button 
+                  size="lg" 
+                  className="bg-white text-rose-600 hover:bg-rose-50 px-10 py-4 rounded-xl font-bold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 group"
+                  onClick={() => window.location.href = '/lien-he'}
+                >
+                  <motion.span 
+                    className="flex items-center gap-3"
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {t('nhom_thien.cta.buttons.join_activities')}
+                    <motion.div
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      <ArrowRight className="w-6 h-6" />
+                    </motion.div>
+                  </motion.span>
+                </Button>
+              </motion.div>
+            </motion.div>
+            
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       <Footer />
     </div>

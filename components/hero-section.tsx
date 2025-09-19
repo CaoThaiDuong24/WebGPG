@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button"
 import { Play, ArrowRight, Sparkles, Star, Zap, Globe, Rocket, Shield } from "lucide-react"
 import { motion } from "framer-motion"
 import { fadeInUp, fadeInLeft, fadeInRight, fadeInScale, staggerContainer, hoverScale, floating, pulse, textReveal, gradientText } from "./animations"
-
+import { useLocale } from "@/components/locale-provider"
 export function HeroSection() {
+  const { t } = useLocale()
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20 pb-16">
       {/* Video Background */}
@@ -131,7 +133,7 @@ export function HeroSection() {
               >
                 <Globe className="w-4 h-4" />
               </motion.div>
-              <span className="text-white/90">TIÊN PHONG • 16 NĂM KINH NGHIỆM • ĐỔI MỚI SÁNG TẠO</span>
+              <span className="text-white/90">{t('hero.badge')}</span>
               <motion.div
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -164,7 +166,7 @@ export function HeroSection() {
                 ease: "linear"
               }}
             >
-                  HỆ SINH THÁI
+              {t('hero.title1')}
             </motion.span>
             <motion.span 
               className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
@@ -185,7 +187,7 @@ export function HeroSection() {
                 delay: 0.5
               }}
             >
-              TCT ĐỐI TÁC CHÂN THẬT
+              {t('hero.title2')}
             </motion.span>
           </motion.h1>
 
@@ -197,20 +199,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <motion.span 
-                className="font-bold text-blue-200"
-                animate={{ 
-                  textShadow: [
-                    "0 0 0px rgba(96, 165, 250, 0)",
-                    "0 0 20px rgba(96, 165, 250, 0.5)",
-                    "0 0 0px rgba(96, 165, 250, 0)"
-                  ]
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                16 năm tiên phong
-              </motion.span> trong việc kiến tạo 
-              <span className="font-semibold text-white"> hệ sinh thái số</span> toàn diện
+              {t('hero.description1')}
             </motion.p>
             <motion.p 
               className="text-base sm:text-lg text-white/80 leading-relaxed"
@@ -218,9 +207,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Chúng tôi đang định hình tương lai của 
-              <span className="font-medium text-blue-200"> logistics • thương mại • công nghệ • tư vấn</span> 
-              cho doanh nghiệp Việt Nam
+              {t('hero.description2')}
             </motion.p>
           </motion.div>
 
@@ -245,7 +232,7 @@ export function HeroSection() {
                   >
                     <Rocket className="w-5 h-5" />
                   </motion.div>
-                KHÁM PHÁ HỆ SINH THÁI
+                  {t('hero.button1')}
                   <motion.div
                     animate={{ x: [0, 5, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
@@ -273,7 +260,7 @@ export function HeroSection() {
                   >
                     <Play className="w-5 h-5" />
                   </motion.div>
-                XEM VIDEO GIỚI THIỆU
+                  {t('hero.button2')}
                 </motion.span>
             </Button>
             </motion.div>
@@ -285,9 +272,9 @@ export function HeroSection() {
             variants={staggerContainer}
           >
             {[
-              { number: "16+", label: "Năm Tiên Phong", icon: Zap },
-              { number: "18+", label: "Trung Tâm Khai Thác", icon: Globe },
-              { number: "28+", label: "Công Ty & Chi Nhánh", icon: Shield }
+              { number: "16+", label: t('hero.stats.years'), icon: Zap },
+              { number: "18+", label: t('hero.stats.centers'), icon: Globe },
+              { number: "28+", label: t('hero.stats.companies'), icon: Shield }
             ].map((stat, index) => {
               const IconComponent = stat.icon;
               return (

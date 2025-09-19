@@ -3,12 +3,13 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Users, Award, Globe, TrendingUp, Sparkles, ArrowRight, CheckCircle } from "lucide-react"
+import { Users, Award, Globe, TrendingUp, Sparkles, ArrowRight, CheckCircle, Truck, ShoppingBag, Brain, Heart } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { fadeInUp, fadeInLeft, fadeInRight, fadeInScale, staggerContainer, hoverScale } from "./animations"
-
+import { useLocale } from "@/components/locale-provider"
 export function AboutSection() {
+  const { t } = useLocale()
   const sectionRef = useRef<HTMLElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [animatedItems, setAnimatedItems] = useState<Set<number>>(new Set())
@@ -50,38 +51,38 @@ export function AboutSection() {
     {
       icon: Users,
       number: "1000+",
-      label: "Nhân viên",
-      description: "Đội ngũ chuyên nghiệp",
+      label: t('about.stats.employees'),
+      description: t('about.stats.professional_team'),
       gradient: "from-blue-500 to-indigo-500",
     },
     {
       icon: Award,
       number: "50+",
-      label: "Giải thưởng",
-      description: "Được công nhận",
+      label: t('about.stats.awards'),
+      description: t('about.stats.recognized'),
       gradient: "from-indigo-500 to-violet-500",
     },
     {
       icon: Globe,
       number: "63",
-      label: "Tỉnh thành",
-      description: "Phủ sóng toàn quốc",
+      label: t('about.stats.provinces'),
+      description: t('about.stats.nationwide'),
       gradient: "from-blue-400 to-indigo-400",
     },
     {
       icon: TrendingUp,
       number: "99%",
-      label: "Hài lòng",
-      description: "Khách hàng tin tưởng",
+      label: t('about.stats.satisfaction'),
+      description: t('about.stats.trusted'),
       gradient: "from-indigo-400 to-violet-400",
     },
   ]
 
   const highlights = [
-    "16 năm kinh nghiệm trong ngành",
-    "Hệ sinh thái đa dạng và toàn diện",
-    "Triết lý kinh doanh bền vững",
-    "Đối tác tin cậy hàng đầu Việt Nam"
+    t('about.highlights.experience'),
+    t('about.highlights.team'),
+    t('about.highlights.coverage'),
+    t('about.highlights.satisfaction')
   ]
 
   return (
@@ -128,7 +129,7 @@ export function AboutSection() {
                   >
                     <Sparkles className="w-4 h-4" />
                   </motion.div>
-                  Về chúng tôi
+{t('about.badge')}
                 </Badge>
               </motion.div>
               
@@ -151,7 +152,7 @@ export function AboutSection() {
                     ease: "linear"
                   }}
                 >
-                  16 năm
+{t('about.title1')}
                 </motion.span>
                 <motion.span 
                   className="block"
@@ -172,10 +173,10 @@ export function AboutSection() {
                     delay: 0.5
                   }}
                 >
-                  Kinh nghiệm
+{t('about.title2')}
                 </motion.span>
                 <span className="block text-slate-800 text-3xl sm:text-4xl md:text-5xl">
-                  Đối tác tin cậy
+{t('about.title3')}
                 </span>
               </motion.h2>
             </motion.div>
@@ -188,21 +189,7 @@ export function AboutSection() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                Được thành lập từ năm <motion.span 
-                  className="font-semibold text-blue-600"
-                  animate={{ 
-                    textShadow: [
-                      "0 0 0px rgba(37, 99, 235, 0)",
-                      "0 0 10px rgba(37, 99, 235, 0.5)",
-                      "0 0 0px rgba(37, 99, 235, 0)"
-                    ]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  2009
-                </motion.span>, 
-                <span className="font-semibold text-slate-800"> TCT Đối Tác Chân Thật</span> đã trở thành một trong những 
-                tập đoàn hàng đầu Việt Nam trong lĩnh vực logistics, thương mại và dịch vụ.
+{t('about.description1')}
               </motion.p>
               
               <motion.p 
@@ -212,8 +199,7 @@ export function AboutSection() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                Với triết lý kinh doanh <span className="font-semibold text-indigo-600">"Kế Thừa - Tự Doanh - Xanh Hóa - Hạnh Phúc"</span>, 
-                chúng tôi không ngừng phát triển và mở rộng hệ sinh thái để phục vụ tốt nhất cho khách hàng.
+{t('about.description2')}
               </motion.p>
             </motion.div>
 
@@ -249,7 +235,7 @@ export function AboutSection() {
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.3 }}
                   >
-                    Tìm hiểu thêm
+{t('about.button')}
                     <motion.div
                       animate={{ x: [0, 5, 0] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
@@ -331,69 +317,197 @@ export function AboutSection() {
         
         {/* Bottom Section - Company Philosophy */}
         <motion.div 
-          className="mt-16 text-center"
+          className="mt-20 text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <motion.h3 
-              className="text-2xl md:text-3xl font-bold text-slate-800 mb-6"
+              className="text-3xl md:text-4xl font-black text-slate-900 mb-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Hệ sinh thái <motion.span 
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
-                animate={{
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-                style={{
-                  backgroundSize: "200% 200%"
-                }}
-              >
-                4 nhóm
-              </motion.span> toàn diện
+              {t('about.ecosystem.title')}
             </motion.h3>
+            
             <motion.div 
-              className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10"
               variants={staggerContainer}
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
             >
               {[
-                { name: "Thân", desc: "Logistics & Phụ trợ", color: "from-blue-500 to-indigo-500" },
-                { name: "Tâm", desc: "Dịch vụ & Thương mại", color: "from-indigo-500 to-violet-500" },
-                { name: "Trí", desc: "Tư vấn & Công nghệ", color: "from-blue-400 to-indigo-400" },
-                { name: "Thiện", desc: "Cộng đồng & An sinh", color: "from-indigo-400 to-violet-400" }
+                { 
+                  name: t('about.ecosystem.groups.than'), 
+                  title: t('ecosystem.groups.than.title'),
+                  subtitle: t('ecosystem.groups.than.subtitle'),
+                  desc: t('ecosystem.groups.than.description'), 
+                  color: "from-blue-600 to-cyan-500",
+                  bgGradient: "from-blue-600/5 via-cyan-500/5 to-blue-600/5",
+                  accentColor: "bg-blue-600",
+                  iconBg: "bg-gradient-to-br from-blue-600 to-cyan-500",
+                  icon: Truck
+                },
+                { 
+                  name: t('about.ecosystem.groups.tam'), 
+                  title: t('ecosystem.groups.tam.title'),
+                  subtitle: t('ecosystem.groups.tam.subtitle'),
+                  desc: t('ecosystem.groups.tam.description'), 
+                  color: "from-purple-600 to-pink-500",
+                  bgGradient: "from-purple-600/5 via-pink-500/5 to-purple-600/5",
+                  accentColor: "bg-purple-600",
+                  iconBg: "bg-gradient-to-br from-purple-600 to-pink-500",
+                  icon: ShoppingBag
+                },
+                { 
+                  name: t('about.ecosystem.groups.tri'), 
+                  title: t('ecosystem.groups.tri.title'),
+                  subtitle: t('ecosystem.groups.tri.subtitle'),
+                  desc: t('ecosystem.groups.tri.description'), 
+                  color: "from-indigo-600 to-blue-600",
+                  bgGradient: "from-indigo-600/5 via-blue-600/5 to-indigo-600/5",
+                  accentColor: "bg-indigo-600",
+                  iconBg: "bg-gradient-to-br from-indigo-600 to-blue-600",
+                  icon: Brain
+                },
+                { 
+                  name: t('about.ecosystem.groups.thien'), 
+                  title: t('ecosystem.groups.thien.title'),
+                  subtitle: t('ecosystem.groups.thien.subtitle'),
+                  desc: t('ecosystem.groups.thien.description'), 
+                  color: "from-emerald-600 to-teal-500",
+                  bgGradient: "from-emerald-600/5 via-teal-500/5 to-emerald-600/5",
+                  accentColor: "bg-emerald-600",
+                  iconBg: "bg-gradient-to-br from-emerald-600 to-teal-500",
+                  icon: Heart
+                }
               ].map((group, index) => (
                 <motion.div 
                   key={index} 
-                  className="group p-4 md:p-6 rounded-2xl bg-white/60 backdrop-blur-sm hover:bg-white transition-all duration-500"
+                  className="group relative"
                   variants={fadeInScale}
                   whileHover={{ 
-                    scale: 1.05, 
-                    y: -5,
-                    boxShadow: "0 10px 30px rgba(59, 130, 246, 0.2)"
+                    scale: 1.02, 
+                    y: -8,
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  <motion.div 
-                    className={`w-12 h-12 bg-gradient-to-r ${group.color} rounded-xl flex items-center justify-center mx-auto mb-3`}
-                    whileHover={{ rotate: 12, scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <span className="text-white font-bold text-lg">{group.name}</span>
-                  </motion.div>
-                  <p className="text-sm text-slate-600 group-hover:text-slate-800 transition-colors duration-300">{group.desc}</p>
+                  {/* Card Container */}
+                  <div className="relative bg-gradient-to-br from-white via-gray-50 to-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/60 h-full flex flex-col">
+                    
+                    {/* Header Section with Icon */}
+                    <div className={`relative p-6 ${group.accentColor} bg-gradient-to-r ${group.color}`}>
+                      <div className="flex items-center justify-between">
+                        {/* Large Icon */}
+                        <motion.div 
+                          className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/30"
+                          whileHover={{ rotate: 15, scale: 1.1 }}
+                          transition={{ duration: 0.3 }}
+                          animate={{ 
+                            rotate: [0, 2, -2, 0],
+                            scale: [1, 1.02, 1]
+                          }}
+                          transition={{ duration: 4, repeat: Infinity, delay: index * 0.5 }}
+                        >
+                          <group.icon className="w-10 h-10 text-white" />
+                        </motion.div>
+                        
+                        {/* Floating Elements */}
+                        <div className="flex flex-col gap-2">
+                          <motion.div 
+                            className="w-4 h-4 bg-white/40 rounded-full"
+                            animate={{ 
+                              scale: [1, 1.2, 1],
+                              opacity: [0.4, 0.8, 0.4]
+                            }}
+                            transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
+                          />
+                          <motion.div 
+                            className="w-3 h-3 bg-white/30 rounded-full"
+                            animate={{ 
+                              scale: [1, 1.3, 1],
+                              opacity: [0.3, 0.6, 0.3]
+                            }}
+                            transition={{ duration: 2.5, repeat: Infinity, delay: index * 0.4 }}
+                          />
+                          <motion.div 
+                            className="w-2 h-2 bg-white/20 rounded-full"
+                            animate={{ 
+                              scale: [1, 1.4, 1],
+                              opacity: [0.2, 0.5, 0.2]
+                            }}
+                            transition={{ duration: 3, repeat: Infinity, delay: index * 0.6 }}
+                          />
+                        </div>
+                      </div>
+                      
+                      {/* Number Badge */}
+                      <motion.div 
+                        className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-gray-100"
+                        animate={{ 
+                          rotate: [0, 10, -10, 0],
+                          scale: [1, 1.05, 1]
+                        }}
+                        transition={{ duration: 3, repeat: Infinity, delay: index * 0.7 }}
+                      >
+                        <span className="text-gray-800 font-bold text-sm">{index + 1}</span>
+                      </motion.div>
+                    </div>
+                    
+                    {/* Content Section */}
+                    <div className="relative p-6 flex-grow flex flex-col justify-between">
+                      {/* Title */}
+                      <motion.h4 
+                        className="text-lg font-bold text-gray-900 mb-2 group-hover:text-gray-800 transition-colors duration-300"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                      >
+                        {group.title}
+                      </motion.h4>
+                      
+                      {/* Subtitle */}
+                      <motion.p 
+                        className="text-sm font-semibold text-gray-600 mb-4 group-hover:text-gray-700 transition-colors duration-300"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 + 0.1 }}
+                        viewport={{ once: true }}
+                      >
+                        {group.subtitle}
+                      </motion.p>
+                      
+                      {/* Bottom Accent */}
+                      <motion.div 
+                        className={`mt-4 h-1 w-full bg-gradient-to-r ${group.color} rounded-full`}
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        transition={{ duration: 0.8, delay: index * 0.1 + 0.4 }}
+                        viewport={{ once: true }}
+                      />
+                    </div>
+                    
+                    {/* Corner Decoration */}
+                    <motion.div 
+                      className={`absolute top-4 left-4 w-12 h-12 bg-gradient-to-br ${group.color} opacity-10 rounded-full`}
+                      animate={{ 
+                        scale: [1, 1.1, 1],
+                        rotate: [0, 180, 360]
+                      }}
+                      transition={{ duration: 6, repeat: Infinity, delay: index * 0.8 }}
+                    />
+                    
+                    {/* Hover Overlay */}
+                    <motion.div 
+                      className={`absolute inset-0 bg-gradient-to-br ${group.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                    />
+                  </div>
                 </motion.div>
               ))}
             </motion.div>

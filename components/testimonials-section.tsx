@@ -5,8 +5,9 @@ import { Quote, Star, Heart, MessageCircle } from "lucide-react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { fadeInUp, fadeInLeft, fadeInRight, fadeInScale, staggerContainer, hoverScale } from "./animations"
-
+import { useLocale } from "@/components/locale-provider"
 export function TestimonialsSection() {
+  const { t } = useLocale()
   const testimonials = [
     {
       name: "Nguyễn Văn A",
@@ -83,7 +84,7 @@ export function TestimonialsSection() {
               >
                 <MessageCircle className="w-4 h-4 mr-2" />
               </motion.div>
-              Khách hàng nói gì
+              {t('testimonials.badge')}
             </Badge>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
@@ -93,32 +94,10 @@ export function TestimonialsSection() {
             </motion.div>
           </motion.div>
           <motion.h2 className="text-5xl md:text-6xl font-bold mb-8 text-primary text-balance leading-tight" variants={fadeInUp}>
-            Được{" "}
-            <motion.span 
-              className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent relative"
-              animate={{
-                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "linear"
-              }}
-              style={{
-                backgroundSize: "300% 300%"
-              }}
-            >
-              tin tưởng
-              <motion.div 
-                className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-600/30 via-indigo-600/30 to-violet-600/30 rounded-full"
-                animate={{ scaleX: [0, 1, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-            </motion.span>{" "}
-            bởi
+            {t('testimonials.title')}
           </motion.h2>
           <motion.p className="text-xl text-slate-600 max-w-4xl mx-auto text-pretty leading-relaxed" variants={fadeInUp}>
-            Hàng nghìn doanh nghiệp đã chọn Genuine Partner làm đối tác chiến lược trong hành trình phát triển
+            {t('testimonials.description')}
           </motion.p>
         </motion.div>
 
@@ -137,7 +116,7 @@ export function TestimonialsSection() {
               }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="group relative overflow-hidden border-0 bg-white/70 backdrop-blur-md hover:bg-white/80 transition-all duration-500 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-blue-200/30">
+              <Card className="group relative overflow-hidden border-0 bg-white/70 backdrop-blur-md hover:bg-white/80 transition-all duration-500 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-blue-200/30 h-full flex flex-col">
                 {/* Top gradient accent */}
                 <motion.div 
                   className="h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500 relative"
@@ -156,7 +135,7 @@ export function TestimonialsSection() {
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-indigo-500/5 to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
                 
-                <CardContent className="p-8 relative">
+                <CardContent className="p-8 relative flex-grow flex flex-col justify-between">
                   {/* Quote and rating */}
                   <motion.div 
                     className="flex items-center justify-between mb-8"

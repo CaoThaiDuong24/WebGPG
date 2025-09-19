@@ -4,8 +4,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, Phone, Mail, Sparkles, Star, Zap } from "lucide-react"
 import { motion } from "framer-motion"
 import { fadeInUp, fadeInLeft, fadeInRight, fadeInScale, staggerContainer, hoverScale } from "./animations"
-
+import { useLocale } from "@/components/locale-provider"
 export function CTASection() {
+  const { t } = useLocale()
+  
   return (
     <motion.section 
       className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden"
@@ -74,33 +76,15 @@ export function CTASection() {
                   >
                 <Sparkles className="w-4 h-4 text-yellow-300" />
                   </motion.div>
-                <span className="text-white/90 text-sm font-medium">Đối tác tin cậy của hàng nghìn doanh nghiệp</span>
+                <span className="text-white/90 text-sm font-medium">{t('cta.badge')}</span>
                 </motion.div>
               </motion.div>
             
               <motion.h2 className="text-3xl md:text-5xl font-bold mb-6 text-white text-balance leading-tight" variants={fadeInUp}>
-              Sẵn sàng hợp tác cùng{" "}
-                <motion.span 
-                  className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent"
-                  animate={{
-                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                  style={{
-                    backgroundSize: "300% 300%"
-                  }}
-                >
-                Genuine Partner
-                </motion.span>
-              ?
+                {t('cta.title')}
               </motion.h2>
               <motion.p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto text-pretty leading-relaxed" variants={fadeInUp}>
-              Hãy để chúng tôi trở thành đối tác tin cậy trong hành trình phát triển doanh nghiệp của bạn. Liên hệ ngay
-              để được tư vấn miễn phí và khám phá những cơ hội tăng trưởng vượt bậc.
+                {t('cta.description')}
               </motion.p>
 
               <motion.div 
@@ -123,7 +107,7 @@ export function CTASection() {
                       >
                         <Phone className="mr-3 w-5 h-5" />
                       </motion.div>
-                Gọi ngay
+                      {t('cta.buttons.call')}
                     </motion.span>
               </Button>
                 </motion.div>
@@ -144,7 +128,7 @@ export function CTASection() {
               >
                 <Mail className="mr-3 w-5 h-5 group-hover:text-blue-300 transition-colors duration-300" />
                       </motion.div>
-                Gửi email
+                      {t('cta.buttons.email')}
                       <motion.div
                         animate={{ x: [0, 3, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity }}
@@ -161,9 +145,9 @@ export function CTASection() {
                 variants={staggerContainer}
               >
                 {[
-                  { icon: Phone, title: "Tư vấn miễn phí", desc: "Phân tích nhu cầu chuyên sâu", color: "from-blue-500/20 to-indigo-500/20", hoverColor: "from-blue-500/30 to-indigo-500/30", textColor: "text-blue-400", hoverTextColor: "text-blue-300" },
-                  { icon: Zap, title: "Giải pháp tối ưu", desc: "Phù hợp với mọi doanh nghiệp", color: "from-indigo-500/20 to-violet-500/20", hoverColor: "from-indigo-500/30 to-violet-500/30", textColor: "text-indigo-400", hoverTextColor: "text-indigo-300" },
-                  { icon: Star, title: "Hỗ trợ 24/7", desc: "Luôn đồng hành cùng bạn", color: "from-blue-400/20 to-violet-400/20", hoverColor: "from-blue-400/30 to-violet-400/30", textColor: "text-violet-400", hoverTextColor: "text-violet-300" }
+                  { icon: Phone, title: t('cta.features.consultation.title'), desc: t('cta.features.consultation.description'), color: "from-blue-500/20 to-indigo-500/20", hoverColor: "from-blue-500/30 to-indigo-500/30", textColor: "text-blue-400", hoverTextColor: "text-blue-300" },
+                  { icon: Zap, title: t('cta.features.solution.title'), desc: t('cta.features.solution.description'), color: "from-indigo-500/20 to-violet-500/20", hoverColor: "from-indigo-500/30 to-violet-500/30", textColor: "text-indigo-400", hoverTextColor: "text-indigo-300" },
+                  { icon: Star, title: t('cta.features.support.title'), desc: t('cta.features.support.description'), color: "from-blue-400/20 to-violet-400/20", hoverColor: "from-blue-400/30 to-violet-400/30", textColor: "text-violet-400", hoverTextColor: "text-violet-300" }
                 ].map((item, index) => {
                   const IconComponent = item.icon;
                   return (

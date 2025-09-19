@@ -1,0 +1,1573 @@
+{
+  "hero": {
+    "badge": "TIÊN PHONG • 16 NĂM KINH NGHIỆM • ĐỔI MỚI SÁNG TẠO",
+    "title1": "HỆ SINH THÁI",
+    "title2": "TCT ĐỐI TÁC CHÂN THẬT",
+    "description1": "16 năm tiên phong trong việc kiến tạo hệ sinh thái số toàn diện",
+    "description2": "Chúng tôi đang định hình tương lai của logistics • thương mại • công nghệ • tư vấn cho doanh nghiệp Việt Nam",
+    "button1": "KHÁM PHÁ HỆ SINH THÁI",
+    "button2": "XEM VIDEO GIỚI THIỆU",
+    "stats": {
+      "years": "Năm Tiên Phong",
+      "centers": "Trung Tâm Khai Thác",
+      "companies": "Công Ty & Chi Nhánh"
+    }
+  },
+  "about": {
+    "badge": "Về chúng tôi",
+    "title1": "16 năm",
+    "title2": "Kinh nghiệm",
+    "title3": "Đối tác tin cậy của bạn",
+    "description1": "Được thành lập từ năm 2009, TCT Đối Tác Chân Thật đã trở thành một trong những tập đoàn hàng đầu Việt Nam trong lĩnh vực logistics, thương mại và dịch vụ.",
+    "description2": "Với triết lý kinh doanh \"Kế Thừa - Tự Doanh - Xanh Hóa - Hạnh Phúc\", chúng tôi không ngừng phát triển và mở rộng hệ sinh thái để phục vụ tốt nhất cho khách hàng.",
+    "button": "Tìm hiểu thêm",
+    "stats": {
+      "employees": "Nhân viên",
+      "awards": "Giải thưởng",
+      "provinces": "Tỉnh thành",
+      "satisfaction": "Hài lòng",
+      "professional_team": "Đội ngũ chuyên nghiệp",
+      "recognized": "Được công nhận",
+      "nationwide": "Phủ sóng toàn quốc",
+      "trusted": "Khách hàng tin tưởng"
+    },
+    "highlights": {
+      "experience": "Hơn 16 năm kinh nghiệm trong lĩnh vực logistics và thương mại",
+      "team": "Đội ngũ chuyên nghiệp với hơn 1000+ nhân viên",
+      "coverage": "Phủ sóng 63 tỉnh thành trên toàn quốc",
+      "satisfaction": "Tỷ lệ hài lòng của khách hàng đạt 99%"
+    },
+    "ecosystem": {
+      "title": "Hệ sinh thái 4 nhóm toàn diện",
+      "groups": {
+        "than": "Thân",
+        "tam": "Tâm", 
+        "tri": "Trí",
+        "thien": "Thiện"
+      },
+      "descriptions": {
+        "than": "Logistics & Phụ trợ",
+        "tam": "Dịch vụ & Thương mại",
+        "tri": "Tư vấn & Công nghệ",
+        "thien": "Cộng đồng & An sinh"
+      }
+    }
+  },
+  "general_achievements": {
+    "badge": "Thành tích nổi bật",
+    "title": "Những thành tựu đáng tự hào",
+    "description": "16 năm phát triển với những dấu mốc quan trọng và sự ghi nhận từ cộng đồng doanh nghiệp Việt Nam",
+    "items": {
+      "top500": "Top 500 Doanh nghiệp lớn nhất Việt Nam",
+      "logistics": "Doanh nghiệp xuất sắc ngành Logistics",
+      "iso": "Chứng nhận ISO 9001:2015",
+      "sustainable": "Doanh nghiệp bền vững"
+    },
+    "descriptions": {
+      "top500": "Được vinh danh trong bảng xếp hạng VNR500 do Vietnam Report công bố",
+      "logistics": "Giải thưởng do Hiệp hội Logistics Việt Nam trao tặng",
+      "iso": "Hệ thống quản lý chất lượng đạt tiêu chuẩn quốc tế",
+      "sustainable": "Cam kết phát triển bền vững và trách nhiệm xã hội"
+    }
+  },
+  "ecosystem": {
+    "badge": "Lĩnh vực kinh doanh",
+    "title1": "Hệ sinh thái",
+    "title2": "4 nhóm toàn diện",
+    "description": "Kiến tạo hệ sinh thái doanh nghiệp đa ngành, đa lĩnh vực với 4 trụ cột chính tạo nên sức mạnh tổng thể",
+    "stats": {
+      "groups": "Nhóm chính",
+      "companies": "Công ty thành viên",
+      "provinces": "Tỉnh thành",
+      "employees": "Nhân viên"
+    },
+    "groups": {
+      "than": {
+        "title": "Nhóm Thân",
+        "subtitle": "Logistics & Phụ trợ",
+        "description": "Nhóm Thân là nền tảng quá trình TCT ĐTCT, có trách nhiệm thực hiện và vận hành các hoạt động logistics và phụ trợ. Nhóm Thân đảm bảo việc vận chuyển và cung cấp dịch vụ hỗ trợ một cách hiệu quả và chuyên nghiệp."
+      },
+      "tam": {
+        "title": "Nhóm Tâm",
+        "subtitle": "Dịch vụ & Thương mại",
+        "description": "Bao trùm đông đa các lĩnh vực dịch vụ thương mại từ bán lẻ đến bán buôn, từ thương mại điện tử đến thương mại truyền thống. Nhóm Tâm tập trung vào việc cung cấp các sản phẩm và dịch vụ chất lượng cao."
+      },
+      "tri": {
+        "title": "Nhóm Trí",
+        "subtitle": "Tư vấn, đào tạo & Công nghệ",
+        "description": "Nhóm không thể thiếu trong hệ sinh thái TCT ĐTCT, có trách nhiệm nghiên cứu và phát triển các giải pháp công nghệ, tư vấn chiến lược và đào tạo nhân lực chất lượng cao."
+      },
+      "thien": {
+        "title": "Nhóm Thiện",
+        "subtitle": "Cộng đồng & An sinh xã hội",
+        "description": "Nhóm Thiện thể hiện trách nhiệm xã hội của TCT ĐTCT, tập trung vào các hoạt động từ thiện, hỗ trợ cộng đồng và phát triển bền vững."
+      }
+    },
+    "button": "Tìm hiểu thêm",
+    "companies": "Công ty thành viên:",
+    "more_companies": "công ty khác"
+  },
+  "testimonials": {
+    "badge": "Khách hàng nói gì",
+    "title": "Được tin tưởng bởi",
+    "description": "Hàng nghìn doanh nghiệp đã chọn Genuine Partner làm đối tác chiến lược trong hành trình phát triển"
+  },
+  "cta": {
+    "badge": "Đối tác tin cậy của hàng nghìn doanh nghiệp",
+    "title": "Sẵn sàng hợp tác cùng Genuine Partner?",
+    "description": "Hãy để chúng tôi trở thành đối tác tin cậy trong hành trình phát triển doanh nghiệp của bạn. Liên hệ ngay để được tư vấn miễn phí và khám phá những cơ hội tăng trưởng vượt bậc.",
+    "buttons": {
+      "call": "Gọi ngay",
+      "email": "Gửi email"
+    },
+    "features": {
+      "consultation": {
+        "title": "Tư vấn miễn phí",
+        "description": "Phân tích nhu cầu chuyên sâu"
+      },
+      "solution": {
+        "title": "Giải pháp tối ưu",
+        "description": "Phù hợp với mọi doanh nghiệp"
+      },
+      "support": {
+        "title": "Hỗ trợ 24/7",
+        "description": "Luôn đồng hành cùng bạn"
+      }
+    }
+  },
+  "header": {
+    "nav": {
+      "home": "Trang chủ",
+      "about": "Về chúng tôi",
+      "ecosystem": "Hệ sinh thái",
+      "responsibility": "Trách nhiệm xã hội",
+      "news": "Tin tức",
+      "contact": "Liên hệ"
+    },
+    "locales": {
+      "vi": "Tiếng Việt",
+      "en": "Tiếng Anh",
+      "km": "Tiếng Cam"
+    },
+    "about_menu": {
+      "general": "Giới thiệu chung",
+      "vision": "Tầm nhìn và sứ mệnh",
+      "history": "Lịch sử hình thành",
+      "achievements": "Thành tựu của chúng tôi"
+    },
+    "ecosystem_menu": {
+      "than": "Thân - Logistics & Phụ trợ",
+      "tam": "Tâm - Dịch vụ & Thương mại",
+      "tri": "Trí - Tư vấn & Công nghệ",
+      "thien": "Thiện - Cộng đồng",
+      "than_desc": "Vận tải, kho bãi, phân phối",
+      "tam_desc": "Bán lẻ, F&B, dịch vụ",
+      "tri_desc": "Giải pháp số, tư vấn",
+      "thien_desc": "An sinh xã hội"
+    },
+    "cta": "Tư vấn miễn phí",
+    "lookup_button": "Tra cứu EIR & HĐĐT",
+    "languages": {
+      "vi": "Tiếng Việt",
+      "en": "Tiếng Anh",
+      "km": "Tiếng Cam"
+    }
+  },
+  "footer": {
+    "description": "Đối tác tin cậy trong hành trình phát triển bền vững, mang đến những giải pháp sáng tạo và chất lượng cao.",
+    "sections": {
+      "quick_links": "Liên kết nhanh",
+      "services": "Dịch vụ",
+      "contact": "Liên hệ"
+    },
+    "links": {
+      "about": "Về chúng tôi",
+      "ecosystem": "Hệ sinh thái",
+      "responsibility": "Trách nhiệm xã hội",
+      "news": "Tin tức",
+      "careers": "Cơ hội nghề nghiệp"
+    },
+    "services": {
+      "logistics": "Logistics & Phụ trợ",
+      "commerce": "Dịch vụ & Thương mại",
+      "consulting": "Tư vấn & Công nghệ",
+      "community": "Cộng đồng & An sinh"
+    },
+    "contact": {
+      "address": "Địa chỉ",
+      "phone": "Điện thoại",
+      "email": "Email",
+      "country": "Hồ Chí Minh,Việt Nam",
+      "phone_number": "1900 0271",
+      "email_address": "info@genuinepartner.com"
+    },
+    "copyright": "© 2024 Genuine Partner Group",
+    "rights": "Tất cả quyền được bảo lưu.",
+    "legal": {
+      "privacy": "Chính sách bảo mật",
+      "terms": "Điều khoản sử dụng",
+      "sitemap": "Sitemap",
+      "support": "Hỗ trợ"
+    },
+    "bottom": {
+      "developed": "Được phát triển với",
+      "love": "♥",
+      "location": "tại Việt Nam",
+      "version": "Phiên bản 2.0.1",
+      "last_update": "Cập nhật lần cuối: 2024"
+    }
+  },
+  "vision_mission": {
+    "hero": {
+      "badge": "TẦM NHÌN • SỨ MỆNH • GIÁ TRỊ CỐT LÕI",
+      "title1": "TẦM NHÌN & SỨ MỆNH",
+      "title2": "TCT ĐỐI TÁC CHÂN THẬT",
+      "description1": "Định hướng tương lai với tầm nhìn rõ ràng và sứ mệnh bền vững",
+      "description2": "Chúng tôi cam kết mang lại giá trị • đổi mới • phát triển bền vững cho doanh nghiệp và cộng đồng",
+      "quote1": "Con đường đạt đến thành công không gì hơn trí tuệ và lòng nhẫn nại",
+      "quote2": "Bền chắc trong sự thành công không gì hơn sự chân thật và tình yêu thương",
+      "quote_author": "Thượng tọa Thích Nghiêm Đạo"
+    },
+    "vision": {
+      "badge": "Tầm nhìn",
+      "title1": "Tương lai",
+      "title2": "chúng tôi hướng đến",
+      "section_title": "Tầm nhìn",
+      "description1": "Bằng việc ứng dụng các công nghệ tiên tiến và thông minh, chúng tôi kiến tạo và kết nối các giá trị giúp hàng hoá lưu thông thông suốt trên thị trường một cách hiệu quả và tin cậy để phát triển cuộc sống con người, doanh nghiệp và nền kinh tế một cách bền vững.",
+      "description2": "Từ đó chúng tôi đóng góp để xây dựng một xã hội tốt đẹp hơn bằng việc cung cấp các sản phẩm và dịch vụ chất lượng phù hợp với xu hướng phát triển của thế giới nhằm nâng cao chất lượng đời sống của nhân viên, đối tác, khách hàng và công chúng."
+    },
+    "mission": {
+      "badge": "Sứ mệnh",
+      "title1": "Sứ mệnh",
+      "title2": "của chúng tôi",
+      "section_title": "Sứ mệnh",
+      "description1": "Không ngừng đổi mới và cải tiến công nghệ để mang đến cho doanh nghiệp và khách hàng các sản phẩm và dịch vụ chất lượng.",
+      "description2": "Không ngừng kiến tạo và cung cấp giá trị gia tăng cho tất cả các bên liên quan, góp phần tích cực vào sự phát triển bền vững của xã hội và đảm bảo giảm thiểu tác hại đến môi trường."
+    },
+    "core_values": {
+      "badge": "Giá trị cốt lõi",
+      "title": "Giá trị cốt lõi",
+      "subtitle": "Thành công của bạn là thành công của chúng tôi",
+      "values": {
+        "trust": {
+          "title": "Sự tin tưởng",
+          "description": "Xây dựng niềm tin vững chắc với khách hàng, đối tác và cộng đồng thông qua sự minh bạch, trung thực trong mọi hoạt động kinh doanh."
+        },
+        "responsibility": {
+          "title": "Tinh thần trách nhiệm",
+          "description": "Thể hiện tinh thần trách nhiệm cao trong mọi công việc, cam kết mang lại giá trị tốt nhất cho khách hàng và xã hội."
+        },
+        "sustainability": {
+          "title": "Phát triển bền vững",
+          "description": "Hướng đến sự phát triển bền vững, cân bằng giữa lợi ích kinh tế, xã hội và môi trường cho thế hệ hiện tại và tương lai."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Cùng chúng tôi xây dựng tương lai",
+      "title": "Sẵn sàng hợp tác?",
+      "description": "Hãy liên hệ với chúng tôi để tìm hiểu thêm về tầm nhìn, sứ mệnh và cách chúng tôi có thể hỗ trợ doanh nghiệp của bạn",
+      "buttons": {
+        "contact": "Liên hệ ngay",
+        "learn_more": "Tìm hiểu thêm"
+      }
+    }
+  },
+  "about_general": {
+    "hero": {
+      "company_name": "TCT Đối Tác Chân Thật",
+      "title": "Giới thiệu chung",
+      "subtitle": "Từ tòa nhà văn phòng hiện đại đến hệ thống logistics quy mô lớn - 15 năm phát triển bền vững",
+      "button": "Tìm hiểu thêm về chúng tôi",
+      "stats": {
+        "years": "Năm kinh nghiệm",
+        "offices": "Văn phòng",
+        "containers": "Bãi container",
+        "shipping_lines": "Hãng tàu"
+      }
+    },
+    "company_intro": {
+      "badge": "VỀ CHÚNG TÔI",
+      "company_name": "TCT",
+      "company_name_part1": "Đối Tác",
+      "company_name_part2": "Chân Thật",
+      "description": "Doanh nghiệp hàng đầu trong lĩnh vực logistics tại Việt Nam",
+      "founding": "Tổng Công ty Đối Tác Chân Thật (TCT ĐTCT) được thành lập vào ngày",
+      "founding_date": "11/5/2009",
+      "founding_location": "toạ lạc tại tòa nhà số 2A đường 5, phường An Phú, TP Thủ Đức, TP.HCM.",
+      "development": "Sau gần",
+      "development_years": "15 năm",
+      "development_description": "xây dựng và trưởng thành, TCT ĐTCT đã trở thành một trong những doanh nghiệp hàng đầu trong lĩnh vực logistics tại Việt Nam.",
+      "scale_title": "Quy mô hoạt động",
+      "scale_items": {
+        "depots": "15 Depots với sức chứa",
+        "depots_capacity": "65.000 TEUs",
+        "total_area": "Tổng diện tích hơn",
+        "total_area_size": "633.000 m²",
+        "countries": "Hoạt động tại",
+        "countries_count": "3 quốc gia"
+      },
+      "services_title": "Dịch vụ chính",
+      "services_items": {
+        "logistics": "Dịch vụ logistics",
+        "depot": "Dịch vụ depot container",
+        "shipping": "Dịch vụ tàu biển và hàng hải"
+      },
+      "mission_title": "Phương châm hoạt động",
+      "mission_quote": "An toàn – Chất lượng – Phục vụ kịp thời và nhanh chóng",
+      "mission_description": "Thương hiệu ĐTCT trong lĩnh vực logistics dần được khẳng định cả trong nước và khu vực qua chất lượng, tiến độ cùng quan hệ hợp tác với nhiều đối tác, khách hàng lớn."
+    },
+    "ecosystem": {
+      "badge": "Hệ sinh thái",
+      "title": "Hệ sinh thái TCT Đối tác Chân Thật",
+      "description": "TCT ĐTCT đã xây dựng",
+      "ecosystem_name": "Hệ sinh thái Đối Tác Chân Thật",
+      "ecosystem_description": "với logistics là ngành trọng tâm.",
+      "goals": "Mục tiêu giải quyết các yêu cầu về phát triển bền vững, số hóa, vận chuyển đa phương thức, tuân thủ quy định, nhân lực tương lai và giảm khí thải.",
+      "headquarters": "Trụ sở chính",
+      "headquarters_name": "Tòa nhà Đối Tác Chân Thật",
+      "headquarters_address": "Số 2A đường 5, phường An Phú, TP Thủ Đức, TP.HCM",
+      "groups": {
+        "logistics": {
+          "title": "Logistics & Phụ trợ",
+          "description": "Lĩnh vực kinh doanh chính của TCT ĐTCT, tạo ra nguồn thu để đầu tư phát triển Hệ sinh thái."
+        },
+        "commerce": {
+          "title": "Dịch vụ & Thương mại",
+          "description": "Các hoạt động mở rộng đáp ứng nhu cầu sinh hoạt của thành viên trong Hệ sinh thái."
+        },
+        "consulting": {
+          "title": "Tư vấn & Công nghệ",
+          "description": "Phát triển chiến lược kinh doanh, marketing, tư vấn công nghệ, tài chính và pháp lý."
+        },
+        "community": {
+          "title": "Cộng đồng & An sinh",
+          "description": "Thúc đẩy hoạt động cộng đồng và phúc lợi xã hội, tạo điều kiện phát triển bền vững."
+        }
+      }
+    },
+    "sustainable_development": {
+      "badge": "Phát triển bền vững",
+      "title": "Mục tiêu Phát triển bền vững",
+      "description": "Hệ sinh thái GPG xoay quanh việc xây dựng một môi trường kinh doanh",
+      "keywords": {
+        "safe": "an toàn",
+        "stable": "ổn định",
+        "sustainable": "bền vững"
+      },
+      "goals": "Mục tiêu tạo giá trị lâu dài cho tất cả các bên liên quan.",
+      "commerce_badge": "Dịch vụ thương mại",
+      "commerce_title": "Dịch vụ thương mại hiện đại",
+      "commerce_description": "Cung cấp giải pháp thương mại toàn diện với công nghệ kỹ thuật số tiên tiến",
+      "features": {
+        "sustainable": {
+          "title": "Bền vững",
+          "description": "Giải pháp thân thiện môi trường"
+        },
+        "digital": {
+          "title": "Số hóa",
+          "description": "Công nghệ kỹ thuật số tiên tiến"
+        },
+        "workforce": {
+          "title": "Nhân lực",
+          "description": "Đào tạo và phát triển chuyên nghiệp"
+        }
+      }
+    },
+    "values": {
+      "badge": "Giá trị cốt lõi",
+      "title": "Giá trị cốt lõi",
+      "subtitle": "Ba trụ cột vững chắc định hướng mọi hoạt động của chúng tôi",
+      "commitment_title": "Cam kết của chúng tôi",
+      "commitment_description": "Với ba giá trị cốt lõi này, TCT Đối Tác Chân Thật cam kết xây dựng niềm tin bền vững, thể hiện tinh thần trách nhiệm cao và phát triển bền vững, tạo nên sự khác biệt trong ngành logistics và đóng góp tích cực cho cộng đồng.",
+      "core_values": {
+        "trust": {
+          "title": "SỰ TIN TƯỞNG",
+          "description": "Xây dựng và duy trì niềm tin với khách hàng, đối tác thông qua sự minh bạch, trung thực và cam kết chất lượng trong mọi hoạt động."
+        },
+        "responsibility": {
+          "title": "TINH THẦN TRÁCH NHIỆM",
+          "description": "Thể hiện tinh thần trách nhiệm cao trong công việc, luôn hoàn thành tốt nhiệm vụ và đóng góp tích cực cho sự phát triển của tổ chức."
+        },
+        "sustainability": {
+          "title": "PHÁT TRIỂN BỀN VỮNG",
+          "description": "Cam kết phát triển bền vững, cân bằng giữa lợi ích kinh tế, xã hội và môi trường để tạo giá trị lâu dài cho cộng đồng."
+        }
+      }
+    }
+  },
+  "history": {
+    "hero": {
+      "badge": "LỊCH SỬ • HÌNH THÀNH • PHÁT TRIỂN",
+      "title1": "LỊCH SỬ",
+      "title2": "HÌNH THÀNH",
+      "description1": "Hành trình 16 năm xây dựng và phát triển từ những ngày đầu tiên",
+      "description2": "Từ một công ty nhỏ đến tập đoàn hàng đầu trong lĩnh vực logistics tại Việt Nam",
+      "button": "Khám phá hành trình"
+    },
+    "timeline": {
+      "title": "Dòng thời gian phát triển",
+      "subtitle": "Những dấu mốc quan trọng trong hành trình 16 năm",
+      "milestones": {
+        "2009": {
+          "title": "Thành lập công ty",
+          "description": "TCT Đối Tác Chân Thật được thành lập với tầm nhìn trở thành đối tác tin cậy trong lĩnh vực logistics"
+        },
+        "2012": {
+          "title": "Mở rộng quy mô",
+          "description": "Mở rộng hoạt động ra toàn quốc với hệ thống depot và kho bãi hiện đại"
+        },
+        "2015": {
+          "title": "Đạt chứng nhận ISO",
+          "description": "Đạt chứng nhận ISO 9001:2015 về hệ thống quản lý chất lượng"
+        },
+        "2018": {
+          "title": "Phát triển hệ sinh thái",
+          "description": "Bắt đầu xây dựng hệ sinh thái 4 nhóm toàn diện"
+        },
+        "2020": {
+          "title": "Chuyển đổi số",
+          "description": "Ứng dụng công nghệ số trong toàn bộ hoạt động kinh doanh"
+        },
+        "2024": {
+          "title": "Top 500 doanh nghiệp",
+          "description": "Lọt vào Top 500 doanh nghiệp lớn nhất Việt Nam"
+        }
+      }
+    },
+    "achievements": {
+      "title": "Thành tựu nổi bật",
+      "subtitle": "Những dấu ấn quan trọng trong hành trình phát triển",
+      "items": {
+        "growth": {
+          "title": "Tăng trưởng ổn định",
+          "description": "Tăng trưởng bình quân 15% mỗi năm trong 16 năm qua"
+        },
+        "expansion": {
+          "title": "Mở rộng quy mô",
+          "description": "Từ 1 văn phòng đến 15 depot trên toàn quốc"
+        },
+        "recognition": {
+          "title": "Được công nhận",
+          "description": "Nhiều giải thưởng và chứng nhận uy tín trong ngành"
+        },
+        "innovation": {
+          "title": "Đổi mới sáng tạo",
+          "description": "Tiên phong trong việc ứng dụng công nghệ mới"
+        }
+      }
+    }
+  },
+  "achievements": {
+    "hero": {
+      "badge": "THÀNH TỰU • VINH DANH • 16 NĂM KINH NGHIỆM",
+      "title1": "HÀNH TRÌNH",
+      "title2": "VINH QUANG",
+      "description1": "16 năm phát triển với những dấu ấn quan trọng và sự ghi nhận từ cộng đồng doanh nghiệp Việt Nam",
+      "description2": "Từ những giải thưởng đầu tiên đến vị thế Top 500 doanh nghiệp lớn nhất Việt Nam",
+      "button1": "KHÁM PHÁ THÀNH TỰU",
+      "button2": "XEM GIẢI THƯỞNG",
+      "stats": {
+        "years": "Năm Tiên Phong",
+        "employees": "Nhân Viên",
+        "projects": "Dự Án Thành Công"
+      }
+    },
+    "major_achievements": {
+      "title": "Thành tựu chính",
+      "subtitle": "Những dấu mốc quan trọng trong hành trình phát triển",
+      "items": {
+        "top500": {
+          "title": "Top 500 Doanh nghiệp lớn nhất Việt Nam",
+          "description": "Được vinh danh trong bảng xếp hạng VNR500 do Vietnam Report công bố"
+        },
+        "logistics_award": {
+          "title": "Doanh nghiệp xuất sắc ngành Logistics",
+          "description": "Giải thưởng do Hiệp hội Logistics Việt Nam trao tặng"
+        },
+        "iso_certification": {
+          "title": "Chứng nhận ISO 9001:2015",
+          "description": "Hệ thống quản lý chất lượng đạt tiêu chuẩn quốc tế"
+        },
+        "sustainable": {
+          "title": "Doanh nghiệp bền vững",
+          "description": "Cam kết phát triển bền vững và trách nhiệm xã hội"
+        }
+      }
+    },
+    "timeline": {
+      "title": "Dòng thời gian thành tựu",
+      "subtitle": "Những dấu mốc quan trọng trong 16 năm phát triển",
+      "years": {
+        "2009": "Thành lập công ty",
+        "2012": "Mở rộng quy mô",
+        "2015": "Đạt chứng nhận ISO",
+        "2018": "Phát triển hệ sinh thái",
+        "2020": "Chuyển đổi số",
+        "2024": "Top 500 doanh nghiệp"
+      }
+    },
+    "awards": {
+      "title": "Giải thưởng & Chứng nhận",
+      "subtitle": "Những ghi nhận từ cộng đồng doanh nghiệp",
+      "categories": {
+        "business": "Kinh doanh",
+        "quality": "Chất lượng",
+        "innovation": "Đổi mới",
+        "sustainability": "Bền vững"
+      }
+    }
+  },
+  "nhom_than": {
+    "hero": {
+      "badge": "NHÓM THÂN",
+      "title": "Nhóm Thân",
+      "subtitle": "Logistics & Phụ trợ",
+      "description": "Là một trong những thành phần chính của Hệ sinh thái TCT ĐTCT liên quan đến hệ thống logistics – lĩnh vực kinh doanh chính của TCT ĐTCT"
+    },
+    "overview": {
+      "badge": "VAI TRÒ CỦA NHÓM THÂN",
+      "title": "Vai trò của Nhóm Thân",
+      "description": "Nhóm Thân là nền tảng quá trình TCT ĐTCT, có trách nhiệm thực hiện và vận hành các hoạt động logistics và phụ trợ. Nhóm Thân đảm bảo việc vận chuyển và cung cấp dịch vụ hỗ trợ một cách hiệu quả và chuyên nghiệp.",
+      "roles": {
+        "transport": {
+          "title": "Vận tải và Logistics",
+          "description": "Cung cấp dịch vụ vận tải toàn diện từ đường bộ đến đường biển"
+        },
+        "warehouse": {
+          "title": "Kho bãi và Phân phối",
+          "description": "Hệ thống kho bãi hiện đại với công nghệ tiên tiến"
+        },
+        "support": {
+          "title": "Dịch vụ Phụ trợ",
+          "description": "Các dịch vụ hỗ trợ cho toàn bộ hệ sinh thái"
+        }
+      }
+    },
+    "companies": {
+      "badge": "CÁC CÔNG TY THÀNH VIÊN",
+      "title": "Các Công ty Thành viên",
+      "description": "Nhóm Thân bao gồm các công ty chuyên về logistics và dịch vụ phụ trợ",
+      "list": {
+        "gpg": {
+          "name": "GPG - Công ty Cổ phần Bốc Dỡ Chân Thật",
+          "description": "Dịch vụ bốc dỡ hàng hóa chuyên nghiệp",
+          "services": ["Bốc dỡ container", "Xử lý hàng hóa", "Dịch vụ kho bãi"]
+        },
+        "gbl": {
+          "name": "GBL - Công ty TNHH MTV Logistics Bốc Tải Chân Thật",
+          "description": "Logistics và vận tải hàng hóa",
+          "services": ["Vận tải đường bộ", "Logistics tổng hợp", "Quản lý chuỗi cung ứng"]
+        },
+        "gcl": {
+          "name": "GCL - Công ty TNHH MTV Logistics Chân Thật",
+          "description": "Dịch vụ logistics toàn diện",
+          "services": ["Vận chuyển", "Kho bãi", "Phân phối"]
+        },
+        "aic": {
+          "name": "AIC - Công ty Cổ phần Bốc Dỡ Thủy Sản",
+          "description": "Chuyên về bốc dỡ thủy sản",
+          "services": ["Bốc dỡ thủy sản", "Xử lý lạnh", "Vận chuyển chuyên dụng"]
+        },
+        "woosung": {
+          "name": "WOOSUNG - Công ty TNHH Woosung Việt Nam",
+          "description": "Đối tác quốc tế trong logistics",
+          "services": ["Logistics quốc tế", "Vận tải biển", "Dịch vụ cảng"]
+        },
+        "gfl": {
+          "name": "GFL - Công ty Cổ phần Logistics Chân Thật",
+          "description": "Logistics và phân phối",
+          "services": ["Phân phối", "Kho bãi", "Dịch vụ logistics"]
+        },
+        "gil": {
+          "name": "GIL - Công ty TNHH Logistics Quốc tế Chân Thật",
+          "description": "Logistics quốc tế chuyên nghiệp",
+          "services": ["Xuất nhập khẩu", "Logistics quốc tế", "Thủ tục hải quan"]
+        }
+      }
+    },
+    "depots": {
+      "badge": "HỆ THỐNG DEPOT & KHO BÃI",
+      "title": "Hệ thống Depot & Kho bãi",
+      "description": "Mạng lưới depot và kho bãi hiện đại phục vụ toàn bộ hệ sinh thái",
+      "table": {
+        "headers": {
+          "name": "Tên Depot",
+          "location": "Địa điểm",
+          "capacity": "Công suất (m²)",
+          "status": "Trạng thái"
+        },
+        "status": {
+          "active": "Đang hoạt động",
+          "preparing": "Chuẩn bị đưa vào khai thác"
+        },
+        "mobile": {
+          "capacity_label": "Công suất:"
+        }
+      },
+      "list": {
+        "llc": {
+          "name": "Trung tâm dịch vụ logistics Tổng hợp Linh Xuân (LLC)",
+          "location": "TP. Hồ Chí Minh",
+          "capacity": "20.000",
+          "status": "Đang hoạt động"
+        },
+        "etd": {
+          "name": "Trung tâm khai thác Logistics E-depot Tân Bình (ETD)",
+          "location": "Bình Dương",
+          "capacity": "30.000",
+          "status": "Đang hoạt động"
+        },
+        "cld": {
+          "name": "Trung tâm khai thác Chân Thật Long Thạnh Mỹ (CLD)",
+          "location": "TP. Hồ Chí Minh",
+          "capacity": "200.000",
+          "status": "Đang hoạt động"
+        },
+        "tbd": {
+          "name": "Trung tâm khai thác Tây Nam Bình Dương (TBD)",
+          "location": "Bình Dương",
+          "capacity": "25.000",
+          "status": "Đang hoạt động"
+        },
+        "tht": {
+          "name": "Trung tâm khai thác THT E-Logistics (THT)",
+          "location": "Hải Phòng",
+          "capacity": "100.000",
+          "status": "Đang hoạt động"
+        },
+        "ctc": {
+          "name": "Trung tâm khai thác Chân Thật Tiên Sa (CTC)",
+          "location": "Đà Nẵng",
+          "capacity": "40.000",
+          "status": "Đang hoạt động"
+        },
+        "cbd": {
+          "name": "Trung tâm khai thác Chân Thật Tiên Sa 2 - Hải Đội (CBD)",
+          "location": "Đà Nẵng",
+          "capacity": "10.000",
+          "status": "Đang hoạt động"
+        },
+        "pcd": {
+          "name": "Trung tâm khai thác Chân Thật PTSC (PCD)",
+          "location": "Đà Nẵng",
+          "capacity": "10.000",
+          "status": "Đang hoạt động"
+        },
+        "gad": {
+          "name": "Trung tâm khai thác Chân Thật An Đồn (GAD)",
+          "location": "Đà Nẵng",
+          "capacity": "10.000",
+          "status": "Đang hoạt động"
+        },
+        "cpd": {
+          "name": "Trung tâm khai thác Chân Thật Phú Thuận (CPD)",
+          "location": "TP. Hồ Chí Minh",
+          "capacity": "40.000",
+          "status": "Đang hoạt động"
+        },
+        "gkp": {
+          "name": "Trung tâm khai thác Trapang Krasang (GKP)",
+          "location": "Campuchia",
+          "capacity": "18.000",
+          "status": "Đang hoạt động"
+        },
+        "psd": {
+          "name": "Trung tâm khai thác Phnompenh Smart Depot (PSD)",
+          "location": "Campuchia",
+          "capacity": "50.000",
+          "status": "Đang hoạt động"
+        },
+        "bsd": {
+          "name": "Trung tâm khai thác BNP Sóng Thần (BSD)",
+          "location": "Bình Dương",
+          "capacity": "60.000",
+          "status": "Đang hoạt động"
+        },
+        "scd": {
+          "name": "Trung tâm khai thác Smart Cát Lái Depot (SCD)",
+          "location": "TP. Hồ Chí Minh",
+          "capacity": "15.000",
+          "status": "Đang hoạt động"
+        },
+        "tsd": {
+          "name": "Trung tâm khai thác Tân Cảng Suối Tiên (TSD)",
+          "location": "TP. Hồ Chí Minh",
+          "capacity": "50.000",
+          "status": "Đang hoạt động"
+        },
+        "ssd": {
+          "name": "Trung tâm khai thác Smart Sihanoukville (SSD)",
+          "location": "Campuchia",
+          "capacity": "25.000",
+          "status": "Chuẩn bị đưa vào khai thác"
+        },
+        "sbd": {
+          "name": "Trung tâm khai thác Smart Bangkok (SBD)",
+          "location": "Thái Lan",
+          "capacity": "30.000",
+          "status": "Chuẩn bị đưa vào khai thác"
+        }
+      }
+    },
+    "statistics": {
+      "badge": "THỐNG KÊ NHÓM THÂN",
+      "title": "Thống kê ấn tượng",
+      "stats": {
+        "companies": {
+          "number": "14",
+          "label": "Công ty thành viên",
+          "description": "Chuyên về logistics"
+        },
+        "depots": {
+          "number": "16",
+          "label": "Depot & Kho bãi",
+          "description": "Trong và ngoài nước"
+        },
+        "area": {
+          "number": "688.000",
+          "label": "m² Tổng diện tích",
+          "description": "Công suất kho bãi"
+        },
+        "countries": {
+          "number": "3",
+          "label": "Quốc gia",
+          "description": "Việt Nam, Campuchia, Thái Lan"
+        }
+      }
+    },
+    "cta": {
+      "badge": "KẾT NỐI VỚI NHÓM THÂN",
+      "title": "Kết nối với Nhóm Thân",
+      "description": "Tìm hiểu thêm về các dịch vụ logistics và phụ trợ của chúng tôi",
+      "buttons": {
+        "contact": "Liên hệ tư vấn",
+        "services": "Xem dịch vụ"
+      }
+    }
+  },
+  "nhom_tam": {
+    "hero": {
+      "badge": "NHÓM TÂM • DỊCH VỤ & THƯƠNG MẠI",
+      "title": "Nhóm Tâm",
+      "subtitle": "Dịch vụ & Thương mại",
+      "description": "Các hoạt động cung cấp bởi TÂM được thiết kế để đáp ứng nhu cầu của các thành viên trong Hệ sinh thái và mở rộng ra đến cộng đồng"
+    },
+    "overview": {
+      "badge": "VAI TRÒ CỦA NHÓM TÂM",
+      "title": "Vai trò của Nhóm Tâm",
+      "description": "Nhóm Tâm tập trung vào việc cung cấp các sản phẩm và dịch vụ chất lượng cao, đáp ứng nhu cầu đa dạng của khách hàng và cộng đồng. Chúng tôi cam kết mang đến trải nghiệm tốt nhất cho mọi đối tác.",
+      "roles": {
+        "commerce": {
+          "title": "Thương mại đa dạng",
+          "description": "Cung cấp đa dạng sản phẩm và dịch vụ từ bán lẻ đến bán buôn"
+        },
+        "services": {
+          "title": "Dịch vụ chuyên nghiệp",
+          "description": "Đội ngũ chuyên nghiệp với kinh nghiệm lâu năm trong ngành"
+        }
+      }
+    },
+    "services": {
+      "badge": "CÁC DỊCH VỤ CHÍNH",
+      "title": "Các Dịch vụ Chính",
+      "description": "Nhóm Tâm cung cấp đa dạng các dịch vụ chất lượng cao",
+      "list": {
+        "restaurant_hotel": {
+          "title": "Nhà hàng – Khách sạn",
+          "description": "Cung cấp dịch vụ nhà hàng và khách sạn chất lượng cao, đáp ứng mọi nhu cầu và mong muốn của khách hàng. Sự hài lòng của khách hàng là mục tiêu hàng đầu của chúng tôi."
+        },
+        "commerce_retail": {
+          "title": "Thương mại & Bán lẻ",
+          "description": "Hoạt động thương mại và bán lẻ đa dạng, từ hàng tiêu dùng đến các sản phẩm chuyên biệt. Chúng tôi cung cấp giải pháp thương mại toàn diện cho mọi nhu cầu."
+        },
+        "healthcare": {
+          "title": "Chăm sóc Sức khoẻ và Khám chữa bệnh",
+          "description": "Dịch vụ chăm sóc sức khỏe chuyên nghiệp với đội ngũ y bác sĩ giàu kinh nghiệm. Chúng tôi cam kết mang đến dịch vụ y tế chất lượng cao và tận tâm."
+        },
+        "consulting_construction": {
+          "title": "Tư vấn và Xây dựng",
+          "description": "Dịch vụ tư vấn toàn diện từ giai đoạn lập kế hoạch ban đầu cho đến thiết kế, xây dựng và hoàn thiện dự án. Đội ngũ tư vấn chuyên nghiệp với nhiều năm kinh nghiệm."
+        }
+      }
+    },
+    "companies": {
+      "badge": "CÁC CÔNG TY THÀNH VIÊN",
+      "title": "Các Công ty Thành viên",
+      "description": "Nhóm Tâm bao gồm các công ty chuyên về dịch vụ và thương mại",
+      "list": {
+        "fmcg": {
+          "name": "FMCG - Công ty Cổ phần Hàng tiêu dùng Phú Yên",
+          "description": "Chuyên về hàng tiêu dùng nhanh",
+          "services": ["Hàng tiêu dùng", "Phân phối", "Bán lẻ"]
+        },
+        "suzano": {
+          "name": "SUZANO CARGO - Công ty TNHH Tư Vấn Vận Tải An",
+          "description": "Dịch vụ vận tải và tư vấn",
+          "services": ["Vận tải", "Tư vấn logistics", "Dịch vụ vận chuyển"]
+        },
+        "gtc": {
+          "name": "GTC - Công ty TNHH Thương mại Chân Thật",
+          "description": "Thương mại tổng hợp",
+          "services": ["Thương mại", "Phân phối", "Bán buôn"]
+        },
+        "fmg": {
+          "name": "FMG - Công ty Thành Phú Gia Lai Chân Thật",
+          "description": "Dịch vụ thương mại đa dạng",
+          "services": ["Thương mại", "Dịch vụ", "Phân phối"]
+        },
+        "grc": {
+          "name": "GRC - Công ty TNHH Bán lẻ Chân Thật",
+          "description": "Chuyên về bán lẻ",
+          "services": ["Bán lẻ", "Cửa hàng", "Dịch vụ khách hàng"]
+        }
+      }
+    },
+    "cta": {
+      "badge": "KẾT NỐI VỚI NHÓM TÂM",
+      "title": "Kết nối với Nhóm Tâm",
+      "description": "Tìm hiểu thêm về các dịch vụ và thương mại của chúng tôi",
+      "buttons": {
+        "contact": "Liên hệ tư vấn",
+        "services": "Xem dịch vụ"
+      }
+    }
+  },
+  "nhom_tri": {
+    "hero": {
+      "badge": "NHÓM TRÍ • TƯ VẤN & CÔNG NGHỆ",
+      "title": "Nhóm Trí",
+      "subtitle": "Tư vấn, Đào tạo & Công nghệ",
+      "description": "Phát triển chiến lược kinh doanh, chiến lược marketing, tư vấn về công nghệ, tài chính, nhân sự và vấn đề pháp lý",
+      "stats": {
+        "experience": "Năm Kinh Nghiệm",
+        "companies": "Công Ty Thành Viên",
+        "services": "Dịch Vụ Chính"
+      }
+    },
+    "overview": {
+      "badge": "TỔNG QUAN NHÓM TRÍ",
+      "title": "Tổng quan Nhóm Trí",
+      "description": "Nhóm Trí là một trong 4 trụ cột chính của TCT Đối Tác Chân Thật, chuyên về tư vấn, đào tạo và công nghệ. Chúng tôi cam kết mang đến các giải pháp tối ưu và chương trình đào tạo cá nhân hóa để đáp ứng nhu cầu đa dạng của khách hàng.",
+      "roles": {
+        "consulting": {
+          "title": "Tư vấn Chuyên nghiệp",
+          "description": "Cung cấp các giải pháp tư vấn tối ưu và chương trình đào tạo cá nhân hóa"
+        },
+        "training": {
+          "title": "Đào tạo Chất lượng cao",
+          "description": "Phát triển năng lực cá nhân và nhóm làm việc với các chương trình đào tạo chuyên sâu"
+        }
+      }
+    },
+    "services": {
+      "badge": "DỊCH VỤ TƯ VẤN & ĐÀO TẠO",
+      "title": "Dịch vụ Tư vấn & Đào tạo",
+      "description": "Nhóm Trí cung cấp 6 dịch vụ chính trong lĩnh vực tư vấn quản lý, tài chính, marketing, nhân sự, công nghệ và đào tạo chuyên sâu",
+      "list": {
+        "management": {
+          "title": "Tư vấn Quản lý Doanh nghiệp",
+          "description": "Cung cấp các giải pháp tư vấn toàn diện về quản lý doanh nghiệp, chiến lược kinh doanh và tối ưu hóa hiệu suất hoạt động."
+        },
+        "finance": {
+          "title": "Tư vấn Tài chính",
+          "description": "Hỗ trợ tư vấn về quản lý tài chính, đầu tư và phát triển các chiến lược tài chính bền vững cho doanh nghiệp."
+        },
+        "marketing": {
+          "title": "Tư vấn Marketing",
+          "description": "Phát triển chiến lược marketing hiệu quả, xây dựng thương hiệu và tối ưu hóa các kênh tiếp thị."
+        },
+        "hr": {
+          "title": "Tư vấn Nhân sự",
+          "description": "Cung cấp giải pháp quản lý nhân sự, phát triển nguồn nhân lực và xây dựng văn hóa doanh nghiệp."
+        },
+        "technology": {
+          "title": "Tư vấn Công nghệ",
+          "description": "Hỗ trợ tư vấn về chuyển đổi số, ứng dụng công nghệ và phát triển các giải pháp công nghệ tiên tiến."
+        },
+        "training": {
+          "title": "Đào tạo Chuyên sâu",
+          "description": "Cung cấp các chương trình đào tạo chuyên sâu nhằm phát triển năng lực cá nhân và nhóm làm việc."
+        }
+      }
+    },
+    "companies": {
+      "badge": "CÔNG TY THÀNH VIÊN",
+      "title": "Công ty Thành viên",
+      "description": "Nhóm Trí bao gồm LTTCI - Viện Tư vấn và Đào tạo Công nghệ Logistics, tổ chức chuyên về cung cấp các dịch vụ tư vấn chuyên nghiệp và đào tạo chất lượng cao",
+      "list": {
+        "lttci": {
+          "name": "LTTCI - Viện Tư vấn và Đào tạo Công nghệ Logistics",
+          "description": "Tổ chức chuyên về cung cấp các dịch vụ tư vấn chuyên nghiệp và đào tạo chất lượng cao",
+          "services": ["Tư vấn logistics", "Đào tạo chuyên sâu", "Giải pháp công nghệ"]
+        }
+      }
+    },
+    "cta": {
+      "badge": "LIÊN HỆ & HỢP TÁC",
+      "title": "Kết nối với Nhóm Trí",
+      "description": "Tìm hiểu thêm về các dịch vụ tư vấn và đào tạo chuyên nghiệp của chúng tôi",
+      "buttons": {
+        "contact": "Liên hệ tư vấn",
+        "services": "Xem dịch vụ"
+      }
+    }
+  },
+  "nhom_thien": {
+    "metadata": {
+      "title": "Nhóm Thiện - Cộng đồng & An sinh Xã hội | TCT Đối Tác Chân Thật",
+      "description": "Tìm hiểu về Nhóm Thiện - lĩnh vực Cộng đồng & An sinh Xã hội của TCT Đối Tác Chân Thật. Thúc đẩy hoạt động cộng đồng và phúc lợi xã hội, tạo điều kiện phát triển bền vững.",
+      "keywords": "Nhóm Thiện, cộng đồng, an sinh xã hội, TCT Đối Tác Chân Thật, SWC, công tác xã hội, phi lợi nhuận, cầu An Yên, thiện nguyện"
+    },
+    "hero": {
+      "badge": "NHÓM THIỆN • CỘNG ĐỒNG & AN SINH XÃ HỘI",
+      "title": "Nhóm Thiện",
+      "subtitle": "Cộng đồng & An sinh Xã hội",
+      "description": "Thúc đẩy hoạt động cộng đồng và phúc lợi xã hội của Hệ sinh thái TCT ĐTCT tạo điều kiện phát triển bền vững"
+    },
+    "overview": {
+      "badge": "VAI TRÒ CỦA NHÓM THIỆN",
+      "title": "Vai trò của Nhóm Thiện",
+      "description": "Nhóm Thiện tập trung vào việc thúc đẩy hoạt động cộng đồng và phúc lợi xã hội. Chúng tôi cam kết tạo dựng mô hình kinh doanh xã hội giúp cộng đồng phát triển tốt đẹp hơn và tôn vinh tinh thần nhân ái.",
+      "roles": {
+        "compassion": {
+          "title": "Tinh thần Nhân ái",
+          "description": "Phục vụ cộng đồng không chỉ là trách nhiệm xã hội mà còn là một phần tạo dựng giá trị"
+        },
+        "sustainability": {
+          "title": "Phát triển Bền vững",
+          "description": "Tạo dựng mô hình kinh doanh xã hội giúp cộng đồng phát triển tốt đẹp hơn"
+        }
+      }
+    },
+    "activities": {
+      "badge": "CÁC HOẠT ĐỘNG CHÍNH",
+      "title": "Các Hoạt động Chính",
+      "description": "Nhóm Thiện thực hiện các dự án và chương trình xã hội mang tính thường xuyên và bền vững",
+      "list": {
+        "social_work": {
+          "title": "Cộng đồng Công tác xã hội",
+          "description": "Với sự ra đời Công ty TNHH Cộng đồng Công tác xã hội (SWC), SWC là một doanh nghiệp xã hội hoạt động kinh doanh hướng về các hoạt động về giáo dục, y tế và các hoạt động công tác xã hội.",
+          "details": "TCT ĐTCT định hướng xây dựng những dự án và chương trình xã hội mang tính thường xuyên và bền vững, tạo dựng mô hình kinh doanh xã hội giúp cộng đồng phát triển tốt đẹp hơn."
+        },
+        "non_profit": {
+          "title": "Các tổ chức phi lợi nhuận",
+          "description": "TCT ĐTCT phối hợp cùng Trung tâm Công tác xã hội Thanh thiếu niên Việt Nam (YSW), các đối tác đồng hành, Hội Liên hiệp Thanh niên Việt Nam các tỉnh, thành phố triển khai và thực hiện Dự án 'Xây dựng 100 cầu An Yên'.",
+          "details": "Đây là một trong những dự án trọng điểm với mục tiêu từng bước xoá bỏ, thay thế cầu tạm, xây dựng nông thôn mới; giúp các em học sinh được đến trường an toàn; bà con đi lại dễ dàng hơn."
+        },
+        "social_welfare": {
+          "title": "Phúc lợi xã hội",
+          "description": "Thúc đẩy hoạt động cộng đồng và phúc lợi xã hội của Hệ sinh thái TCT ĐTCT tạo điều kiện phát triển bền vững.",
+          "details": "Chúng tôi tin rằng việc phục vụ cộng đồng không chỉ là trách nhiệm xã hội mà còn là một phần tạo dựng giá trị và tôn vinh tinh thần nhân ái."
+        }
+      }
+    },
+    "achievements": {
+      "badge": "THÀNH TỰU NỔI BẬT",
+      "title": "Thành tựu Nổi bật",
+      "description": "Những con số ấn tượng thể hiện sự đóng góp của Nhóm Thiện cho cộng đồng",
+      "stats": {
+        "children_helped": {
+          "number": "25+",
+          "label": "Bạn nhỏ",
+          "description": "Phẫu thuật hở hàm ếch thành công"
+        },
+        "bridges_built": {
+          "number": "12",
+          "label": "Cây cầu",
+          "description": "An Yên được xây dựng"
+        },
+        "donations": {
+          "number": "12,5 tỷ",
+          "label": "Quyên góp",
+          "description": "Thiện nguyện"
+        }
+      }
+    },
+    "companies": {
+      "badge": "CÔNG TY THÀNH VIÊN",
+      "title": "Công ty Thành viên",
+      "description": "Nhóm Thiện bao gồm các công ty chuyên về hoạt động cộng đồng và an sinh xã hội",
+      "list": {
+        "cxyt": {
+          "description": "Dịch vụ y tế cộng đồng và an sinh xã hội",
+          "services": "Y tế Cộng đồng, An sinh Xã hội, Hỗ trợ Y tế"
+        },
+        "hyhy": {
+          "description": "Phòng khám cộng đồng và dịch vụ y tế",
+          "services": "Phòng khám Cộng đồng, Y tế, Hỗ trợ Y khoa"
+        },
+        "swc": {
+          "description": "Công tác xã hội và phát triển cộng đồng",
+          "services": "Công tác Xã hội, Phát triển Cộng đồng, Giáo dục"
+        },
+        "bep_nha": {
+          "description": "Bếp nhà từ tâm và hỗ trợ xã hội",
+          "services": "Bếp Nhà Từ Tâm, Hỗ trợ Thực phẩm, Dịch vụ Xã hội"
+        }
+      }
+    },
+    "cta": {
+      "badge": "KẾT NỐI VỚI NHÓM THIỆN",
+      "title": "Kết nối với Nhóm Thiện",
+      "description": "Cùng chúng tôi tạo dựng giá trị và tôn vinh tinh thần nhân ái cho cộng đồng",
+      "buttons": {
+        "join_activities": "Tham gia hoạt động",
+        "donate": "Quyên góp ủng hộ"
+      }
+    }
+  },
+  "social_responsibility": {
+    "hero": {
+      "badge": "TRÁCH NHIỆM XÃ HỘI • VÌ CỘNG ĐỒNG",
+      "title": "Trách nhiệm xã hội",
+      "description": "Với 38 hoạt động trách nhiệm xã hội trong năm 2024, TCT Đối Tác Chân Thật đã hỗ trợ hơn 2000 người dân tại 15+ tỉnh thành trên cả nước",
+      "badges": {
+        "charity": "Từ thiện & Cộng đồng",
+        "education": "Giáo dục & Đào tạo",
+        "environment": "Môi trường bền vững"
+      },
+      "stats": {
+        "activities": "Hoạt động",
+        "provinces": "Tỉnh thành",
+        "people": "Người hỗ trợ",
+        "commitment": "Cam kết"
+      }
+    },
+    "statistics": {
+      "badge": "TÁC ĐỘNG TÍCH CỰC",
+      "title": "Tác động tích cực của chúng tôi",
+      "subtitle": "Những con số thể hiện cam kết và đóng góp của TCT Đối Tác Chân Thật cho cộng đồng",
+      "metrics": {
+        "activities_2024": "Hoạt động năm 2024",
+        "provinces_supported": "Tỉnh thành hỗ trợ",
+        "people_helped": "Người được hỗ trợ",
+        "years_experience": "Năm kinh nghiệm"
+      },
+      "descriptions": {
+        "activities_2024": "Hoạt động trách nhiệm xã hội",
+        "provinces_supported": "Địa phương trên cả nước",
+        "people_helped": "Người dân và học sinh",
+        "years_experience": "Năm hoạt động CSR"
+      }
+    },
+    "social_activities": {
+      "badge": "LĨNH VỰC HOẠT ĐỘNG XÃ HỘI",
+      "title": "Lĩnh vực hoạt động xã hội",
+      "subtitle": "TCT Đối Tác Chân Thật tập trung vào 4 lĩnh vực chính trong hoạt động trách nhiệm xã hội",
+      "activities": {
+        "community_support": {
+          "title": "Hỗ trợ cộng đồng",
+          "description": "Các hoạt động từ thiện và hỗ trợ cộng đồng địa phương",
+          "activities": [
+            "Trao tặng 2,5 tấn gạo cho đồng bào huyện Tràng Định, tỉnh Lạng Sơn bị ảnh hưởng bởi cơn bão số 3",
+            "Hỗ trợ cải tạo nhà vệ sinh tại các trường học",
+            "Tổ chức các chương trình từ thiện định kỳ"
+          ]
+        },
+        "education_training": {
+          "title": "Giáo dục & Đào tạo",
+          "description": "Đầu tư vào giáo dục và phát triển nguồn nhân lực",
+          "activities": [
+            "Hỗ trợ 631 áo ấm và 02 bộ máy vi tính cho học sinh",
+            "Chương trình 'Nâng bước em đến trường'",
+            "Hỗ trợ công trình nâng cấp thư viện cho các trường học"
+          ]
+        },
+        "employee_development": {
+          "title": "Phát triển nhân viên",
+          "description": "Tạo môi trường làm việc tốt và phát triển con người",
+          "activities": [
+            "Hội nghị Người lao động định kỳ",
+            "Chương trình đào tạo và phát triển kỹ năng",
+            "Xây dựng văn hóa doanh nghiệp nhân văn"
+          ]
+        },
+        "sustainable_environment": {
+          "title": "Môi trường bền vững",
+          "description": "Cam kết bảo vệ môi trường và phát triển bền vững",
+          "activities": [
+            "Áp dụng các giải pháp logistics xanh",
+            "Giảm thiểu tác động môi trường",
+            "Thúc đẩy phát triển bền vững"
+          ]
+        }
+      }
+    },
+    "activities_2024": {
+      "badge": "HOẠT ĐỘNG NĂM 2024",
+      "title": "Hoạt động trách nhiệm xã hội năm 2024",
+      "subtitle": "Tổng hợp 38 hoạt động trách nhiệm xã hội của TCT Đối Tác Chân Thật trong năm 2024",
+      "categories": {
+        "healthcare": {
+          "title": "Y tế & Khám chữa bệnh",
+          "activities": {
+            "spring_volunteer": {
+              "title": "Chương trình Xuân Tình nguyện 2024",
+              "description": "Phối hợp tổ chức chương trình 'Nghĩa tình dân vận - mùa xuân biên giới' tại An Giang - Tổ chức khám bệnh và trao tặng quà miễn phí cho 300 người dân có hoàn cảnh khó khăn",
+              "location": "An Giang"
+            },
+            "free_consultation": {
+              "title": "Tư vấn, khám bệnh miễn phí",
+              "description": "Tổ chức tư vấn, khám bệnh, cấp phát thuốc miễn phí và tặng quà cho 400 người dân có hoàn cảnh khó khăn tại Xã Sơn Hà, huyện Sơn Hoà và xã An Hiệp, huyện Tuy An",
+              "location": "Phú Yên"
+            }
+          }
+        },
+        "disaster_support": {
+          "title": "Hỗ trợ thiên tai",
+          "activities": {
+            "yagi_storm": {
+              "title": "Hỗ trợ bão Yagi",
+              "description": "Trao tặng 2,5 tấn gạo cho đồng bào huyện Tràng Định, tỉnh Lạng Sơn bị ảnh hưởng bởi cơn bão số 3 – bão Yagi",
+              "location": "Lạng Sơn"
+            }
+          }
+        },
+        "education_support": {
+          "title": "Hỗ trợ giáo dục",
+          "activities": {
+            "school_facilities": {
+              "title": "Cải tạo cơ sở vật chất trường học",
+              "description": "Hỗ trợ cải tạo 01 nhà vệ sinh tại Trường THCS An Tức, xã An Tức, huyện Tri Tôn, tỉnh An Giang",
+              "location": "An Giang"
+            },
+            "help_students": {
+              "title": "Chương trình 'Nâng bước em đến trường'",
+              "description": "Hỗ trợ 631 áo ấm và 02 bộ máy vi tính cho học sinh Trường TH&THCS Tân Lập, xã Tân Lập, huyện Lục Yên, tỉnh Yên Bái",
+              "location": "Yên Bái"
+            },
+            "love_connection": {
+              "title": "Chương trình 'Kết nối yêu thương'",
+              "description": "Hỗ trợ công trình nâng cấp nhà vệ sinh, thư viện cho Trường Tiểu học Tân Lập, xã Tân Lập, huyện Lục Ngạn, tỉnh Bắc Giang và các Trường trên địa bàn huyện Yên Sơn, tỉnh Tuyên Quang",
+              "location": "Bắc Giang & Tuyên Quang"
+            }
+          }
+        },
+        "community_gifts": {
+          "title": "Trao tặng & Hỗ trợ cộng đồng",
+          "activities": {
+            "spring_unity": {
+              "title": "Chương trình 'Xuân đoàn kết'",
+              "description": "Trao tặng 200 chăn ấm tại Chương trình 'Xuân đoàn kết, Tết thắm tình quân dân' tại tỉnh Sơn La",
+              "location": "Sơn La"
+            },
+            "teacher_student_support": {
+              "title": "Hỗ trợ giáo viên và học sinh",
+              "description": "Tặng 100 bộ vải áo dài cho các cô giáo; Tặng 50 suất học bổng cho các em học sinh vượt khó học giỏi",
+              "location": "Phú Yên"
+            },
+            "family_support": {
+              "title": "Hỗ trợ hộ gia đình khó khăn",
+              "description": "Tặng hơn 550 phần quà cho các hộ gia đình khó khăn trên địa bàn Phường Phú Thạnh, TP. Tuy Hoà; xã An Định và Thị trấn Chí Thạnh, huyện Tuy An; Trường THPT Trần Phú",
+              "location": "Phú Yên"
+            },
+            "disabled_support": {
+              "title": "Hỗ trợ người khuyết tật",
+              "description": "Thăm hỏi, tặng quà và 20 xe lăn cho người khuyết tật (Hội Bảo trợ Người khuyết tật huyện Tuy An)",
+              "location": "Phú Yên"
+            },
+            "border_spring": {
+              "title": "Chương trình Xuân Biên giới",
+              "description": "Trao tặng 01 bộ máy vi tính, 01 phần quà Tết cho Đồn Biên phòng Bình Thạnh và 01 phần quà Tết cho gia đình Đoàn viên tại Ấp Tân Hoà Thuận, xã Tân Hội, TP. Hồng Ngự, tỉnh Đồng Tháp",
+              "location": "Đồng Tháp"
+            },
+            "joyful_tet": {
+              "title": "Chương trình 'Tết trọn niềm vui'",
+              "description": "Trao tặng 125 phần quà cho các hộ cận nghèo, có hoàn cảnh khó khăn hai xã Tân Thắng và xã Thắng Hải, huyện Hàm Tân",
+              "location": "Bình Thuận"
+            },
+            "love_tet": {
+              "title": "Chương trình 'Tết yêu thương'",
+              "description": "Tổ chức chương trình 'Tết yêu thương' năm 2024 tại tỉnh Thái Nguyên - Trao tặng 60 suất quà cho các cháu tại Trung tâm Thái Hà",
+              "location": "Thái Nguyên"
+            }
+          }
+        }
+      }
+    },
+    "summary": {
+      "title": "Tổng kết hoạt động năm 2024",
+      "stats": {
+        "activities": "Hoạt động",
+        "provinces": "Tỉnh thành",
+        "people_supported": "Người được hỗ trợ",
+        "commitment": "Cam kết"
+      }
+    }
+  },
+  "news": {
+    "hero": {
+      "badge": "TIN TỨC • CẬP NHẬT THƯỜNG XUYÊN • THÔNG TIN MỚI NHẤT",
+      "title1": "TIN TỨC & SỰ KIỆN",
+      "description": "Khám phá hành trình phát triển và những thành tựu nổi bật của TCT Đối Tác Chân Thật",
+      "features": {
+        "trending": "Xu hướng mới",
+        "quality": "Nội dung chất lượng",
+        "updates": "Cập nhật nhanh"
+      }
+    },
+    "filters": {
+      "search": "Tìm kiếm tin tức...",
+      "categories": {
+        "all": "Tất cả",
+        "news": "Tin tức",
+        "events": "Sự kiện",
+        "announcements": "Thông báo",
+        "awards": "Giải thưởng"
+      }
+    },
+    "articles": {
+      "read_more": "Đọc thêm",
+      "external_link": "Xem chi tiết",
+      "views": "lượt xem",
+      "likes": "thích",
+      "share": "Chia sẻ",
+      "date": "Ngày",
+      "category": "Danh mục"
+    },
+    "pagination": {
+      "previous": "Trước",
+      "next": "Tiếp",
+      "page": "Trang",
+      "of": "của"
+    },
+    "section": {
+      "title": "Tin tức nổi bật",
+      "search_results": "Kết quả tìm kiếm cho",
+      "latest_updates": "Cập nhật mới nhất",
+      "description": "Theo dõi những sự kiện và thông báo quan trọng từ TCT Đối Tác Chân Thật",
+      "search_filter": "Tìm kiếm & Lọc",
+      "search_placeholder": "Tìm kiếm tin tức...",
+      "category_label": "Danh mục",
+      "results_count": "Hiển thị {current} trong {total} tin tức",
+      "featured": "Nổi bật",
+      "no_results": {
+        "title": "Không tìm thấy kết quả",
+        "description": "Không có tin tức nào phù hợp với từ khóa tìm kiếm của bạn",
+        "clear_filters": "Xóa bộ lọc"
+      },
+      "sidebar": {
+        "popular_news": "Tin nổi bật",
+        "newsletter": {
+          "title": "Đăng ký nhận tin",
+          "description": "Nhận thông báo về tin tức mới nhất từ TCT Đối Tác Chân Thật",
+          "email_placeholder": "Email của bạn",
+          "subscribe": "Đăng ký"
+        }
+      },
+      "cta": {
+        "badge": "Đăng ký nhận tin",
+        "title": "Theo dõi tin tức mới nhất",
+        "description": "Đăng ký nhận thông báo để không bỏ lỡ những tin tức và sự kiện quan trọng từ TCT Đối Tác Chân Thật",
+        "email_placeholder": "Nhập email của bạn",
+        "subscribe": "Đăng ký",
+        "privacy": "Chúng tôi cam kết bảo mật thông tin của bạn và không gửi spam"
+      }
+    }
+  },
+      "contact": {
+        "hero": {
+          "badge": "LIÊN HỆ • 24/7 HỖ TRỢ • TƯ VẤN MIỄN PHÍ",
+          "title1": "KẾT NỐI",
+          "title2": "ĐỐI TÁC TIN CẬY",
+          "description1": "Luôn sẵn sàng lắng nghe và hỗ trợ bạn. Hãy liên hệ với chúng tôi để được tư vấn miễn phí về các giải pháp phù hợp nhất.",
+          "description2": "Chúng tôi cam kết phản hồi trong vòng 24 giờ với giải pháp tối ưu nhất cho doanh nghiệp của bạn",
+          "button1": "LIÊN HỆ NGAY",
+          "button2": "GỌI HOTLINE",
+          "stats": {
+            "support": "Hỗ trợ khách hàng",
+            "experience": "Năm kinh nghiệm",
+            "quality": "Cam kết chất lượng"
+          }
+        },
+        "contact_info": {
+          "badge": "Thông tin liên hệ",
+          "title": "Kết nối với chúng tôi",
+          "subtitle": "Luôn sẵn sàng hỗ trợ và tư vấn cho bạn mọi lúc, mọi nơi",
+          "cards": {
+            "address": {
+              "title": "Địa chỉ",
+              "company_name": "Tổng Công Ty Đối Tác Chân Thật",
+              "company_name_en": "(Genuine Partner Group)",
+              "location": "TP. Hồ Chí Minh, Việt Nam"
+            },
+            "phone": {
+              "title": "Điện thoại",
+              "phone1": "+84 123 456 789",
+              "phone2": "+84 987 654 321"
+            },
+            "email": {
+              "title": "Email",
+              "email1": "info@genuinepartner.com",
+              "email2": "support@gpg.com"
+            },
+            "hours": {
+              "title": "Giờ làm việc",
+              "weekdays": "Thứ 2 - Thứ 6",
+              "time": "8:00 - 17:30",
+              "saturday": "Thứ 7: 8:00 - 12:00"
+            }
+          }
+        },
+        "contact_form": {
+          "badge": "Gửi tin nhắn",
+          "title": "Liên hệ với chúng tôi",
+          "subtitle": "Điền thông tin vào form bên dưới và chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.",
+          "form_title": "Liên hệ trực tiếp",
+          "form_subtitle": "Chúng tôi sẽ phản hồi trong vòng 24 giờ với giải pháp tối ưu nhất",
+          "fields": {
+            "name": "Họ và tên",
+            "name_placeholder": "Nhập họ và tên của bạn",
+            "phone": "Số điện thoại",
+            "phone_placeholder": "Nhập số điện thoại",
+            "email": "Email",
+            "email_placeholder": "Nhập địa chỉ email",
+            "subject": "Chủ đề",
+            "subject_placeholder": "Tiêu đề tin nhắn",
+            "message": "Nội dung tin nhắn",
+            "message_placeholder": "Nhập nội dung tin nhắn của bạn...",
+            "submit": "Gửi tin nhắn ngay"
+          },
+          "success": "Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.",
+          "error": "Có lỗi xảy ra. Vui lòng thử lại sau."
+        },
+        "quick_contact": {
+          "title": "Liên hệ nhanh",
+          "hotline": "Hotline 24/7",
+          "hotline_number": "+84 123 456 789",
+          "email_support": "Email hỗ trợ",
+          "email_address": "support@gpg.com",
+          "main_office": "Văn phòng chính",
+          "office_location": "TP. Hồ Chí Minh"
+        },
+        "why_choose": {
+          "title": "Tại sao chọn chúng tôi?",
+          "experience": "16 năm kinh nghiệm trong lĩnh vực",
+          "team": "Đội ngũ chuyên gia giàu kinh nghiệm",
+          "solution": "Giải pháp tùy chỉnh theo nhu cầu",
+          "support": "Hỗ trợ 24/7, phản hồi nhanh chóng",
+          "quality": "Cam kết chất lượng và uy tín"
+        },
+        "map": {
+          "badge": "Vị trí văn phòng",
+          "title": "Tìm đường đến chúng tôi",
+          "subtitle": "Văn phòng chính của chúng tôi tọa lạc tại trung tâm TP. Hồ Chí Minh, dễ dàng tiếp cận và thuận tiện cho việc gặp gỡ, trao đổi.",
+          "office_title": "Văn phòng chính",
+          "open_maps": "Mở Google Maps",
+          "call_now": "Gọi ngay"
+        }
+      },
+      "history": {
+        "hero": {
+          "badge": "✨ Lịch Sử Hình Thành ✨",
+          "title": "Hành Trình Vĩ Đại",
+          "description1": "Sau gần 15 năm phát triển",
+          "description2": "TCT ĐTCT trở thành doanh nghiệp hàng đầu logistics Việt Nam"
+        },
+        "summary": {
+          "badge": "🏆 Thành Tựu Vượt Trội 🏆",
+          "title": "Genuine Partner Group",
+          "subtitle": "Ngày Nay",
+          "description1": "Từ công ty khởi nghiệp năm 2009",
+          "description2": "Phát triển thành hệ sinh thái đa dạng với 22 công ty thành viên và 15 depot container"
+        },
+        "statistics": {
+          "depots": {
+            "number": "15+",
+            "title": "Depot Container",
+            "subtitle": "Trong nước & Quốc tế"
+          },
+          "companies": {
+            "number": "22",
+            "title": "Công ty thành viên",
+            "subtitle": "Hệ sinh thái đa dạng"
+          },
+          "experience": {
+            "number": "15",
+            "title": "Năm kinh nghiệm",
+            "subtitle": "Phát triển bền vững"
+          }
+        },
+        "timeline": {
+          "2009": {
+            "title": "Thành lập TCT ĐTCT",
+            "description": "Tổng Công ty Đối Tác Chân Thật (TCT ĐTCT) được thành lập vào ngày 11/5/2009, đánh dấu bước khởi đầu quan trọng trong lĩnh vực logistics tại Việt Nam."
+          },
+          "2010": {
+            "title": "Thành lập Depot đầu tiên",
+            "description": "Thành lập Depot: trung tâm khai thác Chân Thật Sóng Thần, Chân Thật Phú Thuận CY - nền tảng cho hệ thống depot container."
+          },
+          "2011-2012": {
+            "title": "Mở rộng hệ thống công ty thành viên",
+            "description": "Thành lập các công ty thành viên: Công ty TNHH MTV Giải pháp Container VN, Công ty Cổ phần Tiếp Vận Tân Cảng Phương Đông, và Depot thứ 3 - Tân Cảng Phương Đông."
+          },
+          "2013-2014": {
+            "title": "Đối tác chiến lược và mở rộng dịch vụ",
+            "description": "Trở thành nhà cung cấp dịch vụ phân phối Coca Cola. Thành lập Depot thứ 4 & khai trương trung tâm bảo dưỡng và sửa chữa Container di động."
+          },
+          "2015-2016": {
+            "title": "Mở rộng quốc tế",
+            "description": "Khai trương thêm nhiều chi nhánh, văn phòng đại lý hãng tàu, văn phòng đại diện, depot, kho bãi tại Việt Nam & Campuchia."
+          },
+          "2017": {
+            "title": "Tái cấu trúc và đổi mới công nghệ",
+            "description": "Thành lập bãi Container Tây Nam Bình Dương. Tái cấu trúc hệ thống lần thứ 2 thành công. Sản lượng 2017 tăng vọt. Triển khai & áp dụng thành công phần mềm HRMS. Khai thác tuyến vận tải đường sắt."
+          },
+          "2018": {
+            "title": "Năm của những giải thưởng",
+            "description": "Vinh dự nhận giải thưởng 'Doanh nghiệp TP.HCM tiêu biểu năm 2018'. Khai trương PTSC – Chân Thật Depot. Vinh dự nhận danh hiệu 'Top 200 giải thưởng vàng đất Việt 2018'."
+          },
+          "2019": {
+            "title": "Ghi nhận từ Chính phủ",
+            "description": "Vinh dự nhận bằng khen của Thủ tướng Chính phủ. Vinh dự nhận cờ truyền thống của UBND TP.HCM. Vinh dự nhận bằng khen của UBTW Hội liên hiệp Thanh Niên Việt Nam."
+          },
+          "2022": {
+            "title": "Mở rộng hệ sinh thái và trách nhiệm xã hội",
+            "description": "Xây dựng thành công 15 Depot trong nước và quốc tế. Mở rộng 22 công ty thành viên thuộc hệ thống Tổng Công Ty. Đồng hành cùng Trung tâm Công tác Xã hội Thanh thiếu niên & CLB Chuyến Xe Yêu Thương trong dự án xây dựng 100 cây cầu An Yên tại các địa phương."
+          },
+          "T1/2023": {
+            "title": "Chuyển đổi số và mở rộng quốc tế",
+            "description": "Hợp nhất với Công ty Ứng dụng Công nghệ Logistics (LTA), tiên phong chuyển đổi số trong hoạt động khai thác Container qua siêu ứng dụng i-Depot superAPP@LTA. Định hướng chiến lược mở rộng dịch vụ Container Depot sang Sihanoukville (Campuchia), Laem Chabang & Bangkok (Thái Lan)."
+          },
+          "T7/2023": {
+            "title": "Kích hoạt Hệ sinh thái",
+            "description": "Chính thức kích hoạt Hệ sinh thái Tổng Công ty Đối Tác Chân Thật xoay quanh việc xây dựng một môi trường kinh doanh chắc chắn, ổn định và bền vững để tạo ra giá trị cho Khách hàng & các Đối tác liên quan."
+          },
+          "2024": {
+            "title": "Phát triển bền vững",
+            "description": "Tiếp tục phát triển hệ sinh thái Tổng Công ty Đối Tác Chân Thật một cách bền vững, dựa trên hệ thống logistics tiên tiến và thích ứng tích cực để đáp ứng mục tiêu về bền vững, số hóa, nhu cầu vận chuyển đa phương thức, tuân thủ quy định, lực lượng lao động tương lai và giảm khí thải."
+          }
+        }
+      },
+      "achievements": {
+        "hero": {
+          "badge": "THÀNH TÍCH NỔI BẬT • GIẢI THƯỞNG UY TÍN",
+          "title1": "THÀNH TỰU",
+          "title2": "VƯỢT TRỘI",
+          "description1": "16 năm phát triển với những dấu ấn quan trọng và sự ghi nhận từ cộng đồng doanh nghiệp Việt Nam",
+          "description2": "Từ những giải thưởng đầu tiên đến vị thế Top 500 doanh nghiệp lớn nhất Việt Nam",
+          "stats": {
+            "years": "Năm Tiên Phong",
+            "employees": "Nhân Viên", 
+            "projects": "Dự Án Thành Công"
+          },
+          "buttons": {
+            "explore": "KHÁM PHÁ THÀNH TỰU",
+            "awards": "XEM GIẢI THƯỞNG"
+          }
+        },
+        "major_achievements": {
+          "badge": "THÀNH TÍCH NỔI BẬT • GIẢI THƯỞNG UY TÍN",
+          "title": "Những thành tựu đáng tự hào",
+          "subtitle": "Những giải thưởng và chứng nhận quan trọng nhất trong hành trình phát triển của TCT Đối Tác Chân Thật",
+          "achievements": {
+            "top500": {
+              "title": "Top 500 Doanh nghiệp lớn nhất Việt Nam",
+              "year": "2023",
+              "description": "Được vinh danh trong bảng xếp hạng VNR500 do Vietnam Report công bố"
+            },
+            "hcm_excellent": {
+              "title": "Doanh nghiệp, doanh nhân TP. HCM tiêu biểu năm 2024",
+              "year": "2024", 
+              "description": "Giải thưởng do UBND TP. Hồ Chí Minh trao tặng"
+            },
+            "iso9001": {
+              "title": "Chứng nhận ISO 9001:2015",
+              "year": "2021",
+              "description": "Hệ thống quản lý chất lượng đạt tiêu chuẩn quốc tế"
+            },
+            "sustainable": {
+              "title": "Doanh nghiệp bền vững",
+              "year": "2023",
+              "description": "Cam kết phát triển bền vững và trách nhiệm xã hội"
+            }
+          }
+        },
+        "timeline": {
+          "badge": "HÀNH TRÌNH • PHÁT TRIỂN • 16 NĂM KINH NGHIỆM",
+          "title": "Hành trình phát triển",
+          "subtitle": "Những cột mốc quan trọng trong lịch sử hình thành và phát triển của TCT Đối Tác Chân Thật",
+          "milestones": {
+            "2009": {
+              "title": "Thành lập TCT Đối Tác Chân Thật",
+              "description": "Khởi đầu hành trình với tầm nhìn trở thành đối tác tin cậy trong lĩnh vực logistics"
+            },
+            "2013": {
+              "title": "Trở thành hội viên chính thức",
+              "description": "Gia nhập Hiệp hội Giao nhận kho vận Việt Nam và Hội Xuất Nhập khẩu tỉnh Bình Dương"
+            },
+            "2016": {
+              "title": "Giải thưởng doanh nhân trẻ",
+              "description": "Được vinh danh Top 100 Doanh nhân trẻ khởi nghiệp xuất sắc năm 2016"
+            },
+            "2021": {
+              "title": "Chứng nhận ISO 9001:2015",
+              "description": "Đạt chứng nhận hệ thống quản lý chất lượng quốc tế"
+            },
+            "2023": {
+              "title": "Top 500 doanh nghiệp lớn nhất",
+              "description": "Lọt vào bảng xếp hạng VNR500 - Top 500 doanh nghiệp lớn nhất Việt Nam"
+            },
+            "2024": {
+              "title": "Kỷ niệm 15 năm thành lập",
+              "description": "Đánh dấu 15 năm phát triển và nhận giải thưởng doanh nghiệp tiêu biểu TP.HCM"
+            }
+          }
+        },
+        "awards_certifications": {
+          "badge": "GIẢI THƯỞNG • CHỨNG NHẬN • UY TÍN",
+          "title": "Giải thưởng & Chứng nhận",
+          "subtitle": "Tổng hợp tất cả các giải thưởng, chứng nhận và sự ghi nhận từ các tổ chức uy tín",
+          "categories": {
+            "personal": "Giải thưởng cá nhân",
+            "local": "Giải thưởng địa phương", 
+            "international": "Giải thưởng quốc tế",
+            "professional": "Chứng nhận chuyên môn",
+            "quality": "Cam kết chất lượng"
+          },
+          "awards": {
+            "young_entrepreneur_2016": {
+              "title": "Top 100 Doanh nhân trẻ khởi nghiệp xuất sắc năm 2016",
+              "year": "2016",
+              "issuer": "Hội doanh nhân trẻ Việt Nam"
+            },
+            "young_entrepreneur_hcm": {
+              "title": "Top 10 Doanh nhân trẻ tiêu biểu TP.HCM",
+              "year": "2017",
+              "issuer": "Hội doanh nhân trẻ Tp.HCM"
+            },
+            "asean_entrepreneur": {
+              "title": "Doanh nhân khởi nghiệp xuất sắc khu vực Đông Nam Á",
+              "year": "2018",
+              "issuer": "Diễn đàn doanh nhân trẻ ASEAN- Trung quốc"
+            },
+            "top200_entrepreneur": {
+              "title": "TOP 200 Doanh nhân tiêu biểu xuất sắc",
+              "year": "2019",
+              "issuer": "Chủ tịch UBND tỉnh Bình Dương"
+            },
+            "vietnam_logistics_member": {
+              "title": "Chứng nhận Hội viên chính thức Hiệp hội Giao nhận kho vận Việt Nam",
+              "year": "2013",
+              "issuer": "Hiệp hội Giao nhận kho vận Việt Nam"
+            },
+            "binh_duong_import_export": {
+              "title": "Chứng nhận Hội viên chính thức Hội Xuất Nhập khẩu tỉnh Bình Dương",
+              "year": "2014",
+              "issuer": "Hội Xuất Nhập Khẩu tỉnh Bình Dương"
+            },
+            "iso_9001_2015": {
+              "title": "Chứng nhận ISO 9001:2015 - Hệ thống quản lý chất lượng",
+              "year": "2021",
+              "issuer": "Tổ chức chứng nhận quốc tế"
+            },
+            "depot_quality": {
+              "title": "Bản tự công bố Chất lượng dịch vụ Depot & Container",
+              "year": "2023",
+              "issuer": "TCT Đối Tác Chân Thật"
+            }
+          }
+        }
+      }
+    }

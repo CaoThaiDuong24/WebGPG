@@ -1,9 +1,12 @@
-import { Header } from '@/components/header';
-import { Footer } from '@/components/footer';
-import AboutGeneral from '@/components/about-general';
-import { ScrollIndicator } from '@/components/scroll-indicator';
-import { CustomCursor } from '@/components/custom-cursor';
-import { ParticleSystem } from '@/components/particle-system';
+'use client'
+import dynamic from 'next/dynamic'
+
+const Header = dynamic(() => import('@/components/header').then(mod => ({ default: mod.Header })), { ssr: false })
+const Footer = dynamic(() => import('@/components/footer').then(mod => ({ default: mod.Footer })), { ssr: false })
+const AboutGeneral = dynamic(() => import('@/components/about-general'), { ssr: false })
+const ScrollIndicator = dynamic(() => import('@/components/scroll-indicator').then(mod => ({ default: mod.ScrollIndicator })), { ssr: false })
+const CustomCursor = dynamic(() => import('@/components/custom-cursor').then(mod => ({ default: mod.CustomCursor })), { ssr: false })
+const ParticleSystem = dynamic(() => import('@/components/particle-system').then(mod => ({ default: mod.ParticleSystem })), { ssr: false })
 
 export default function GioiThieuChungPage() {
   return (
@@ -19,8 +22,3 @@ export default function GioiThieuChungPage() {
     </div>
   );
 }
-
-export const metadata = {
-  title: 'Giới thiệu chung - TCT Đối Tác Chân Thật',
-  description: 'Tìm hiểu về lịch sử, sứ mệnh và hệ sinh thái của Tổng Công ty Đối Tác Chân Thật - đối tác logistics hàng đầu tại Việt Nam.',
-};

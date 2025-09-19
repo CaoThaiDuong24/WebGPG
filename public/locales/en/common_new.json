@@ -1,0 +1,1231 @@
+﻿{
+  "hero": {
+    "badge": "PIONEER â€¢ 16 YEARS EXPERIENCE â€¢ INNOVATION",
+    "title1": "ECOSYSTEM",
+    "title2": "GENUINE PARTNER GROUP",
+    "description1": "16 years of pioneering in creating a comprehensive digital ecosystem",
+    "description2": "We are shaping the future of logistics â€¢ commerce â€¢ technology â€¢ consulting for Vietnamese businesses",
+    "button1": "EXPLORE ECOSYSTEM",
+    "button2": "WATCH INTRO VIDEO",
+    "stats": {
+      "years": "Pioneer Years",
+      "centers": "Exploitation Centers",
+      "companies": "Companies & Branches"
+    }
+  },
+  "about": {
+    "badge": "About Us",
+    "title1": "16 years",
+    "title2": "Experience",
+    "title3": "Your Trusted Partner",
+    "description1": "Established in 2009, Genuine Partner Group has become one of Vietnam's leading corporations in logistics, commerce and services.",
+    "description2": "With the business philosophy \"Inheritance - Self-Business - Greening - Happiness\", we continuously develop and expand our ecosystem to best serve our customers.",
+    "button": "Learn More",
+    "stats": {
+      "employees": "Employees",
+      "awards": "Awards",
+      "provinces": "Provinces",
+      "satisfaction": "Satisfaction",
+      "professional_team": "Professional team",
+      "recognized": "Recognized",
+      "nationwide": "Nationwide coverage",
+      "trusted": "Trusted by customers"
+    },
+    "highlights": {
+      "experience": "Over 16 years of experience in logistics and commerce",
+      "team": "Professional team with over 1000+ employees",
+      "coverage": "Covering 63 provinces nationwide",
+      "satisfaction": "Customer satisfaction rate reaches 99%"
+    }
+  },
+  "ecosystem": {
+    "badge": "Business Areas",
+    "title1": "Ecosystem",
+    "title2": "4 Comprehensive Groups",
+    "description": "Creating a multi-industry, multi-sector business ecosystem with 4 main pillars creating overall strength",
+    "stats": {
+      "groups": "Main Groups",
+      "companies": "Member Companies",
+      "provinces": "Provinces",
+      "employees": "Employees"
+    },
+    "groups": {
+      "than": {
+        "title": "Body Group",
+        "subtitle": "Logistics & Support",
+        "description": "The Body Group is the foundation of GPG's process, responsible for implementing and operating logistics and support activities. The Body Group ensures efficient and professional transportation and support services."
+      },
+      "tam": {
+        "title": "Heart Group",
+        "subtitle": "Services & Commerce",
+        "description": "Covering diverse service and commerce sectors from retail to wholesale, from e-commerce to traditional commerce. The Heart Group focuses on providing high-quality products and services."
+      },
+      "tri": {
+        "title": "Mind Group",
+        "subtitle": "Consulting, Training & Technology",
+        "description": "An indispensable group in the GPG ecosystem, responsible for researching and developing technology solutions, strategic consulting and training high-quality human resources."
+      },
+      "thien": {
+        "title": "Goodness Group",
+        "subtitle": "Community & Social Welfare",
+        "description": "The Goodness Group represents GPG's social responsibility, focusing on charity activities, community support and sustainable development."
+      }
+    },
+    "button": "Learn More",
+    "companies": "Member Companies:",
+    "more_companies": "more companies"
+  },
+  "testimonials": {
+    "badge": "What Customers Say",
+    "title": "Trusted by",
+    "description": "Thousands of businesses have chosen Genuine Partner as their strategic partner in their development journey"
+  },
+  "cta": {
+    "badge": "Trusted Partner of Thousands of Businesses",
+    "title": "Ready to Partner with Genuine Partner?",
+    "description": "Let us become your trusted partner in your business development journey. Contact us now for free consultation and discover outstanding growth opportunities.",
+    "buttons": {
+      "call": "Call Now",
+      "email": "Send Email"
+    },
+    "features": {
+      "consultation": {
+        "title": "Free Consultation",
+        "description": "In-depth needs analysis"
+      },
+      "solution": {
+        "title": "Optimal Solutions",
+        "description": "Suitable for all businesses"
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Always walking with you"
+      }
+    }
+  },
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "ecosystem": "Ecosystem",
+      "responsibility": "Social Responsibility",
+      "news": "News",
+      "contact": "Contact"
+    },
+    "about_menu": {
+      "general": "General Introduction",
+      "vision": "Vision & Mission",
+      "history": "Formation History",
+      "achievements": "Our Achievements"
+    },
+    "ecosystem_menu": {
+      "than": "Body - Logistics & Support",
+      "tam": "Heart - Services & Commerce",
+      "tri": "Mind - Consulting & Technology",
+      "thien": "Goodness - Community",
+      "than_desc": "Transportation, warehousing, distribution",
+      "tam_desc": "Retail, F&B, services",
+      "tri_desc": "Digital solutions, consulting",
+      "thien_desc": "Social welfare"
+    },
+    "cta": "Free Consultation",
+    "languages": {
+      "vi": "Tiáº¿ng Viá»‡t",
+      "en": "English",
+      "km": "áž—áž¶ážŸáž¶ážáŸ’áž˜áŸ‚ážš"
+    }
+  },
+  "footer": {
+    "description": "Trusted partner in sustainable development journey, bringing innovative and high-quality solutions.",
+    "sections": {
+      "quick_links": "Quick Links",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "links": {
+      "about": "About Us",
+      "ecosystem": "Ecosystem",
+      "responsibility": "Social Responsibility",
+      "news": "News",
+      "careers": "Career Opportunities"
+    },
+    "services": {
+      "logistics": "Logistics & Support",
+      "commerce": "Services & Commerce",
+      "consulting": "Consulting & Technology",
+      "community": "Community & Social Welfare"
+    },
+    "contact": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "country": "Vietnam",
+      "phone_number": "+84 xxx xxx xxx",
+      "email_address": "info@genuinepartner.com"
+    },
+    "copyright": "Â© 2024 Genuine Partner Group",
+    "rights": "All rights reserved.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "sitemap": "Sitemap",
+      "support": "Support"
+    },
+    "bottom": {
+      "developed": "Developed with",
+      "love": "â™¥",
+      "location": "in Vietnam",
+      "version": "Version 2.0.1",
+      "last_update": "Last updated: 2024"
+    }
+  },
+  "vision_mission": {
+    "hero": {
+      "badge": "VISION â€¢ MISSION â€¢ CORE VALUES",
+      "title1": "VISION & MISSION",
+      "title2": "GENUINE PARTNER GROUP",
+      "description1": "Shaping the future with clear vision and sustainable mission",
+      "description2": "We are committed to bringing value â€¢ innovation â€¢ sustainable development to businesses and communities",
+      "quote1": "The path to success is nothing more than wisdom and patience",
+      "quote2": "The foundation of success is nothing more than truth and love",
+      "quote_author": "Venerable Thich Nghiem Dao"
+    },
+    "vision": {
+      "badge": "Vision",
+      "title1": "Future",
+      "title2": "we are heading towards",
+      "section_title": "Vision",
+      "description1": "By applying advanced and intelligent technologies, we create and connect values that help goods flow smoothly and reliably in the market to develop human life, businesses and the economy sustainably.",
+      "description2": "From there, we contribute to building a better society by providing quality products and services that align with global development trends to improve the quality of life for employees, partners, customers and the public."
+    },
+    "mission": {
+      "badge": "Mission",
+      "title1": "Mission",
+      "title2": "of ours",
+      "section_title": "Mission",
+      "description1": "Continuously innovating and improving technology to bring quality products and services to businesses and customers.",
+      "description2": "Continuously creating and providing added value for all stakeholders, actively contributing to the sustainable development of society and ensuring minimal environmental impact."
+    },
+    "core_values": {
+      "badge": "Core Values",
+      "title": "Core Values",
+      "subtitle": "Your success is our success",
+      "values": {
+        "trust": {
+          "title": "Trust",
+          "description": "Building strong trust with customers, partners and the community through transparency and honesty in all business activities."
+        },
+        "responsibility": {
+          "title": "Spirit of Responsibility",
+          "description": "Demonstrating high responsibility in all work, committed to bringing the best value to customers and society."
+        },
+        "sustainability": {
+          "title": "Sustainable Development",
+          "description": "Towards sustainable development, balancing economic, social and environmental benefits for present and future generations."
+        }
+      }
+    },
+    "cta": {
+      "badge": "Building the future together with us",
+      "title": "Ready to partner?",
+      "description": "Contact us to learn more about our vision, mission and how we can support your business",
+      "buttons": {
+        "contact": "Contact Now",
+        "learn_more": "Learn More"
+      }
+    }
+  },
+  "about_general": {
+    "hero": {
+      "company_name": "Genuine Partner Group",
+      "title": "General Introduction",
+      "subtitle": "From modern office buildings to large-scale logistics systems - 15 years of sustainable development",
+      "button": "Learn more about us",
+      "stats": {
+        "years": "Years of Experience",
+        "offices": "Offices",
+        "containers": "Container Yards",
+        "shipping_lines": "Shipping Lines"
+      }
+    },
+    "company_intro": {
+      "badge": "ABOUT US",
+      "company_name": "GPG",
+      "company_name_part1": "Genuine",
+      "company_name_part2": "Partner",
+      "description": "Leading enterprise in the logistics field in Vietnam",
+      "founding": "Genuine Partner Group (GPG) was established on",
+      "founding_date": "May 11, 2009",
+      "founding_location": "located at building No. 2A, Street 5, An Phu Ward, Thu Duc City, Ho Chi Minh City.",
+      "development": "After nearly",
+      "development_years": "15 years",
+      "development_description": "of construction and growth, GPG has become one of the leading enterprises in the logistics field in Vietnam.",
+      "scale_title": "Operating Scale",
+      "scale_items": {
+        "depots": "15 Depots with capacity of",
+        "depots_capacity": "65,000 TEUs",
+        "total_area": "Total area of over",
+        "total_area_size": "633,000 mÂ²",
+        "countries": "Operating in",
+        "countries_count": "3 countries"
+      },
+      "services_title": "Main Services",
+      "services_items": {
+        "logistics": "Logistics services",
+        "depot": "Container depot services",
+        "shipping": "Maritime and shipping services"
+      },
+      "mission_title": "Operating Philosophy",
+      "mission_quote": "Safety â€“ Quality â€“ Timely and Fast Service",
+      "mission_description": "The GPG brand in the logistics field has gradually been affirmed both domestically and regionally through quality, progress and cooperation with many partners and major customers."
+    },
+    "ecosystem": {
+      "badge": "Ecosystem",
+      "title": "Genuine Partner Group Ecosystem",
+      "description": "GPG has built",
+      "ecosystem_name": "Genuine Partner Ecosystem",
+      "ecosystem_description": "with logistics as the core industry.",
+      "goals": "Goals to address requirements for sustainable development, digitalization, multimodal transport, compliance, future workforce and emission reduction.",
+      "headquarters": "Headquarters",
+      "headquarters_name": "Genuine Partner Building",
+      "headquarters_address": "No. 2A, Street 5, An Phu Ward, Thu Duc City, Ho Chi Minh City",
+      "groups": {
+        "logistics": {
+          "title": "Logistics & Support",
+          "description": "GPG's main business field, generating revenue to invest in Ecosystem development."
+        },
+        "commerce": {
+          "title": "Services & Commerce",
+          "description": "Expansion activities to meet the living needs of members in the Ecosystem."
+        },
+        "consulting": {
+          "title": "Consulting & Technology",
+          "description": "Developing business strategies, marketing, technology consulting, finance and legal."
+        },
+        "community": {
+          "title": "Community & Social Welfare",
+          "description": "Promoting community activities and social welfare, creating conditions for sustainable development."
+        }
+      }
+    },
+    "sustainable_development": {
+      "badge": "Sustainable Development",
+      "title": "Sustainable Development Goals",
+      "description": "The GPG ecosystem revolves around building a business environment that is",
+      "keywords": {
+        "safe": "safe",
+        "stable": "stable",
+        "sustainable": "sustainable"
+      },
+      "goals": "Goals to create long-term value for all stakeholders.",
+      "commerce_badge": "Commercial Services",
+      "commerce_title": "Modern Commercial Services",
+      "commerce_description": "Providing comprehensive commercial solutions with advanced digital technology",
+      "features": {
+        "sustainable": {
+          "title": "Sustainable",
+          "description": "Environmentally friendly solutions"
+        },
+        "digital": {
+          "title": "Digitalization",
+          "description": "Advanced digital technology"
+        },
+        "workforce": {
+          "title": "Workforce",
+          "description": "Professional training and development"
+        }
+      }
+    },
+    "values": {
+      "badge": "Core Values",
+      "title": "Core Values",
+      "subtitle": "Three solid pillars that guide all our activities",
+      "commitment_title": "Our Commitment",
+      "commitment_description": "With these three core values, Genuine Partner Group commits to building lasting trust, demonstrating high responsibility and sustainable development, creating differentiation in the logistics industry and making positive contributions to the community.",
+      "core_values": {
+        "trust": {
+          "title": "TRUST",
+          "description": "Building and maintaining trust with customers and partners through transparency, honesty and quality commitment in all activities."
+        },
+        "responsibility": {
+          "title": "SPIRIT OF RESPONSIBILITY",
+          "description": "Demonstrating high responsibility in work, always completing tasks well and contributing positively to the organization's development."
+        },
+        "sustainability": {
+          "title": "SUSTAINABLE DEVELOPMENT",
+          "description": "Commitment to sustainable development, balancing economic, social and environmental benefits to create long-term value for the community."
+        }
+      }
+    }
+  },
+  "history": {
+    "hero": {
+      "badge": "HISTORY â€¢ FORMATION â€¢ DEVELOPMENT",
+      "title1": "HISTORY",
+      "title2": "FORMATION",
+      "description1": "16-year journey of building and development from the early days",
+      "description2": "From a small company to a leading corporation in the logistics field in Vietnam",
+      "button": "Explore the journey"
+    },
+    "timeline": {
+      "title": "Development Timeline",
+      "subtitle": "Important milestones in the 16-year journey",
+      "milestones": {
+        "2009": {
+          "title": "Company Establishment",
+          "description": "Genuine Partner Group was established with the vision to become a trusted partner in the logistics field"
+        },
+        "2012": {
+          "title": "Scale Expansion",
+          "description": "Expanded operations nationwide with modern depot and warehouse systems"
+        },
+        "2015": {
+          "title": "ISO Certification",
+          "description": "Achieved ISO 9001:2015 certification for quality management system"
+        },
+        "2018": {
+          "title": "Ecosystem Development",
+          "description": "Started building a comprehensive 4-group ecosystem"
+        },
+        "2020": {
+          "title": "Digital Transformation",
+          "description": "Applied digital technology across all business operations"
+        },
+        "2024": {
+          "title": "Top 500 Companies",
+          "description": "Ranked among Top 500 largest companies in Vietnam"
+        }
+      }
+    },
+    "achievements": {
+      "title": "Outstanding Achievements",
+      "subtitle": "Important milestones in the development journey",
+      "items": {
+        "growth": {
+          "title": "Steady Growth",
+          "description": "Average growth of 15% annually over the past 16 years"
+        },
+        "expansion": {
+          "title": "Scale Expansion",
+          "description": "From 1 office to 15 depots nationwide"
+        },
+        "recognition": {
+          "title": "Recognition",
+          "description": "Many prestigious awards and certifications in the industry"
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Pioneer in applying new technologies"
+        }
+      }
+    }
+  },
+  "achievements": {
+    "hero": {
+      "badge": "ACHIEVEMENTS â€¢ HONOR â€¢ 16 YEARS EXPERIENCE",
+      "title1": "GLORIOUS",
+      "title2": "JOURNEY",
+      "description1": "16 years of development with important milestones and recognition from the Vietnamese business community",
+      "description2": "From the first awards to the position of Top 500 largest companies in Vietnam",
+      "button1": "EXPLORE ACHIEVEMENTS",
+      "button2": "VIEW AWARDS",
+      "stats": {
+        "years": "Pioneer Years",
+        "employees": "Employees",
+        "projects": "Successful Projects"
+      }
+    },
+    "major_achievements": {
+      "title": "Major Achievements",
+      "subtitle": "Important milestones in the development journey",
+      "items": {
+        "top500": {
+          "title": "Top 500 Largest Companies in Vietnam",
+          "description": "Honored in the VNR500 ranking announced by Vietnam Report"
+        },
+        "logistics_award": {
+          "title": "Excellent Logistics Company",
+          "description": "Award presented by Vietnam Logistics Association"
+        },
+        "iso_certification": {
+          "title": "ISO 9001:2015 Certification",
+          "description": "Quality management system meeting international standards"
+        },
+        "sustainable": {
+          "title": "Sustainable Company",
+          "description": "Commitment to sustainable development and social responsibility"
+        }
+      }
+    },
+    "timeline": {
+      "title": "Achievement Timeline",
+      "subtitle": "Important milestones in 16 years of development",
+      "years": {
+        "2009": "Company Establishment",
+        "2012": "Scale Expansion",
+        "2015": "ISO Certification",
+        "2018": "Ecosystem Development",
+        "2020": "Digital Transformation",
+        "2024": "Top 500 Companies"
+      }
+    },
+    "awards": {
+      "title": "Awards & Certifications",
+      "subtitle": "Recognition from the business community",
+      "categories": {
+        "business": "Business",
+        "quality": "Quality",
+        "innovation": "Innovation",
+        "sustainability": "Sustainability"
+      }
+    }
+  },
+  "nhom_than": {
+    "hero": {
+      "badge": "BODY GROUP",
+      "title": "Body Group - Logistics & Support",
+      "subtitle": "Logistics & Support",
+      "description": "One of the main components of the GPG Ecosystem related to the logistics system - GPG's main business field"
+    },
+    "overview": {
+      "badge": "ROLE OF BODY GROUP",
+      "title": "Role of Body Group",
+      "description": "The Body Group is the foundation of GPG's process, responsible for implementing and operating logistics and support activities. The Body Group ensures efficient and professional transportation and support services.",
+      "roles": {
+        "transport": {
+          "title": "Transportation & Logistics",
+          "description": "Providing comprehensive transportation services from road to sea"
+        },
+        "warehouse": {
+          "title": "Warehousing & Distribution",
+          "description": "Modern warehouse system with advanced technology"
+        },
+        "support": {
+          "title": "Support Services",
+          "description": "Support services for the entire ecosystem"
+        }
+      }
+    },
+    "companies": {
+      "badge": "MEMBER COMPANIES",
+      "title": "Member Companies",
+      "description": "The Body Group includes companies specializing in logistics and support services",
+      "list": {
+        "gpg": {
+          "name": "GPG - GPG Joint Stock Company",
+          "description": "Professional cargo handling services",
+          "services": ["Container handling", "Cargo processing", "Warehouse services"]
+        },
+        "gbl": {
+          "name": "GBL - GPG Logistics Limited Company",
+          "description": "Logistics and cargo transportation",
+          "services": ["Road transport", "Integrated logistics", "Supply chain management"]
+        },
+        "gcl": {
+          "name": "GCL - GPG Logistics Limited Company",
+          "description": "Comprehensive logistics services",
+          "services": ["Transportation", "Warehousing", "Distribution"]
+        },
+        "aic": {
+          "name": "AIC - Aquaculture Handling Joint Stock Company",
+          "description": "Specialized in seafood handling",
+          "services": ["Seafood handling", "Cold processing", "Specialized transportation"]
+        },
+        "woosung": {
+          "name": "WOOSUNG - Woosung Vietnam Limited Company",
+          "description": "International logistics partner",
+          "services": ["International logistics", "Sea transport", "Port services"]
+        },
+        "gfl": {
+          "name": "GFL - GPG Logistics Joint Stock Company",
+          "description": "Logistics and distribution",
+          "services": ["Distribution", "Warehousing", "Logistics services"]
+        },
+        "gil": {
+          "name": "GIL - GPG International Logistics Limited Company",
+          "description": "Professional international logistics",
+          "services": ["Import/Export", "International logistics", "Customs procedures"]
+        }
+      }
+    },
+    "depots": {
+      "badge": "DEPOT & WAREHOUSE SYSTEM",
+      "title": "Depot & Warehouse System",
+      "description": "Modern depot and warehouse network serving the entire ecosystem",
+      "table": {
+        "headers": {
+          "name": "Depot Name",
+          "location": "Location",
+          "capacity": "Capacity (mÂ²)",
+          "status": "Status"
+        },
+        "status": {
+          "active": "Active",
+          "preparing": "Preparing for operation"
+        },
+        "mobile": {
+          "capacity_label": "Capacity:"
+        }
+      },
+      "list": {
+        "scd": {
+          "name": "Smart Cat Lai Depot (SCD)",
+          "location": "Ho Chi Minh City",
+          "capacity": "15,000",
+          "status": "Active"
+        },
+        "tsd": {
+          "name": "Tan Cang Suoi Tien Depot (TSD)",
+          "location": "Ho Chi Minh City",
+          "capacity": "50,000",
+          "status": "Active"
+        },
+        "ssd": {
+          "name": "Smart Sihanoukville Depot (SSD)",
+          "location": "Cambodia",
+          "capacity": "25,000",
+          "status": "Preparing for operation"
+        },
+        "sbd": {
+          "name": "Smart Bangkok Depot (SBD)",
+          "location": "Thailand",
+          "capacity": "30,000",
+          "status": "Preparing for operation"
+        }
+      }
+    },
+    "statistics": {
+      "badge": "BODY GROUP STATISTICS",
+      "title": "Impressive Statistics",
+      "stats": {
+        "companies": {
+          "number": "7",
+          "label": "Member Companies",
+          "description": "Specialized in logistics"
+        },
+        "depots": {
+          "number": "4",
+          "label": "Depots & Warehouses",
+          "description": "Domestic and international"
+        },
+        "area": {
+          "number": "120,000",
+          "label": "mÂ² Total Area",
+          "description": "Warehouse capacity"
+        },
+        "countries": {
+          "number": "3",
+          "label": "Countries",
+          "description": "Vietnam, Cambodia, Thailand"
+        }
+      }
+    },
+    "cta": {
+      "badge": "CONNECT WITH BODY GROUP",
+      "title": "Connect with Body Group",
+      "description": "Learn more about our logistics and support services",
+      "buttons": {
+        "contact": "Contact for consultation",
+        "services": "View services"
+      }
+    }
+  },
+  "nhom_tam": {
+    "hero": {
+      "badge": "HEART GROUP â€¢ SERVICES & COMMERCE",
+      "title": "Heart Group",
+      "subtitle": "Services & Commerce",
+      "description": "Activities provided by HEART are designed to meet the needs of members in the Ecosystem and expand to the community"
+    },
+    "overview": {
+      "badge": "ROLE OF HEART GROUP",
+      "title": "Role of Heart Group",
+      "description": "The Heart Group focuses on providing high-quality products and services, meeting the diverse needs of customers and the community. We are committed to delivering the best experience for all partners.",
+      "roles": {
+        "commerce": {
+          "title": "Diverse Commerce",
+          "description": "Providing diverse products and services from retail to wholesale"
+        },
+        "services": {
+          "title": "Professional Services",
+          "description": "Professional team with many years of industry experience"
+        }
+      }
+    },
+    "services": {
+      "badge": "MAIN SERVICES",
+      "title": "Main Services",
+      "description": "The Heart Group provides diverse high-quality services",
+      "list": {
+        "restaurant_hotel": {
+          "title": "Restaurant â€“ Hotel",
+          "description": "Providing high-quality restaurant and hotel services, meeting all customer needs and desires. Customer satisfaction is our top priority."
+        },
+        "commerce_retail": {
+          "title": "Commerce & Retail",
+          "description": "Diverse commercial and retail activities, from consumer goods to specialized products. We provide comprehensive commercial solutions for all needs."
+        },
+        "healthcare": {
+          "title": "Healthcare and Medical Services",
+          "description": "Professional healthcare services with experienced medical teams. We are committed to providing high-quality and dedicated medical services."
+        },
+        "consulting_construction": {
+          "title": "Consulting and Construction",
+          "description": "Comprehensive consulting services from initial planning stage to design, construction and project completion. Professional consulting team with many years of experience."
+        }
+      }
+    },
+    "companies": {
+      "badge": "MEMBER COMPANIES",
+      "title": "Member Companies",
+      "description": "The Heart Group includes companies specializing in services and commerce",
+      "list": {
+        "fmcg": {
+          "name": "FMCG - Phu Yen Consumer Goods Joint Stock Company",
+          "description": "Specialized in fast-moving consumer goods",
+          "services": ["Consumer Goods", "Distribution", "Retail"]
+        },
+        "suzano": {
+          "name": "SUZANO CARGO - An Transport Consulting Company Limited",
+          "description": "Transport and consulting services",
+          "services": ["Transport", "Logistics Consulting", "Shipping Services"]
+        },
+        "gtc": {
+          "name": "GTC - Genuine Trading Company Limited",
+          "description": "General trading",
+          "services": ["Trading", "Distribution", "Wholesale"]
+        },
+        "fmg": {
+          "name": "FMG - Genuine Thanh Phu Gia Lai Company",
+          "description": "Diverse commercial services",
+          "services": ["Trading", "Services", "Distribution"]
+        },
+        "grc": {
+          "name": "GRC - Genuine Retail Company Limited",
+          "description": "Specialized in retail",
+          "services": ["Retail", "Stores", "Customer Service"]
+        }
+      }
+    },
+    "cta": {
+      "badge": "CONNECT WITH HEART GROUP",
+      "title": "Connect with Heart Group",
+      "description": "Learn more about our services and commerce",
+      "buttons": {
+        "contact": "Contact for consultation",
+        "services": "View services"
+      }
+    }
+  },
+  "nhom_tri": {
+    "hero": {
+      "badge": "MIND GROUP â€¢ CONSULTING & TECHNOLOGY",
+      "title": "Mind Group",
+      "subtitle": "Consulting, Training & Technology",
+      "description": "Developing business strategies, marketing strategies, consulting on technology, finance, human resources and legal issues",
+      "stats": {
+        "experience": "Years of Experience",
+        "companies": "Member Companies",
+        "services": "Main Services"
+      }
+    },
+    "overview": {
+      "badge": "MIND GROUP OVERVIEW",
+      "title": "Mind Group Overview",
+      "description": "The Mind Group is one of the 4 main pillars of GPG Partnership, specializing in consulting, training and technology. We are committed to providing optimal solutions and personalized training programs to meet the diverse needs of customers.",
+      "roles": {
+        "consulting": {
+          "title": "Professional Consulting",
+          "description": "Providing optimal consulting solutions and personalized training programs"
+        },
+        "training": {
+          "title": "High-Quality Training",
+          "description": "Developing individual and team capabilities with specialized training programs"
+        }
+      }
+    },
+    "services": {
+      "badge": "CONSULTING & TRAINING SERVICES",
+      "title": "Consulting & Training Services",
+      "description": "The Mind Group provides 6 main services in the fields of management consulting, finance, marketing, human resources, technology and specialized training",
+      "list": {
+        "management": {
+          "title": "Business Management Consulting",
+          "description": "Providing comprehensive consulting solutions on business management, business strategy and operational performance optimization."
+        },
+        "finance": {
+          "title": "Financial Consulting",
+          "description": "Supporting consulting on financial management, investment and developing sustainable financial strategies for businesses."
+        },
+        "marketing": {
+          "title": "Marketing Consulting",
+          "description": "Developing effective marketing strategies, building brands and optimizing marketing channels."
+        },
+        "hr": {
+          "title": "Human Resources Consulting",
+          "description": "Providing human resource management solutions, human resource development and building corporate culture."
+        },
+        "technology": {
+          "title": "Technology Consulting",
+          "description": "Supporting consulting on digital transformation, technology application and developing advanced technology solutions."
+        },
+        "training": {
+          "title": "Specialized Training",
+          "description": "Providing specialized training programs to develop individual and team capabilities."
+        }
+      }
+    },
+    "companies": {
+      "badge": "MEMBER COMPANIES",
+      "title": "Member Companies",
+      "description": "The Mind Group includes LTTCI - Logistics Technology Consulting and Training Institute, an organization specializing in providing professional consulting services and high-quality training",
+      "list": {
+        "lttci": {
+          "name": "LTTCI - Logistics Technology Consulting and Training Institute",
+          "description": "Organization specializing in providing professional consulting services and high-quality training",
+          "services": ["Logistics consulting", "Specialized training", "Technology solutions"]
+        }
+      }
+    },
+    "cta": {
+      "badge": "CONTACT & COOPERATION",
+      "title": "Connect with Mind Group",
+      "description": "Learn more about our professional consulting and training services",
+      "buttons": {
+        "contact": "Contact for consultation",
+        "services": "View services"
+      }
+    }
+  },
+  "nhom_thien": {
+    "hero": {
+      "badge": "GOODNESS GROUP â€¢ COMMUNITY & SOCIAL WELFARE",
+      "title": "Goodness Group",
+      "subtitle": "Community & Social Welfare",
+      "description": "Promoting community activities and social welfare of the GPG Ecosystem to create conditions for sustainable development"
+    },
+    "overview": {
+      "badge": "ROLE OF GOODNESS GROUP",
+      "title": "Role of Goodness Group",
+      "description": "The Goodness Group focuses on promoting community activities and social welfare. We are committed to creating social business models that help communities develop better and honor the spirit of compassion.",
+      "roles": {
+        "compassion": {
+          "title": "Spirit of Compassion",
+          "description": "Serving the community is not only a social responsibility but also a part of creating value"
+        },
+        "sustainability": {
+          "title": "Sustainable Development",
+          "description": "Creating social business models that help communities develop better"
+        }
+      }
+    },
+    "activities": {
+      "badge": "MAIN ACTIVITIES",
+      "title": "Main Activities",
+      "description": "The Goodness Group implements regular and sustainable social projects and programs",
+      "list": {
+        "social_work": {
+          "title": "Social Work Community",
+          "description": "With the establishment of Social Work Community Company Limited (SWC), SWC is a social enterprise operating business oriented towards education, healthcare and social work activities.",
+          "details": "GPG Partnership is oriented to build regular and sustainable social projects and programs, creating social business models that help communities develop better."
+        },
+        "non_profit": {
+          "title": "Non-profit Organizations",
+          "description": "GPG Partnership cooperates with Vietnam Youth Social Work Center (YSW), accompanying partners, Vietnam Youth Union of provinces and cities to implement and carry out the 'Building 100 An Yen Bridges' project.",
+          "details": "This is one of the key projects with the goal of gradually eliminating and replacing temporary bridges, building new rural areas; helping students get to school safely; making it easier for people to travel."
+        },
+        "social_welfare": {
+          "title": "Social Welfare",
+          "description": "Promoting community activities and social welfare of the GPG Ecosystem to create conditions for sustainable development.",
+          "details": "We believe that serving the community is not only a social responsibility but also a part of creating value and honoring the spirit of compassion."
+        }
+      }
+    },
+    "achievements": {
+      "badge": "OUTSTANDING ACHIEVEMENTS",
+      "title": "Outstanding Achievements",
+      "description": "Impressive numbers showing the Goodness Group's contributions to the community",
+      "list": {
+        "children": {
+          "number": "25+",
+          "label": "Children",
+          "description": "Successful cleft lip surgery"
+        },
+        "bridges": {
+          "number": "12",
+          "label": "Bridges",
+          "description": "An Yen bridges built"
+        },
+        "donations": {
+          "number": "12.5 billion",
+          "label": "Donations",
+          "description": "Charitable"
+        }
+      }
+    },
+    "cta": {
+      "badge": "CONNECT WITH GOODNESS GROUP",
+      "title": "Connect with Goodness Group",
+      "description": "Join us in creating value and honoring the spirit of compassion for the community",
+      "buttons": {
+        "join": "Join activities",
+        "donate": "Donate support"
+      }
+    }
+  },
+  "social_responsibility": {
+    "hero": {
+      "badge": "SOCIAL RESPONSIBILITY â€¢ FOR THE COMMUNITY",
+      "title": "Social Responsibility",
+      "description": "With 38 social responsibility activities in 2024, Genuine Partner Group has supported over 2000 people in 15+ provinces nationwide",
+      "badges": {
+        "charity": "Charity & Community",
+        "education": "Education & Training",
+        "environment": "Sustainable Environment"
+      },
+      "stats": {
+        "activities": "Activities",
+        "provinces": "Provinces",
+        "people": "People supported",
+        "commitment": "Commitment"
+      }
+    },
+    "statistics": {
+      "title": "Activity Statistics",
+      "subtitle": "Impressive numbers about social responsibility",
+      "metrics": {
+        "total_activities": "Total activities",
+        "people_supported": "People supported",
+        "provinces_covered": "Provinces covered",
+        "investment": "Investment"
+      }
+    },
+    "activities": {
+      "title": "Social Activities",
+      "subtitle": "Outstanding social responsibility activities",
+      "categories": {
+        "education": "Education & Training",
+        "healthcare": "Healthcare & Health",
+        "environment": "Environment",
+        "community": "Community"
+      }
+    },
+    "activities_2024": {
+      "title": "2024 Activities",
+      "subtitle": "38 social responsibility activities in 2024",
+      "highlights": {
+        "education_support": "Education support",
+        "healthcare_programs": "Healthcare programs",
+        "environmental_protection": "Environmental protection",
+        "community_development": "Community development"
+      }
+    }
+  },
+  "news": {
+    "hero": {
+      "badge": "NEWS â€¢ REGULAR UPDATES â€¢ LATEST INFORMATION",
+      "title1": "NEWS & EVENTS",
+      "description": "Discover the development journey and outstanding achievements of Genuine Partner Group",
+      "features": {
+        "trending": "New trends",
+        "quality": "Quality content",
+        "updates": "Fast updates"
+      }
+    },
+    "filters": {
+      "search": "Search news...",
+      "categories": {
+        "all": "All",
+        "news": "News",
+        "events": "Events",
+        "announcements": "Announcements",
+        "awards": "Awards"
+      }
+    },
+    "articles": {
+      "read_more": "Read more",
+      "external_link": "View details",
+      "views": "views",
+      "likes": "likes",
+      "share": "Share",
+      "date": "Date",
+      "category": "Category"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page",
+      "of": "of"
+    }
+  },
+  "contact": {
+        "hero": {
+          "badge": "CONTACT â€¢ 24/7 SUPPORT â€¢ FREE CONSULTATION",
+          "title1": "CONNECT",
+          "title2": "TRUSTED PARTNER",
+          "description1": "Always ready to listen and support you. Contact us for free consultation on the most suitable solutions.",
+          "description2": "We commit to responding within 24 hours with the most optimal solution for your business",
+          "button1": "CONTACT NOW",
+          "button2": "CALL HOTLINE",
+          "stats": {
+            "support": "Customer support",
+            "experience": "Years of experience",
+            "quality": "Quality commitment"
+          }
+        },
+        "contact_info": {
+          "title": "Contact Information",
+          "cards": {
+            "address": {
+              "title": "Address",
+              "content": "No. 2A, Street 5, An Phu Ward, Thu Duc City, Ho Chi Minh City"
+            },
+            "phone": {
+              "title": "Phone",
+              "content": "+84 xxx xxx xxx"
+            },
+            "email": {
+              "title": "Email",
+              "content": "info@genuinepartner.com"
+            },
+            "hours": {
+              "title": "Working Hours",
+              "content": "Monday - Friday: 8:00 - 17:30"
+            }
+          }
+        },
+        "contact_form": {
+          "title": "Send Message",
+          "subtitle": "We will respond within 24 hours",
+          "fields": {
+            "name": "Full Name",
+            "email": "Email",
+            "phone": "Phone Number",
+            "company": "Company",
+            "subject": "Subject",
+            "message": "Message Content",
+            "submit": "Send Message"
+          },
+          "success": "Thank you for contacting us! We will respond as soon as possible.",
+          "error": "An error occurred. Please try again later."
+        },
+        "map": {
+          "title": "Office Location",
+          "subtitle": "Find directions to our office"
+        }
+      },
+      "history": {
+        "hero": {
+          "badge": "âœ¨ Formation History âœ¨",
+          "title": "Great Journey",
+          "description1": "After nearly 15 years of development",
+          "description2": "GPG has become a leading logistics company in Vietnam"
+        },
+        "summary": {
+          "badge": "ðŸ† Outstanding Achievements ðŸ†",
+          "title": "Genuine Partner Group",
+          "subtitle": "Today",
+          "description1": "From a startup company in 2009",
+          "description2": "Developed into a diverse ecosystem with 22 member companies and 15 container depots"
+        },
+        "statistics": {
+          "depots": {
+            "number": "15+",
+            "title": "Container Depots",
+            "subtitle": "Domestic & International"
+          },
+          "companies": {
+            "number": "22",
+            "title": "Member Companies",
+            "subtitle": "Diverse Ecosystem"
+          },
+          "experience": {
+            "number": "15",
+            "title": "Years of Experience",
+            "subtitle": "Sustainable Development"
+          }
+        },
+        "timeline": {
+          "2009": {
+            "title": "GPG Establishment",
+            "description": "Genuine Partner Group (GPG) was established on May 11, 2009, marking an important milestone in Vietnam's logistics sector."
+          },
+          "2010": {
+            "title": "First Depot Establishment",
+            "description": "Established Depot: ChÃ¢n Tháº­t SÃ³ng Tháº§n exploitation center, ChÃ¢n Tháº­t PhÃº Thuáº­n CY - foundation for the container depot system."
+          },
+          "2011-2012": {
+            "title": "Member Company System Expansion",
+            "description": "Established member companies: Container Solutions VN LLC, Tan Cang Phuong Dong Logistics JSC, and 3rd Depot - Tan Cang Phuong Dong."
+          },
+          "2013-2014": {
+            "title": "Strategic Partnerships and Service Expansion",
+            "description": "Became Coca Cola distribution service provider. Established 4th Depot & inaugurated mobile container maintenance and repair center."
+          },
+          "2015-2016": {
+            "title": "International Expansion",
+            "description": "Opened many more branches, shipping line agency offices, representative offices, depots, warehouses in Vietnam & Cambodia."
+          },
+          "2017": {
+            "title": "Restructuring and Technology Innovation",
+            "description": "Established Tay Nam Binh Duong Container Yard. Successfully completed 2nd system restructuring. 2017 production soared. Successfully deployed & applied HRMS software. Exploited railway transport routes."
+          },
+          "2018": {
+            "title": "Year of Awards",
+            "description": "Honored to receive 'Outstanding Ho Chi Minh City Enterprise 2018' award. Inaugurated PTSC â€“ ChÃ¢n Tháº­t Depot. Honored to receive 'Top 200 Golden Vietnam Awards 2018' title."
+          },
+          "2019": {
+            "title": "Government Recognition",
+            "description": "Honored to receive Prime Minister's Certificate of Merit. Honored to receive Ho Chi Minh City People's Committee's Traditional Flag. Honored to receive Central Committee of Vietnam Youth Union's Certificate of Merit."
+          },
+          "2022": {
+            "title": "Ecosystem Expansion and Social Responsibility",
+            "description": "Successfully built 15 domestic and international Depots. Expanded 22 member companies under the Corporation system. Partnered with Youth Social Work Center & Love Journey Club in the project to build 100 An Yen bridges in localities."
+          },
+          "T1/2023": {
+            "title": "Digital Transformation and International Expansion",
+            "description": "Merged with Logistics Technology Application Company (LTA), pioneering digital transformation in container exploitation operations through i-Depot superAPP@LTA. Strategic direction to expand Container Depot services to Sihanoukville (Cambodia), Laem Chabang & Bangkok (Thailand)."
+          },
+          "T7/2023": {
+            "title": "Ecosystem Activation",
+            "description": "Officially activated the Genuine Partner Group Ecosystem centered around building a solid, stable and sustainable business environment to create value for Customers & related Partners."
+          },
+          "2024": {
+            "title": "Sustainable Development",
+            "description": "Continue to develop the Genuine Partner Group ecosystem sustainably, based on advanced logistics systems and positive adaptation to meet sustainability, digitalization, multimodal transport needs, compliance, future workforce and emission reduction goals."
+          }
+        }
+      },
+      "achievements": {
+        "hero": {
+          "badge": "OUTSTANDING ACHIEVEMENTS â€¢ PRESTIGIOUS AWARDS",
+          "title1": "OUTSTANDING",
+          "title2": "ACHIEVEMENTS",
+          "description1": "16 years of development with important milestones and recognition from the Vietnamese business community",
+          "description2": "From the first awards to the position of Top 500 largest companies in Vietnam",
+          "stats": {
+            "years": "Pioneering Years",
+            "employees": "Employees", 
+            "projects": "Successful Projects"
+          },
+          "buttons": {
+            "explore": "EXPLORE ACHIEVEMENTS",
+            "awards": "VIEW AWARDS"
+          }
+        },
+        "major_achievements": {
+          "badge": "OUTSTANDING ACHIEVEMENTS â€¢ PRESTIGIOUS AWARDS",
+          "title": "Proud Achievements",
+          "subtitle": "The most important awards and certifications in the development journey of Genuine Partner Group",
+          "achievements": {
+            "top500": {
+              "title": "Top 500 Largest Companies in Vietnam",
+              "year": "2023",
+              "description": "Honored in the VNR500 ranking announced by Vietnam Report"
+            },
+            "hcm_excellent": {
+              "title": "Outstanding HCMC Enterprise and Entrepreneur 2024",
+              "year": "2024", 
+              "description": "Award presented by Ho Chi Minh City People's Committee"
+            },
+            "iso9001": {
+              "title": "ISO 9001:2015 Certification",
+              "year": "2021",
+              "description": "Quality management system meeting international standards"
+            },
+            "sustainable": {
+              "title": "Sustainable Enterprise",
+              "year": "2023",
+              "description": "Commitment to sustainable development and social responsibility"
+            }
+          }
+        },
+        "timeline": {
+          "badge": "JOURNEY â€¢ DEVELOPMENT â€¢ 16 YEARS EXPERIENCE",
+          "title": "Development Journey",
+          "subtitle": "Important milestones in the formation and development history of Genuine Partner Group",
+          "milestones": {
+            "2009": {
+              "title": "Genuine Partner Group Establishment",
+              "description": "Beginning the journey with the vision to become a trusted partner in the logistics field"
+            },
+            "2013": {
+              "title": "Became Official Member",
+              "description": "Joined Vietnam Logistics Association and Binh Duong Import-Export Association"
+            },
+            "2016": {
+              "title": "Young Entrepreneur Award",
+              "description": "Honored as Top 100 Outstanding Young Entrepreneurs 2016"
+            },
+            "2021": {
+              "title": "ISO 9001:2015 Certification",
+              "description": "Achieved international quality management system certification"
+            },
+            "2023": {
+              "title": "Top 500 Largest Companies",
+              "description": "Entered VNR500 ranking - Top 500 largest companies in Vietnam"
+            },
+            "2024": {
+              "title": "15th Anniversary Celebration",
+              "description": "Marking 15 years of development and receiving outstanding HCMC enterprise award"
+            }
+          }
+        },
+        "awards_certifications": {
+          "badge": "AWARDS â€¢ CERTIFICATIONS â€¢ PRESTIGE",
+          "title": "Awards & Certifications",
+          "subtitle": "Summary of all awards, certifications and recognition from prestigious organizations",
+          "categories": {
+            "personal": "Personal Awards",
+            "local": "Local Awards", 
+            "international": "International Awards",
+            "professional": "Professional Certifications",
+            "quality": "Quality Commitments"
+          },
+          "awards": {
+            "young_entrepreneur_2016": {
+              "title": "Top 100 Outstanding Young Entrepreneurs 2016",
+              "year": "2016",
+              "issuer": "Vietnam Young Entrepreneurs Association"
+            },
+            "young_entrepreneur_hcm": {
+              "title": "Top 10 Outstanding Young Entrepreneurs HCMC",
+              "year": "2017",
+              "issuer": "HCMC Young Entrepreneurs Association"
+            },
+            "asean_entrepreneur": {
+              "title": "Outstanding Southeast Asian Entrepreneur",
+              "year": "2018",
+              "issuer": "ASEAN-China Young Entrepreneurs Forum"
+            },
+            "top200_entrepreneur": {
+              "title": "TOP 200 Outstanding Entrepreneurs",
+              "year": "2019",
+              "issuer": "Binh Duong Province People's Committee Chairman"
+            },
+            "vietnam_logistics_member": {
+              "title": "Official Member Certificate - Vietnam Logistics Association",
+              "year": "2013",
+              "issuer": "Vietnam Logistics Association"
+            },
+            "binh_duong_import_export": {
+              "title": "Official Member Certificate - Binh Duong Import-Export Association",
+              "year": "2014",
+              "issuer": "Binh Duong Import-Export Association"
+            },
+            "iso_9001_2015": {
+              "title": "ISO 9001:2015 Certification - Quality Management System",
+              "year": "2021",
+              "issuer": "International Certification Organization"
+            },
+            "depot_quality": {
+              "title": "Self-Declaration of Depot & Container Service Quality",
+              "year": "2023",
+              "issuer": "Genuine Partner Group"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,77 +7,96 @@ import { Truck, ShoppingBag, Brain, Heart, ArrowRight, Sparkles, Star } from "lu
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { fadeInUp, fadeInLeft, fadeInRight, fadeInScale, staggerContainer, hoverScale } from "./animations"
-
-const ecosystemData = [
-  {
-    icon: Truck,
-    title: "Nhóm Thân",
-    subtitle: "Logistics & Phụ trợ",
-    description:
-      "Nhóm Thân là nền tảng quá trình TCT ĐTCT, có trách nhiệm thực hiện và vận hành các hoạt động logistics và phụ trợ. Nhóm Thân đảm bảo việc vận chuyển và cung cấp dịch vụ hỗ trợ một cách hiệu quả và chuyên nghiệp.",
-    services: [
-      "GPG - Công ty Cổ phần Bốc Dỡ Chân Thật",
-      "GBL - Công ty TNHH MTV Logistics Bốc Tải Chân Thật",
-      "GCL - Công ty TNHH MTV Logistics Chân Thật",
-      "AIC - Công ty Cổ phần Bốc Dỡ Thủy Sản",
-      "WOOSUNG - Công ty TNHH Woosung Việt Nam",
-      "GFL - Công ty Cổ phần Logistics Chân Thật",
-      "GIL - Công ty TNHH Logistics Quốc tế Chân Thật",
-    ],
-    image: "/modern-logistics-warehouse-with-containers-and-tru.jpg",
-    color: "from-blue-600 to-cyan-500",
-  },
-  {
-    icon: ShoppingBag,
-    title: "Nhóm Tâm",
-    subtitle: "Dịch vụ & Thương mại",
-    description:
-      "Bao trùm đông đa các lĩnh vực dịch vụ thương mại từ bán lẻ đến bán buôn, từ thương mại điện tử đến thương mại truyền thống. Nhóm Tâm tập trung vào việc cung cấp các sản phẩm và dịch vụ chất lượng cao.",
-    services: [
-      "FMCG - Công ty Cổ phần Hàng tiêu dùng Phú Yên",
-      "SUZANO CARGO - Công ty TNHH Tư Vấn Vận Tải An",
-      "GTC - Công ty TNHH Thương mại Chân Thật",
-      "FMG - Công ty Thành Phú Gia Lai Chân Thật",
-      "GRC - Công ty TNHH Bán lẻ Chân Thật",
-    ],
-    image: "/modern-retail-store-with-digital-displays-and-cust.jpg",
-    color: "from-emerald-600 to-green-500",
-  },
-  {
-    icon: Brain,
-    title: "Nhóm Trí",
-    subtitle: "Tư vấn, đào tạo & Công nghệ",
-    description:
-      "Nhóm không thể thiếu trong hệ sinh thái TCT ĐTCT, có trách nhiệm nghiên cứu và phát triển các giải pháp công nghệ, tư vấn chiến lược và đào tạo nhân lực chất lượng cao.",
-    services: [
-      "GCC - Công ty Cổ phần Tư vấn Quốc tế Chân Thật",
-      "LTA - Công ty Cổ phần Tư vấn Công nghệ Logistics",
-      "ELC - Công ty TNHH Tư vấn Đông Gia Lai",
-      "GTC - Công ty TNHH Công nghệ Chân Thật",
-    ],
-    image: "/modern-tech-office-with-developers-working-on-comp.jpg",
-    color: "from-purple-600 to-violet-500",
-  },
-  {
-    icon: Heart,
-    title: "Nhóm Thiện",
-    subtitle: "Cộng đồng & An sinh xã hội",
-    description:
-      "Nhóm Thiện thể hiện trách nhiệm xã hội của TCT ĐTCT, tập trung vào các hoạt động từ thiện, hỗ trợ cộng đồng và phát triển bền vững.",
-    services: [
-      "CTYT - Câu lạc bộ Từ thiện Vì Trẻ em Thương",
-      "GAF - Quỹ Từ thiện Tây Nguyên Hạnh phúc",
-      "GWC - Công ty TNHH Chăm sóc Và Vệ sinh Môi trường",
-    ],
-    image: "/community-volunteers-helping-children-and-families.jpg",
-    color: "from-orange-600 to-red-500",
-  },
-]
+import { useLocale } from "@/components/locale-provider"
+import { useRouter } from "next/navigation"
 
 export function EcosystemSection() {
+  const { t } = useLocale()
+  const router = useRouter()
+  
+  // Mapping for group pages
+  const groupPages = {
+    than: '/nhom-than',
+    tam: '/nhom-tam', 
+    tri: '/nhom-tri',
+    thien: '/nhom-thien'
+  }
+  
+  const ecosystemData = [
+    {
+      icon: Truck,
+      title: t('ecosystem.groups.than.title'),
+      subtitle: t('ecosystem.groups.than.subtitle'),
+      description: t('ecosystem.groups.than.description'),
+      group: 'than',
+      services: [
+        "CÔNG TY TNHH TẬP ĐOÀN ĐỐI TÁC CHÂN THẬT",
+        "Công ty Cổ Phần Đối Tác Chân Thật",
+        "Công ty Cổ Phần Cảng Việt Nam",
+        "Công ty Cổ Phần THT E-Logistics",
+        "Công ty TNHH MTV Đầu Tư Logistics Miền Trung",
+        "Công ty TNHH Doanh Nhân Khởi Nghiệp Việt Nam",
+        "Genuine Partner Logistics (Cambodia) Company Limited",
+      ],
+      image: "/modern-logistics-warehouse-with-containers-and-tru.jpg",
+      color: "from-blue-600 to-cyan-500",
+    },
+    {
+      icon: ShoppingBag,
+      title: t('ecosystem.groups.tam.title'),
+      subtitle: t('ecosystem.groups.tam.subtitle'),
+      description: t('ecosystem.groups.tam.description'),
+      group: 'tam',
+      services: [
+        "Công ty TNHH Doanh Nhân Khởi Nghiệp Việt Nam",
+        "CÔNG TY CỔ PHẦN TẬP ĐOÀN VỮNG AN",
+        "CÔNG TY TNHH Y KHOA CỘNG ĐỒNG HỶ HỶ",
+      ],
+      image: "/tam-Medium.jpg",
+      color: "from-emerald-600 to-green-500",
+    },
+    {
+      icon: Brain,
+      title: t('ecosystem.groups.tri.title'),
+      subtitle: t('ecosystem.groups.tri.subtitle'),
+      description: t('ecosystem.groups.tri.description'),
+      group: 'tri',
+      services: [
+        "Công ty Cổ phần Ứng Dụng Công Nghệ Logistics",
+        "Viện Tư vấn và Đào tạo Công nghệ Logistics",
+        "Công ty TNHH Tư Vấn Đầu Tư Đông Sài Gòn",
+        "CÔNG TY TNHH TRUYỀN THÔNG QUỐC TẾ CHÂN THẬT",
+      ],
+      image: "/mind-1024x580.png.jpeg",
+      color: "from-purple-600 to-violet-500",
+    },
+    {
+      icon: Heart,
+      title: t('ecosystem.groups.thien.title'),
+      subtitle: t('ecosystem.groups.thien.subtitle'),
+      description: t('ecosystem.groups.thien.description'),
+      group: 'thien',
+      services: [
+        "Công ty TNHH Cộng đồng Công tác xã hội",
+        "Quỹ Vì nụ cười hạnh phúc",
+        "CLB Chuyến xe yêu thương",
+        "Bếp nhà từ tâm",
+      ],
+      image: "/thien.jpg",
+      color: "from-orange-600 to-red-500",
+    },
+  ]
   const sectionRef = useRef<HTMLElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [animatedItems, setAnimatedItems] = useState<Set<number>>(new Set())
+
+  // Handle navigation to group pages
+  const handleGroupNavigation = (group: string) => {
+    const pagePath = groupPages[group as keyof typeof groupPages]
+    if (pagePath) {
+      router.push(pagePath)
+    }
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -154,7 +173,7 @@ export function EcosystemSection() {
               >
                 <Sparkles className="w-4 h-4" />
               </motion.div>
-              <span className="font-semibold">Lĩnh vực kinh doanh</span>
+              <span className="font-semibold">{t('ecosystem.badge')}</span>
               <motion.div
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
@@ -183,7 +202,7 @@ export function EcosystemSection() {
                 ease: "linear"
               }}
             >
-              Hệ sinh thái
+              {t('ecosystem.title1')}
             </motion.span>
             <motion.span 
               className="block"
@@ -204,7 +223,7 @@ export function EcosystemSection() {
                 delay: 0.5
               }}
             >
-              4 nhóm toàn diện
+              {t('ecosystem.title2')}
             </motion.span>
           </motion.h2>
           
@@ -212,24 +231,7 @@ export function EcosystemSection() {
             className="text-xl md:text-2xl text-slate-600 leading-relaxed font-light max-w-4xl mx-auto"
             variants={fadeInUp}
           >
-            Kiến tạo hệ sinh thái doanh nghiệp đa ngành, đa lĩnh vực với 
-            <motion.span 
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-bold"
-              animate={{
-                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "linear"
-              }}
-              style={{
-                backgroundSize: "200% 200%"
-              }}
-            >
-              {" "}4 trụ cột chính{" "}
-            </motion.span>
-            tạo nên sức mạnh tổng thể
+            {t('ecosystem.description')}
           </motion.p>
           
           {/* Stats */}
@@ -238,10 +240,10 @@ export function EcosystemSection() {
             variants={staggerContainer}
           >
             {[
-              { number: "4", label: "Nhóm chính", emoji: "🏢" },
-              { number: "20+", label: "Công ty thành viên", emoji: "🚀" },
-              { number: "63", label: "Tỉnh thành", emoji: "🌍" },
-              { number: "1000+", label: "Nhân viên", emoji: "👥" }
+              { number: "4", label: t('ecosystem.stats.groups'), emoji: "🏢" },
+              { number: "20+", label: t('ecosystem.stats.companies'), emoji: "🚀" },
+              { number: "63", label: t('ecosystem.stats.provinces'), emoji: "🌍" },
+              { number: "1000+", label: t('ecosystem.stats.employees'), emoji: "👥" }
             ].map((stat, index) => (
               <motion.div 
                 key={index} 
@@ -295,14 +297,17 @@ export function EcosystemSection() {
               }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="group relative overflow-hidden border-0 bg-white/95 backdrop-blur-xl hover:bg-white transition-all duration-500 shadow-xl hover:shadow-2xl rounded-2xl">
+              <Card className="group relative overflow-hidden border-0 bg-white/95 backdrop-blur-xl hover:bg-white transition-all duration-500 shadow-xl hover:shadow-2xl rounded-2xl h-full flex flex-col">
                 {/* Header Section */}
                 <div className="relative p-6 pb-4">
                   <div className="flex items-start gap-4">
                     <motion.div 
                       className={`relative p-4 rounded-xl bg-gradient-to-r ${item.color} shadow-lg`}
-                      whileHover={{ rotate: 6, scale: 1.1 }}
-                      transition={{ duration: 0.3 }}
+                      whileHover={{ 
+                        rotate: 6, 
+                        scale: 1.1,
+                        transition: { duration: 0.3 }
+                      }}
                       animate={{ 
                         boxShadow: [
                           "0 0 0px rgba(59, 130, 246, 0)",
@@ -310,7 +315,11 @@ export function EcosystemSection() {
                           "0 0 0px rgba(59, 130, 246, 0)"
                         ]
                       }}
-                      transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
+                      transition={{ 
+                        duration: 2, 
+                        repeat: Infinity, 
+                        delay: index * 0.5
+                      }}
                     >
                       <item.icon className="w-8 h-8 text-white" />
                     </motion.div>
@@ -377,7 +386,7 @@ export function EcosystemSection() {
                 </motion.div>
                 
                 {/* Content Section */}
-                <CardContent className="relative px-6 pb-6">
+                <CardContent className="relative px-6 pb-6 flex-grow flex flex-col justify-between">
                   <motion.p 
                     className="text-slate-600 text-base leading-relaxed mb-4 group-hover:text-slate-700 transition-colors duration-300"
                     initial={{ opacity: 0, y: 20 }}
@@ -398,7 +407,7 @@ export function EcosystemSection() {
                   >
                     <h4 className="text-base font-bold text-slate-800 mb-3 flex items-center gap-2">
                       <div className={`w-1 h-4 bg-gradient-to-b ${item.color} rounded-full`}></div>
-                      Công ty thành viên:
+                      {t('ecosystem.companies')}
                     </h4>
                     <div className="space-y-2">
                       {item.services.slice(0, 3).map((service, serviceIndex) => (
@@ -416,7 +425,7 @@ export function EcosystemSection() {
                       ))}
                       {item.services.length > 3 && (
                         <div className="text-sm text-slate-500 font-medium pl-5">
-                          +{item.services.length - 3} công ty khác
+                          +{item.services.length - 3} {t('ecosystem.more_companies')}
                         </div>
                       )}
                     </div>
@@ -428,13 +437,16 @@ export function EcosystemSection() {
                     whileTap={{ scale: 0.98 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <Button className={`group/btn relative overflow-hidden bg-gradient-to-r ${item.color} hover:shadow-xl text-white px-6 py-3 text-base font-bold rounded-xl transition-all duration-300 w-full`}>
+                    <Button 
+                      className={`group/btn relative overflow-hidden bg-gradient-to-r ${item.color} hover:shadow-xl text-white px-6 py-3 text-base font-bold rounded-xl transition-all duration-300 w-full`}
+                      onClick={() => handleGroupNavigation(item.group)}
+                    >
                       <motion.span 
                         className="relative z-10 flex items-center justify-center gap-2"
                         whileHover={{ x: 5 }}
                         transition={{ duration: 0.3 }}
                       >
-                        Tìm hiểu thêm
+                        {t('ecosystem.button')}
                         <motion.div
                           animate={{ x: [0, 3, 0] }}
                           transition={{ duration: 1.5, repeat: Infinity }}
