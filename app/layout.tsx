@@ -8,6 +8,7 @@ import { ClientWrapper } from "@/components/client-wrapper"
 import { ErrorBoundary } from "@/components/error-boundary"
 import { LoadingFallback } from "@/components/loading-fallback"
 import ChatBox from "@/components/chat-box"
+import { FloatingLanguageSwitcher } from "@/components/floating-language-switcher"
 import "./globals.css"
 
 export const metadata: Metadata = {

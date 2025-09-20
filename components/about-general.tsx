@@ -22,9 +22,9 @@ const AboutGeneral = () => {
           // Animate items with staggered delay
           const timeouts: NodeJS.Timeout[] = []
           const stats = [
-            { number: "15+", label: t('about_general.hero.stats.years'), color: "from-blue-400 to-blue-600" },
+            { number: "16+", label: t('about_general.hero.stats.years'), color: "from-blue-400 to-blue-600" },
             { number: "11", label: t('about_general.hero.stats.offices'), color: "from-green-400 to-green-600" },
-            { number: "16", label: t('about_general.hero.stats.containers'), color: "from-purple-400 to-purple-600" },
+            { number: "18", label: t('about_general.hero.stats.containers'), color: "from-purple-400 to-purple-600" },
             { number: "21", label: t('about_general.hero.stats.shipping_lines'), color: "from-orange-400 to-orange-600" }
           ]
           stats.forEach((_, index) => {
@@ -205,9 +205,9 @@ const AboutGeneral = () => {
                 variants={staggerContainer}
               >
                 {[
-                  { number: "15+", label: t('about_general.hero.stats.years'), color: "from-blue-400 to-blue-600" },
+                  { number: "16+", label: t('about_general.hero.stats.years'), color: "from-blue-400 to-blue-600" },
                   { number: "11", label: t('about_general.hero.stats.offices'), color: "from-green-400 to-green-600" },
-                  { number: "16", label: t('about_general.hero.stats.containers'), color: "from-purple-400 to-purple-600" },
+                  { number: "18", label: t('about_general.hero.stats.containers'), color: "from-purple-400 to-purple-600" },
                   { number: "21", label: t('about_general.hero.stats.shipping_lines'), color: "from-orange-400 to-orange-600" }
                 ].map((stat, index) => (
                   <motion.div 

@@ -167,6 +167,7 @@
     },
     "cta": "Tư vấn miễn phí",
     "lookup_button": "Tra cứu EIR & HĐĐT",
+    "language_switcher": "Ngôn ngữ / Language / ភាសា",
     "languages": {
       "vi": "Tiếng Việt",
       "en": "Tiếng Anh",
@@ -277,7 +278,7 @@
     "hero": {
       "company_name": "TCT Đối Tác Chân Thật",
       "title": "Giới thiệu chung",
-      "subtitle": "Từ tòa nhà văn phòng hiện đại đến hệ thống logistics quy mô lớn - 15 năm phát triển bền vững",
+      "subtitle": "Từ tòa nhà văn phòng hiện đại đến hệ thống logistics quy mô lớn - 16 năm phát triển bền vững",
       "button": "Tìm hiểu thêm về chúng tôi",
       "stats": {
         "years": "Năm kinh nghiệm",
@@ -296,12 +297,12 @@
       "founding_date": "11/5/2009",
       "founding_location": "toạ lạc tại tòa nhà số 2A đường 5, phường An Phú, TP Thủ Đức, TP.HCM.",
       "development": "Sau gần",
-      "development_years": "15 năm",
+      "development_years": "16 năm",
       "development_description": "xây dựng và trưởng thành, TCT ĐTCT đã trở thành một trong những doanh nghiệp hàng đầu trong lĩnh vực logistics tại Việt Nam.",
       "scale_title": "Quy mô hoạt động",
       "scale_items": {
-        "depots": "15 Depots với sức chứa",
-        "depots_capacity": "65.000 TEUs",
+        "depots": "18 Depots với sức chứa",
+        "depots_capacity": "70.000 TEUs",
         "total_area": "Tổng diện tích hơn",
         "total_area_size": "633.000 m²",
         "countries": "Hoạt động tại",
@@ -445,7 +446,7 @@
         },
         "expansion": {
           "title": "Mở rộng quy mô",
-          "description": "Từ 1 văn phòng đến 15 depot trên toàn quốc"
+          "description": "Từ 1 văn phòng đến 18 depot trên toàn quốc"
         },
         "recognition": {
           "title": "Được công nhận",
@@ -1362,7 +1363,7 @@
         "hero": {
           "badge": "✨ Lịch Sử Hình Thành ✨",
           "title": "Hành Trình Vĩ Đại",
-          "description1": "Sau gần 15 năm phát triển",
+          "description1": "Sau gần 16 năm phát triển",
           "description2": "TCT ĐTCT trở thành doanh nghiệp hàng đầu logistics Việt Nam"
         },
         "summary": {
@@ -1370,11 +1371,11 @@
           "title": "Genuine Partner Group",
           "subtitle": "Ngày Nay",
           "description1": "Từ công ty khởi nghiệp năm 2009",
-          "description2": "Phát triển thành hệ sinh thái đa dạng với 22 công ty thành viên và 15 depot container"
+          "description2": "Phát triển thành hệ sinh thái đa dạng với 22 công ty thành viên và 18 depot container"
         },
         "statistics": {
           "depots": {
-            "number": "15+",
+            "number": "18+",
             "title": "Depot Container",
             "subtitle": "Trong nước & Quốc tế"
           },
@@ -1384,7 +1385,7 @@
             "subtitle": "Hệ sinh thái đa dạng"
           },
           "experience": {
-            "number": "15",
+            "number": "16",
             "title": "Năm kinh nghiệm",
             "subtitle": "Phát triển bền vững"
           }
@@ -1424,7 +1425,7 @@
           },
           "2022": {
             "title": "Mở rộng hệ sinh thái và trách nhiệm xã hội",
-            "description": "Xây dựng thành công 15 Depot trong nước và quốc tế. Mở rộng 22 công ty thành viên thuộc hệ thống Tổng Công Ty. Đồng hành cùng Trung tâm Công tác Xã hội Thanh thiếu niên & CLB Chuyến Xe Yêu Thương trong dự án xây dựng 100 cây cầu An Yên tại các địa phương."
+            "description": "Xây dựng thành công 18 Depot trong nước và quốc tế. Mở rộng 22 công ty thành viên thuộc hệ thống Tổng Công Ty. Đồng hành cùng Trung tâm Công tác Xã hội Thanh thiếu niên & CLB Chuyến Xe Yêu Thương trong dự án xây dựng 100 cây cầu An Yên tại các địa phương."
           },
           "T1/2023": {
             "title": "Chuyển đổi số và mở rộng quốc tế",

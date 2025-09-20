@@ -277,7 +277,7 @@
     "hero": {
       "company_name": "Genuine Partner Group",
       "title": "General Introduction",
-      "subtitle": "From modern office buildings to large-scale logistics systems - 15 years of sustainable development",
+      "subtitle": "From modern office buildings to large-scale logistics systems - 16 years of sustainable development",
       "button": "Learn more about us",
       "stats": {
         "years": "Years of Experience",
@@ -296,12 +296,12 @@
       "founding_date": "May 11, 2009",
       "founding_location": "located at building No. 2A, Street 5, An Phu Ward, Thu Duc City, Ho Chi Minh City.",
       "development": "After nearly",
-      "development_years": "15 years",
+      "development_years": "16 years",
       "development_description": "of construction and growth, GPG has become one of the leading enterprises in the logistics field in Vietnam.",
       "scale_title": "Operating Scale",
       "scale_items": {
-        "depots": "15 Depots with capacity of",
-        "depots_capacity": "65,000 TEUs",
+        "depots": "18 Depots with capacity of",
+        "depots_capacity": "70,000 TEUs",
         "total_area": "Total area of over",
         "total_area_size": "633,000 m²",
         "countries": "Operating in",
@@ -445,7 +445,7 @@
         },
         "expansion": {
           "title": "Scale Expansion",
-          "description": "From 1 office to 15 depots nationwide"
+          "description": "From 1 office to 18 depots nationwide"
         },
         "recognition": {
           "title": "Recognition",
@@ -1362,7 +1362,7 @@
         "hero": {
           "badge": "✨ Formation History ✨",
           "title": "Great Journey",
-          "description1": "After nearly 15 years of development",
+          "description1": "After nearly 16 years of development",
           "description2": "GPG has become a leading logistics company in Vietnam"
         },
         "summary": {
@@ -1374,7 +1374,7 @@
         },
         "statistics": {
           "depots": {
-            "number": "15+",
+            "number": "18+",
             "title": "Container Depots",
             "subtitle": "Domestic & International"
           },
@@ -1384,7 +1384,7 @@
             "subtitle": "Diverse Ecosystem"
           },
           "experience": {
-            "number": "15",
+            "number": "16",
             "title": "Years of Experience",
             "subtitle": "Sustainable Development"
           }

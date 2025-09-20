@@ -10,9 +10,9 @@ export function Header() {
   const { t, locale, changeLocale } = useLocale()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
   const pathname = usePathname()
   const router = useRouter()
-  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +21,34 @@ export function Header() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isMenuOpen) {
+        const target = event.target as Element
+        if (!target.closest('[data-mobile-menu]') && !target.closest('[data-mobile-menu-button]')) {
+          setIsMenuOpen(false)
+        }
+      }
+    }
+
+    if (isMenuOpen) {
+      document.addEventListener('click', handleClickOutside)
+      return () => document.removeEventListener('click', handleClickOutside)
+    }
+  }, [isMenuOpen])
+
+  // Auto-open submenu when on sub-page
+  useEffect(() => {
+    if (pathname.startsWith('/gioi-thieu-chung') || pathname.startsWith('/tam-nhin-su-menh') || pathname.startsWith('/lich-su-hinh-thanh') || pathname.startsWith('/thanh-tuu-cua-chung-toi')) {
+      setOpenSubmenu('about')
+    } else if (pathname.startsWith('/nhom-than') || pathname.startsWith('/nhom-tam') || pathname.startsWith('/nhom-tri') || pathname.startsWith('/nhom-thien')) {
+      setOpenSubmenu('ecosystem')
+    } else {
+      setOpenSubmenu(null)
+    }
+  }, [pathname])
 
   // Helper function to check if a menu item is active
   const isActive = (path: string) => {
@@ -39,18 +67,23 @@ export function Header() {
     return `${baseClasses} ${isActive(path) ? activeClasses : inactiveClasses}`
   }
 
+  // Helper function to toggle submenu
+  const toggleSubmenu = (submenuName: string) => {
+    setOpenSubmenu(openSubmenu === submenuName ? null : submenuName)
+  }
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
         ? 'bg-white/95 backdrop-blur-xl shadow-2xl border-b border-blue-100/50' 
         : 'bg-gradient-to-r from-blue-50/80 via-white/90 to-blue-50/80 backdrop-blur-xl shadow-lg'
     }`}>
-      <div className="container mx-auto px-4 py-3">
+      <div className="container mx-auto px-3 sm:px-4 py-2 sm:py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center group">
             <div className="relative">
-              <div className="w-32 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+              <div className="w-24 h-12 sm:w-28 sm:h-14 lg:w-32 lg:h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
                 <img 
                   src="/Logo GPG.png" 
                   alt="Genuine Partner Group Logo" 
@@ -88,7 +121,7 @@ export function Header() {
                   )}
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-64 z-[60] bg-white/95 backdrop-blur-xl shadow-2xl border border-blue-100/50 rounded-2xl p-2">
+              <DropdownMenuContent className="w-64 z-[70] bg-white/95 backdrop-blur-xl shadow-2xl border border-blue-100/50 rounded-2xl p-2">
                 <DropdownMenuItem 
                   className={`py-3 px-4 rounded-xl transition-all duration-300 cursor-pointer ${
                     isActive('/gioi-thieu-chung') 
@@ -189,7 +222,7 @@ export function Header() {
                   )}
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-72 z-[60] bg-white/95 backdrop-blur-xl shadow-2xl border border-blue-100/50 rounded-2xl p-2">
+              <DropdownMenuContent className="w-72 z-[70] bg-white/95 backdrop-blur-xl shadow-2xl border border-blue-100/50 rounded-2xl p-2">
                 <DropdownMenuItem 
                   className={`py-4 px-4 rounded-xl transition-all duration-300 cursor-pointer ${
                     isActive('/nhom-than') 
@@ -418,292 +451,318 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden relative group p-3 rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 transition-all duration-300 border border-blue-100/50"
+            className="lg:hidden relative group p-2 sm:p-3 rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 transition-all duration-300 border border-blue-100/50"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Đóng menu" : "Mở menu"}
+            data-mobile-menu-button
           >
             <div className="relative z-10">
-              {isMenuOpen ? <X className="w-6 h-6 text-blue-700" /> : <Menu className="w-6 h-6 text-blue-700" />}
+              <div className="w-6 h-6 flex items-center justify-center">
+                <Menu className={`w-5 h-5 sm:w-6 sm:h-6 text-blue-700 transition-all duration-300 ${isMenuOpen ? 'opacity-0 rotate-180' : 'opacity-100 rotate-0'}`} />
+                <X className={`w-5 h-5 sm:w-6 sm:h-6 text-blue-700 absolute transition-all duration-300 ${isMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-180'}`} />
+              </div>
             </div>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden mt-6 pb-6 border-t border-blue-100/50">
-            <nav className="flex flex-col space-y-3 pt-6">
-              <button
-                onClick={() => router.push('/')}
-                className={`relative group transition-all duration-300 font-medium px-4 py-3 rounded-2xl ${
-                  isActive('/') 
-                    ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
-                }`}
-              >
-                <span className="relative z-10">{t('header.nav.home')}</span>
-                {!isActive('/') && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                )}
-              </button>
-              <div className="space-y-2">
-                <div className="text-blue-700 font-semibold px-4 py-2 text-sm bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl">
-                  {t('header.nav.about')}
+        <div className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isMenuOpen ? 'max-h-screen opacity-100 mt-4 pb-4' : 'max-h-0 opacity-0 mt-0 pb-0'
+        }`} data-mobile-menu>
+          {isMenuOpen && (
+            <div className="border-t border-blue-100/50 pt-4">
+              <nav className="flex flex-col space-y-2 sm:space-y-3">
+                {/* Home */}
+                <button
+                  onClick={() => router.push('/')}
+                  className={`relative group transition-all duration-300 font-medium px-4 py-3 rounded-2xl text-left ${
+                    isActive('/') 
+                      ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                  }`}
+                >
+                  <span className="relative z-10">{t('header.nav.home')}</span>
+                  {!isActive('/') && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  )}
+                </button>
+
+                {/* About Menu with Dropdown */}
+                <div className="space-y-2">
+                  <button
+                    onClick={() => toggleSubmenu('about')}
+                    className={`relative group transition-all duration-300 font-medium px-4 py-3 rounded-2xl text-left w-full flex items-center justify-between ${
+                      isActive('/gioi-thieu-chung') || isActive('/tam-nhin-su-menh') || isActive('/lich-su-hinh-thanh') || isActive('/thanh-tuu-cua-chung-toi')
+                        ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
+                        : 'text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                    }`}
+                  >
+                    <span className="relative z-10">{t('header.nav.about')}</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openSubmenu === 'about' ? 'rotate-180' : ''}`} />
+                    {!(isActive('/gioi-thieu-chung') || isActive('/tam-nhin-su-menh') || isActive('/lich-su-hinh-thanh') || isActive('/thanh-tuu-cua-chung-toi')) && (
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    )}
+                  </button>
+                  
+                  {/* About Submenu */}
+                  <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    openSubmenu === 'about' ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                    <div className="pl-4 space-y-1">
+                      <button
+                        onClick={() => router.push('/gioi-thieu-chung')}
+                        className={`relative group transition-all duration-300 font-medium px-4 py-2 rounded-xl text-left text-sm w-full ${
+                          isActive('/gioi-thieu-chung') 
+                            ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
+                            : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                        }`}
+                      >
+                        <span className="relative z-10 flex items-center space-x-3">
+                          <div className={`w-2 h-2 rounded-full ${
+                            isActive('/gioi-thieu-chung') 
+                              ? 'bg-blue-600' 
+                              : 'bg-gradient-to-r from-blue-500 to-indigo-500'
+                          }`}></div>
+                          <span>{t('header.about_menu.general')}</span>
+                        </span>
+                        {!isActive('/gioi-thieu-chung') && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        )}
+                      </button>
+                      <button
+                        onClick={() => router.push('/tam-nhin-su-menh')}
+                        className={`relative group transition-all duration-300 font-medium px-4 py-2 rounded-xl text-left text-sm w-full ${
+                          isActive('/tam-nhin-su-menh') 
+                            ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
+                            : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                        }`}
+                      >
+                        <span className="relative z-10 flex items-center space-x-3">
+                          <div className={`w-2 h-2 rounded-full ${
+                            isActive('/tam-nhin-su-menh') 
+                              ? 'bg-blue-600' 
+                              : 'bg-gradient-to-r from-blue-500 to-indigo-500'
+                          }`}></div>
+                          <span>{t('header.about_menu.vision')}</span>
+                        </span>
+                        {!isActive('/tam-nhin-su-menh') && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        )}
+                      </button>
+                      <button
+                        onClick={() => router.push('/lich-su-hinh-thanh')}
+                        className={`relative group transition-all duration-300 font-medium px-4 py-2 rounded-xl text-left text-sm w-full ${
+                          isActive('/lich-su-hinh-thanh') 
+                            ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
+                            : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                        }`}
+                      >
+                        <span className="relative z-10 flex items-center space-x-3">
+                          <div className={`w-2 h-2 rounded-full ${
+                            isActive('/lich-su-hinh-thanh') 
+                              ? 'bg-blue-600' 
+                              : 'bg-gradient-to-r from-blue-500 to-indigo-500'
+                          }`}></div>
+                          <span>{t('header.about_menu.history')}</span>
+                        </span>
+                        {!isActive('/lich-su-hinh-thanh') && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        )}
+                      </button>
+                      <button
+                        onClick={() => router.push('/thanh-tuu-cua-chung-toi')}
+                        className={`relative group transition-all duration-300 font-medium px-4 py-2 rounded-xl text-left text-sm w-full ${
+                          isActive('/thanh-tuu-cua-chung-toi') 
+                            ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
+                            : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                        }`}
+                      >
+                        <span className="relative z-10 flex items-center space-x-3">
+                          <div className={`w-2 h-2 rounded-full ${
+                            isActive('/thanh-tuu-cua-chung-toi') 
+                              ? 'bg-blue-600' 
+                              : 'bg-gradient-to-r from-blue-500 to-indigo-500'
+                          }`}></div>
+                          <span>{t('header.about_menu.achievements')}</span>
+                        </span>
+                        {!isActive('/thanh-tuu-cua-chung-toi') && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        )}
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <button
-                  onClick={() => router.push('/gioi-thieu-chung')}
-                  className={`relative group transition-all duration-300 font-medium px-8 py-3 rounded-2xl block text-sm ${
-                    isActive('/gioi-thieu-chung') 
-                      ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
-                  }`}
-                >
-                  <span className="relative z-10 flex items-center space-x-3">
-                    <div className={`w-2 h-2 rounded-full ${
-                      isActive('/gioi-thieu-chung') 
-                        ? 'bg-blue-600' 
-                        : 'bg-gradient-to-r from-blue-500 to-indigo-500'
-                    }`}></div>
-                    <span>Giới thiệu chung</span>
-                  </span>
-                  {!isActive('/gioi-thieu-chung') && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  )}
-                </button>
-                <button
-                  onClick={() => router.push('/tam-nhin-su-menh')}
-                  className={`relative group transition-all duration-300 font-medium px-8 py-3 rounded-2xl block text-sm ${
-                    isActive('/tam-nhin-su-menh') 
-                      ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
-                  }`}
-                >
-                  <span className="relative z-10 flex items-center space-x-3">
-                    <div className={`w-2 h-2 rounded-full ${
-                      isActive('/tam-nhin-su-menh') 
-                        ? 'bg-blue-600' 
-                        : 'bg-gradient-to-r from-blue-500 to-indigo-500'
-                    }`}></div>
-                    <span>Tầm nhìn và sứ mệnh</span>
-                  </span>
-                  {!isActive('/tam-nhin-su-menh') && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  )}
-                </button>
-                <button
-                  onClick={() => router.push('/lich-su-hinh-thanh')}
-                  className={`relative group transition-all duration-300 font-medium px-8 py-3 rounded-2xl block text-sm ${
-                    isActive('/lich-su-hinh-thanh') 
-                      ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
-                  }`}
-                >
-                  <span className="relative z-10 flex items-center space-x-3">
-                    <div className={`w-2 h-2 rounded-full ${
-                      isActive('/lich-su-hinh-thanh') 
-                        ? 'bg-blue-600' 
-                        : 'bg-gradient-to-r from-blue-500 to-indigo-500'
-                    }`}></div>
-                    <span>Lịch sử hình thành</span>
-                  </span>
-                  {!isActive('/lich-su-hinh-thanh') && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  )}
-                </button>
-                <button
-                  onClick={() => router.push('/thanh-tuu-cua-chung-toi')}
-                  className={`relative group transition-all duration-300 font-medium px-8 py-3 rounded-2xl block text-sm ${
-                    isActive('/thanh-tuu-cua-chung-toi') 
-                      ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
-                  }`}
-                >
-                  <span className="relative z-10 flex items-center space-x-3">
-                    <div className={`w-2 h-2 rounded-full ${
-                      isActive('/thanh-tuu-cua-chung-toi') 
-                        ? 'bg-blue-600' 
-                        : 'bg-gradient-to-r from-blue-500 to-indigo-500'
-                    }`}></div>
-                    <span>Thành tựu của chúng tôi</span>
-                  </span>
-                  {!isActive('/thanh-tuu-cua-chung-toi') && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  )}
-                </button>
-              </div>
-              <div className="space-y-2">
-                <div className="text-blue-700 font-semibold px-4 py-2 text-sm bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl">
-                  Hệ sinh thái
+
+                {/* Ecosystem Menu with Dropdown */}
+                <div className="space-y-2">
+                  <button
+                    onClick={() => toggleSubmenu('ecosystem')}
+                    className={`relative group transition-all duration-300 font-medium px-4 py-3 rounded-2xl text-left w-full flex items-center justify-between ${
+                      isActive('/nhom-than') || isActive('/nhom-tam') || isActive('/nhom-tri') || isActive('/nhom-thien')
+                        ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
+                        : 'text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                    }`}
+                  >
+                    <span className="relative z-10">{t('header.nav.ecosystem')}</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openSubmenu === 'ecosystem' ? 'rotate-180' : ''}`} />
+                    {!(isActive('/nhom-than') || isActive('/nhom-tam') || isActive('/nhom-tri') || isActive('/nhom-thien')) && (
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    )}
+                  </button>
+                  
+                  {/* Ecosystem Submenu */}
+                  <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    openSubmenu === 'ecosystem' ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                    <div className="pl-4 space-y-1">
+                      <button
+                        onClick={() => router.push('/nhom-than')}
+                        className={`relative group transition-all duration-300 font-medium px-4 py-2 rounded-xl text-left text-sm w-full ${
+                          isActive('/nhom-than') 
+                            ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
+                            : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                        }`}
+                      >
+                        <span className="relative z-10 flex items-center space-x-3">
+                          <div className={`w-2 h-2 rounded-full ${
+                            isActive('/nhom-than') 
+                              ? 'bg-blue-600' 
+                              : 'bg-gradient-to-r from-blue-500 to-indigo-500'
+                          }`}></div>
+                          <span>{t('header.ecosystem_menu.than')} - {t('header.ecosystem_menu.than_desc')}</span>
+                        </span>
+                        {!isActive('/nhom-than') && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        )}
+                      </button>
+                      <button
+                        onClick={() => router.push('/nhom-tam')}
+                        className={`relative group transition-all duration-300 font-medium px-4 py-2 rounded-xl text-left text-sm w-full ${
+                          isActive('/nhom-tam') 
+                            ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
+                            : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                        }`}
+                      >
+                        <span className="relative z-10 flex items-center space-x-3">
+                          <div className={`w-2 h-2 rounded-full ${
+                            isActive('/nhom-tam') 
+                              ? 'bg-blue-600' 
+                              : 'bg-gradient-to-r from-blue-500 to-indigo-500'
+                          }`}></div>
+                          <span>{t('header.ecosystem_menu.tam')} - {t('header.ecosystem_menu.tam_desc')}</span>
+                        </span>
+                        {!isActive('/nhom-tam') && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        )}
+                      </button>
+                      <button
+                        onClick={() => router.push('/nhom-tri')}
+                        className={`relative group transition-all duration-300 font-medium px-4 py-2 rounded-xl text-left text-sm w-full ${
+                          isActive('/nhom-tri') 
+                            ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
+                            : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                        }`}
+                      >
+                        <span className="relative z-10 flex items-center space-x-3">
+                          <div className={`w-2 h-2 rounded-full ${
+                            isActive('/nhom-tri') 
+                              ? 'bg-blue-600' 
+                              : 'bg-gradient-to-r from-blue-500 to-indigo-500'
+                          }`}></div>
+                          <span>{t('header.ecosystem_menu.tri')} - {t('header.ecosystem_menu.tri_desc')}</span>
+                        </span>
+                        {!isActive('/nhom-tri') && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        )}
+                      </button>
+                      <button
+                        onClick={() => router.push('/nhom-thien')}
+                        className={`relative group transition-all duration-300 font-medium px-4 py-2 rounded-xl text-left text-sm w-full ${
+                          isActive('/nhom-thien') 
+                            ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
+                            : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                        }`}
+                      >
+                        <span className="relative z-10 flex items-center space-x-3">
+                          <div className={`w-2 h-2 rounded-full ${
+                            isActive('/nhom-thien') 
+                              ? 'bg-blue-600' 
+                              : 'bg-gradient-to-r from-blue-500 to-indigo-500'
+                          }`}></div>
+                          <span>{t('header.ecosystem_menu.thien')} - {t('header.ecosystem_menu.thien_desc')}</span>
+                        </span>
+                        {!isActive('/nhom-thien') && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        )}
+                      </button>
+                    </div>
+                  </div>
                 </div>
+                {/* Social Responsibility */}
                 <button
-                  onClick={() => router.push('/nhom-than')}
-                  className={`relative group transition-all duration-300 font-medium px-8 py-3 rounded-2xl block text-sm ${
-                    isActive('/nhom-than') 
+                  onClick={() => router.push('/trach-nhiem-xa-hoi')}
+                  className={`relative group transition-all duration-300 font-medium px-4 py-3 rounded-2xl text-left ${
+                    isActive('/trach-nhiem-xa-hoi') 
                       ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
                   }`}
                 >
-                  <span className="relative z-10 flex items-center space-x-3">
-                    <div className={`w-2 h-2 rounded-full ${
-                      isActive('/nhom-than') 
-                        ? 'bg-blue-600' 
-                        : 'bg-gradient-to-r from-blue-500 to-indigo-500'
-                    }`}></div>
-                    <span>Thân - Logistics & Phụ trợ</span>
-                  </span>
-                  {!isActive('/nhom-than') && (
+                  <span className="relative z-10">{t('header.nav.responsibility')}</span>
+                  {!isActive('/trach-nhiem-xa-hoi') && (
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   )}
                 </button>
+
+                {/* News */}
                 <button
-                  onClick={() => router.push('/nhom-tam')}
-                  className={`relative group transition-all duration-300 font-medium px-8 py-3 rounded-2xl block text-sm ${
-                    isActive('/nhom-tam') 
+                  onClick={() => router.push('/tin-tuc')}
+                  className={`relative group transition-all duration-300 font-medium px-4 py-3 rounded-2xl text-left ${
+                    isActive('/tin-tuc') 
                       ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
                   }`}
                 >
-                  <span className="relative z-10 flex items-center space-x-3">
-                    <div className={`w-2 h-2 rounded-full ${
-                      isActive('/nhom-tam') 
-                        ? 'bg-blue-600' 
-                        : 'bg-gradient-to-r from-blue-500 to-indigo-500'
-                    }`}></div>
-                    <span>Tâm - Dịch vụ & Thương mại</span>
-                  </span>
-                  {!isActive('/nhom-tam') && (
+                  <span className="relative z-10">{t('header.nav.news')}</span>
+                  {!isActive('/tin-tuc') && (
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   )}
                 </button>
+
+                {/* Contact */}
                 <button
-                  onClick={() => router.push('/nhom-tri')}
-                  className={`relative group transition-all duration-300 font-medium px-8 py-3 rounded-2xl block text-sm ${
-                    isActive('/nhom-tri') 
+                  onClick={() => router.push('/lien-he')}
+                  className={`relative group transition-all duration-300 font-medium px-4 py-3 rounded-2xl text-left ${
+                    isActive('/lien-he') 
                       ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
                   }`}
                 >
-                  <span className="relative z-10 flex items-center space-x-3">
-                    <div className={`w-2 h-2 rounded-full ${
-                      isActive('/nhom-tri') 
-                        ? 'bg-blue-600' 
-                        : 'bg-gradient-to-r from-blue-500 to-indigo-500'
-                    }`}></div>
-                    <span>Trí - Tư vấn & Công nghệ</span>
-                  </span>
-                  {!isActive('/nhom-tri') && (
+                  <span className="relative z-10">{t('header.nav.contact')}</span>
+                  {!isActive('/lien-he') && (
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   )}
                 </button>
-                <button
-                  onClick={() => router.push('/nhom-thien')}
-                  className={`relative group transition-all duration-300 font-medium px-8 py-3 rounded-2xl block text-sm ${
-                    isActive('/nhom-thien') 
-                      ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
-                  }`}
-                >
-                  <span className="relative z-10 flex items-center space-x-3">
-                    <div className={`w-2 h-2 rounded-full ${
-                      isActive('/nhom-thien') 
-                        ? 'bg-blue-600' 
-                        : 'bg-gradient-to-r from-blue-500 to-indigo-500'
-                    }`}></div>
-                    <span>Thiện - Cộng đồng</span>
-                  </span>
-                  {!isActive('/nhom-thien') && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  )}
-                </button>
-              </div>
-              <button
-                onClick={() => router.push('/trach-nhiem-xa-hoi')}
-                className={`relative group transition-all duration-300 font-medium px-4 py-3 rounded-2xl ${
-                  isActive('/trach-nhiem-xa-hoi') 
-                    ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
-                }`}
-              >
-                <span className="relative z-10">{t('header.nav.responsibility')}</span>
-                {!isActive('/trach-nhiem-xa-hoi') && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                )}
-              </button>
-              <button
-                onClick={() => router.push('/tin-tuc')}
-                className={`relative group transition-all duration-300 font-medium px-4 py-3 rounded-2xl ${
-                  isActive('/tin-tuc') 
-                    ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
-                }`}
-              >
-                <span className="relative z-10">{t('header.nav.news')}</span>
-                {!isActive('/tin-tuc') && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                )}
-              </button>
-              <button
-                onClick={() => router.push('/lien-he')}
-                className={`relative group transition-all duration-300 font-medium px-4 py-3 rounded-2xl ${
-                  isActive('/lien-he') 
-                    ? 'text-blue-600 bg-gradient-to-r from-blue-50 to-indigo-50 shadow-sm' 
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50'
-                }`}
-              >
-                <span className="relative z-10">{t('header.nav.contact')}</span>
-                {!isActive('/lien-he') && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                )}
-              </button>
               
-              {/* Mobile Language Switcher */}
-              <div className="space-y-2 mt-4">
-                <div className="text-blue-700 font-semibold px-4 py-2 text-sm bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl">
-                  Ngôn ngữ / Language / ភាសា
-                </div>
-                <div className="flex space-x-2 px-4">
-                  <Button
-                    variant={locale === 'vi' ? 'default' : 'outline'}
-                    size="sm"
-                    onClick={() => changeLocale('vi')}
-                    className={`flex-1 ${locale === 'vi' ? 'bg-blue-600 text-white' : 'bg-white border-blue-200 text-gray-700'}`}
-                  >
-                    VI
-                  </Button>
-                  <Button
-                    variant={locale === 'en' ? 'default' : 'outline'}
-                    size="sm"
-                    onClick={() => changeLocale('en')}
-                    className={`flex-1 ${locale === 'en' ? 'bg-blue-600 text-white' : 'bg-white border-blue-200 text-gray-700'}`}
-                  >
-                    EN
-                  </Button>
-                  <Button
-                    variant={locale === 'km' ? 'default' : 'outline'}
-                    size="sm"
-                    onClick={() => changeLocale('km')}
-                    className={`flex-1 ${locale === 'km' ? 'bg-blue-600 text-white' : 'bg-white border-blue-200 text-gray-700'}`}
-                  >
-                    KM
-                  </Button>
-                </div>
-              </div>
 
-              <Button className="relative group bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 hover:from-blue-700 hover:via-blue-800 hover:to-indigo-800 text-white w-full mt-6 py-4 rounded-2xl font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-500 hover:scale-105 border border-blue-500/20">
-                <span className="relative z-10 flex items-center justify-center space-x-2">
-                  <span>{t('header.cta')}</span>
-                  <Sparkles className="w-4 h-4 animate-pulse" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </Button>
+                {/* CTA Button */}
+                <Button className="relative group bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 hover:from-blue-700 hover:via-blue-800 hover:to-indigo-800 text-white w-full mt-6 py-4 rounded-2xl font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-500 hover:scale-105 border border-blue-500/20">
+                  <span className="relative z-10 flex items-center justify-center space-x-2">
+                    <span>{t('header.cta')}</span>
+                    <Sparkles className="w-4 h-4 animate-pulse" />
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </Button>
 
-              {/* Mobile Tra cứu Button */}
-              <button className="flex items-center justify-center space-x-2 px-4 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 transition-all duration-300 rounded-lg font-medium text-sm w-full mt-4">
-                <Crown className="w-4 h-4 text-orange-500" />
-                <span>{t('header.lookup_button')}</span>
-              </button>
-            </nav>
-          </div>
-        )}
+                {/* Mobile Tra cứu Button */}
+                <button className="flex items-center justify-center space-x-2 px-4 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 transition-all duration-300 rounded-lg font-medium text-sm w-full mt-4">
+                  <Crown className="w-4 h-4 text-orange-500" />
+                  <span>{t('header.lookup_button')}</span>
+                </button>
+              </nav>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   )
