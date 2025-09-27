@@ -724,7 +724,7 @@ const AboutGeneral = () => {
                     transition={{ duration: 0.7 }}
                   >
                     <Image
-                      src="/quymogpg.png"
+                      src="/Quymo1-04.png"
                       alt="Quy mô hoạt động GPG - Thống kê và số liệu về hệ thống logistics"
                       width={700}
                       height={700}
